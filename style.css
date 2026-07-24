@@ -1,39 +1,23 @@
-/* ========== HEADER + LOGO PERFECT ========== */
+/* ========== SIRF LOGO THEEK KARNE KE LIYE ========== */
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 15px 8% !important;
-  background: rgba(0, 0, 0, 0.95) !important;
-  backdrop-filter: blur(10px);
+  padding: 10px 8% !important;
+  background: #000 !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 9999;
-  border-bottom: 1px solid rgba(10, 132, 255, 0.3);
 }
 
 header .logo-img {
-  width: 500px !important;    /* tumhara manga hua size */
-  height: 200px !important;
-  object-fit: contain !important; /* image crop nahi hogi */
-  filter: drop-shadow(0 0 20px rgba(10, 132, 255, 0.7)); /* neela glow */
+  height: 100px !important;    /* 100px pe perfect dikhega, phatega nahi */
+  width: auto !important;      /* width auto rakho taake design na bigre */
+  object-fit: contain !important;
 }
 
-header nav a {
-  color: #fff;
-  margin-left: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-}
-header nav a:hover {
-  color: #0a84ff;
-}
-
-/* Body ko header ke neeche dhakelne ke liye */
 body { 
-  padding-top: 260px !important; 
-  background: #000;
+  padding-top: 140px !important; /* header jitna space */
 }
