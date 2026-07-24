@@ -1,23 +1,36 @@
-/* ========== SIRF LOGO THEEK KARNE KE LIYE ========== */
+/* ========== HEADER WAPAS NORMAL ========== */
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px 8% !important;
-  background: #000 !important;
+  padding: 15px 8% !important;
+  background: rgba(0, 0, 0, 0.95) !important;
+  backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 9999;
+  border-bottom: 1px solid rgba(10, 132, 255, 0.2);
 }
 
 header .logo-img {
-  height: 100px !important;    /* 100px pe perfect dikhega, phatega nahi */
-  width: auto !important;      /* width auto rakho taake design na bigre */
-  object-fit: contain !important;
+  height: 60px !important;    /* pehle wala size */
+  width: auto !important;
+}
+
+header nav a {
+  color: #fff;
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 body { 
-  padding-top: 140px !important; /* header jitna space */
+  padding-top: 90px !important; /* normal padding */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
 }
