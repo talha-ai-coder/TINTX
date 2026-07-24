@@ -215,7 +215,27 @@ header {
   align-items: center;
   z-index: 1000;
 }
+header {
+  background: #000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 12px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
 
+.logo-img {
+  height: 60px;
+  width: auto;
+}
+
+body {
+  padding-top: 90px; /* taake content header ke neeche na chupay */
+}
 .logo-img {
   height: 60px; /* tumhari wali height */
   width: auto;
