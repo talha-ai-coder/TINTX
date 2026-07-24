@@ -204,3 +204,19 @@ header {
 color:#bbb;
 margin-bottom:20px;
 }
+header {
+  background: #000; /* Black background */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo-img {
+  height: 60px; /* tumhari wali height */
+  width: auto;
+}
