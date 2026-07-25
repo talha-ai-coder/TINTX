@@ -34,7 +34,7 @@
     </ul>
     
     <!-- SHOP NOW BUTTON + TRUST BADGES -->
-    <a href="#products" class="btn-shop-now">Shop Now →</a>
+    <a href="#car-selector" class="btn-shop-now">Shop Now →</a>
     
     <div class="trust-badges">
       <span>🚚 Free Delivery</span>
@@ -48,29 +48,106 @@
   </div>
 </section>
 
-<!-- 4 FEATURE BOXES -->
-  <!-- MAIN PRODUCT SECTION -->
-<section class="main-product">
-  <div class="main-product-text">
-    <p class="section-tag">BEST SELLER</p>
-    <h2>Full Window Sun Shade</h2>
-    <p class="subtext">Premium Comfort. Complete Protection.</p>
-    
-    <ul class="product-features">
-      <li>✓ PREMIUM USA - High-Density Mesh</li>
-      <li>✓ SUPERIOR PROTECTION - Blocks Heat, Glare & UV</li>
-      <li>✓ OEM-PERFECT FIT - Precision Engineered</li>
-      <li>✓ LUXURY CRAFTSMANSHIP - Double Stitching</li>
-      <li>✓ IMPORTED QUALITY - Engineered to Last</li>
-    </ul>
+<!-- CAR SELECTOR SECTION - NEW ADDED -->
+<section class="car-selector" id="car-selector">
+  <p class="section-tag">FIND YOUR FIT</p>
+  <h2>Select Your Car Model</h2>
+  <p class="subtext">100% Perfect Fit Guarantee</p>
 
-    <p class="product-price-big">Rs. 2,499</p>
-    <a href="https://wa.me/923112205795?text=Hi%20TINTX,%20I%20want%20to%20order%20Full%20Window%20Sun%20Shade%20for%20Rs.%202499" class="btn-whatsapp-big">📱 Order on WhatsApp Now</a>
-  </div>
-  <div class="main-product-img">
-    <img src="product-main.jpg" alt="TintX Full Window Sun Shade">
+  <div class="selector-box">
+    <label for="carSelect">Select your Vehicle:</label>
+    <select id="carSelect">
+      <option value="">-- Select Your Car Model --</option>
+      
+      <optgroup label="TOYOTA">
+        <option value="Toyota Corolla">Toyota Corolla</option>
+        <option value="Toyota Yaris">Toyota Yaris</option>
+        <option value="Toyota Camry">Toyota Camry</option>
+        <option value="Toyota Fortuner">Toyota Fortuner</option>
+        <option value="Toyota Land Cruiser">Toyota Land Cruiser</option>
+        <option value="Toyota Prado">Toyota Prado</option>
+        <option value="Toyota Revo">Toyota Revo</option>
+        <option value="Toyota Hilux">Toyota Hilux</option>
+        <option value="Toyota Vitz">Toyota Vitz</option>
+        <option value="Toyota Prius">Toyota Prius</option>
+      </optgroup>
+
+      <optgroup label="HONDA">
+        <option value="Honda Civic">Honda Civic</option>
+        <option value="Honda City">Honda City</option>
+        <option value="Honda BR-V">Honda BR-V</option>
+        <option value="Honda HR-V">Honda HR-V</option>
+        <option value="Honda Accord">Honda Accord</option>
+        <option value="Honda Vezel">Honda Vezel</option>
+      </optgroup>
+
+      <optgroup label="SUZUKI">
+        <option value="Suzuki Alto">Suzuki Alto</option>
+        <option value="Suzuki Cultus">Suzuki Cultus</option>
+        <option value="Suzuki Swift">Suzuki Swift</option>
+        <option value="Suzuki WagonR">Suzuki WagonR</option>
+        <option value="Suzuki Mehran">Suzuki Mehran</option>
+        <option value="Suzuki Bolan">Suzuki Bolan</option>
+        <option value="Suzuki Ravi">Suzuki Ravi</option>
+        <option value="Suzuki Jimny">Suzuki Jimny</option>
+      </optgroup>
+
+      <optgroup label="KIA">
+        <option value="Kia Sportage">Kia Sportage</option>
+        <option value="Kia Picanto">Kia Picanto</option>
+        <option value="Kia Sorento">Kia Sorento</option>
+        <option value="Kia Stonic">Kia Stonic</option>
+      </optgroup>
+
+      <optgroup label="HYUNDAI">
+        <option value="Hyundai Tucson">Hyundai Tucson</option>
+        <option value="Hyundai Elantra">Hyundai Elantra</option>
+        <option value="Hyundai Sonata">Hyundai Sonata</option>
+        <option value="Hyundai Santa Fe">Hyundai Santa Fe</option>
+      </optgroup>
+
+      <optgroup label="MG">
+        <option value="MG ZS">MG ZS</option>
+        <option value="MG HS">MG HS</option>
+        <option value="MG 5">MG 5</option>
+        <option value="MG 6">MG 6</option>
+      </optgroup>
+
+      <optgroup label="CHANGAN">
+        <option value="Changan Alsvin">Changan Alsvin</option>
+        <option value="Changan Oshan X7">Changan Oshan X7</option>
+        <option value="Changan Karvaan">Changan Karvaan</option>
+      </optgroup>
+
+      <optgroup label="HAVAL">
+        <option value="Haval Jolion">Haval Jolion</option>
+        <option value="Haval H6">Haval H6</option>
+      </optgroup>
+
+      <optgroup label="PROTON">
+        <option value="Proton Saga">Proton Saga</option>
+        <option value="Proton X70">Proton X70</option>
+      </optgroup>
+
+      <optgroup label="IMPORTED / JDM">
+        <option value="Daihatsu Mira">Daihatsu Mira</option>
+        <option value="Honda N-Box">Honda N-Box</option>
+        <option value="Suzuki Every">Suzuki Every</option>
+        <option value="Toyota Aqua">Toyota Aqua</option>
+      </optgroup>
+
+      <optgroup label="OTHERS">
+        <option value="Prince Pearl">Prince Pearl</option>
+        <option value="FAW V2">FAW V2</option>
+        <option value="United Bravo">United Bravo</option>
+      </optgroup>
+    </select>
+
+    <a href="#" id="whatsappLink" class="btn-whatsapp-selector">📱 Get Price on WhatsApp</a>
   </div>
 </section>
+
+<!-- 4 FEATURE BOXES -->
 <section class="features-new">
   <div class="feature-box">
     <div class="icon">🛡️</div>
@@ -91,6 +168,29 @@
     <div class="icon">💎</div>
     <h3>Premium Quality</h3>
     <p>Made with high quality USA fabric.</p>
+  </div>
+</section>
+
+<!-- MAIN PRODUCT SECTION -->
+<section class="main-product">
+  <div class="main-product-text">
+    <p class="section-tag">BEST SELLER</p>
+    <h2>Full Window Sun Shade</h2>
+    <p class="subtext">Premium Comfort. Complete Protection.</p>
+    
+    <ul class="product-features">
+      <li>✓ PREMIUM USA - High-Density Mesh</li>
+      <li>✓ SUPERIOR PROTECTION - Blocks Heat, Glare & UV</li>
+      <li>✓ OEM-PERFECT FIT - Precision Engineered</li>
+      <li>✓ LUXURY CRAFTSMANSHIP - Double Stitching</li>
+      <li>✓ IMPORTED QUALITY - Engineered to Last</li>
+    </ul>
+
+    <p class="product-price-big">Rs. 2,499</p>
+    <a href="https://wa.me/923112205795?text=Hi%20TINTX,%20I%20want%20to%20order%20Full%20Window%20Sun%20Shade%20for%20Rs.%202499" class="btn-whatsapp-big">📱 Order on WhatsApp Now</a>
+  </div>
+  <div class="main-product-img">
+    <img src="product-main.jpg" alt="TintX Full Window Sun Shade">
   </div>
 </section>
 
