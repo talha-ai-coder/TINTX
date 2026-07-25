@@ -103,3 +103,48 @@ header {
   }
   .hero-text h1 { font-size: 32px; }
 }
+/* HERO BUTTON */
+.btn-shop-now {
+  background: #3b82f6;
+  color: white;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.btn-shop-now:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+}
+
+/* TRUST BADGES */
+.trust-badges {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #aaa;
+}
+.trust-badges span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .btn-shop-now {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
