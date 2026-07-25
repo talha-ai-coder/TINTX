@@ -58,3 +58,12 @@ header {
   font-weight: 600;
   text-decoration: none;
 }
+/* MOBILE ME LOGO CHOTA */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 32px;
+  }
+  header {
+    padding: 8px 3%;
+  }
+}
