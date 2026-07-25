@@ -186,3 +186,41 @@ header {
   background: #128C7E;
   transform: scale(1.03);
 }
+/* PRODUCT CARD + WHATSAPP BUTTON */
+.product-card {
+  background: #1a1a1f;
+  padding: 15px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+.product-card h4 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+}
+.product-price {
+  color: #3b82f6;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.btn-whatsapp {
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+.btn-whatsapp:hover {
+  background: #128C7E;
+  transform: scale(1.03);
+}
