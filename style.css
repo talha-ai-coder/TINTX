@@ -15,7 +15,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 5%;
+  padding: 18px 5%;
   background: #0a0a0f;
   border-bottom: 1px solid #222;
   position: sticky;
@@ -38,9 +38,9 @@ header {
 }
 
 .logo-img {
-  height: 45px;
+  height: 55px;
   width: auto;
-  max-width: 160px;
+  max-width: 200px;
 }
 
 .nav-btn {
