@@ -23,3 +23,38 @@
 .product-card { background: #1a1a1f; padding: 15px; border-radius: 12px; }
 .product-card img { width: 100%; border-radius: 8px; }
 .product-card button { background: #3b82f6; color: white; border: none; padding: 8px 16px; border-radius: 6px; margin-top: 10px; cursor: pointer; }
+/* NEW HEADER LAYOUT */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 5%;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.menu-left {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.logo-center {
+  flex: 1;
+  text-align: center;
+}
+
+.logo-img {
+  height: 45px;   /* logo ka size */
+  width: auto;
+}
+
+.nav-btn {
+  background: #FFC107;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+}
