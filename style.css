@@ -295,3 +295,6 @@ header {
 .review-card { background: #1a1a1f; padding: 25px; border-radius: 12px; border: 1px solid #333; text-align: left; }
 .review-card .stars { color: #FFD700; font-size: 20px; margin-bottom: 10px; }
 .review-card h4 { margin-top: 15px; color: #25D366; }
+.product-gallery { padding: 60px 20px; background: #f8f9fa; text-align: center; }
+.product-gallery h2 { font-size: 2rem; margin-bottom: 30px; color: #1a1a1a; }
+.gallery-grid img { max-width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
