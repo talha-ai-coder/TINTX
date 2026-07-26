@@ -49,16 +49,101 @@
         </p>
 
         <div style="margin:25px 0;">
-          <label for="carSelectProduct"><b>Select your Vehicle:</b></label>
-          <select id="carSelectProduct" style="padding:14px; width:100%; margin-top:8px; border:1px solid #ddd; border-radius:8px; font-size:1rem;">
-            <option value="">Choose an option</option>
-            <option value="Toyota Corolla">Toyota Corolla</option>
-            <option value="Honda Civic">Honda Civic</option>
-            <option value="Toyota Yaris">Toyota Yaris</option>
-            <option value="Honda City">Honda City</option>
-            <option value="Toyota Fortuner">Toyota Fortuner</option>
-          </select>
-        </div>
+  <label for="carSelectProduct"><b>Select your Vehicle:</b></label>
+  
+  <!-- SEARCH BOX -->
+  <input type="text" id="carSearchProduct" placeholder="🔍 Gari ka naam likho... Civic, Corolla, Alto, Mehran"
+  style="width:100%; padding:12px; margin:10px 0; border:2px solid #FFC107; border-radius:8px; font-size:1rem; box-sizing:border-box;">
+
+  <!-- 100+ CARS DROPDOWN -->
+  <select id="carSelectProduct" style="padding:14px; width:100%; border:1px solid #ddd; border-radius:8px; font-size:1rem;">
+    <option value="">-- Choose Your Car Model --</option>
+    
+    <optgroup label="TOYOTA">
+      <option value="Toyota Corolla 2003-2008">Toyota Corolla 2003-2008</option>
+      <option value="Toyota Corolla 2009-2013">Toyota Corolla 2009-2013</option>
+      <option value="Toyota Corolla 2014-2024">Toyota Corolla 2014-2024</option>
+      <option value="Toyota Yaris 2020-2024">Toyota Yaris 2020-2024</option>
+      <option value="Toyota Vitz 2005-2024">Toyota Vitz 2005-2024</option>
+      <option value="Toyota Fortuner 2017-2024">Toyota Fortuner 2017-2024</option>
+      <option value="Toyota Hilux 2016-2024">Toyota Hilux 2016-2024</option>
+      <option value="Toyota Land Cruiser 2010-2024">Toyota Land Cruiser 2010-2024</option>
+      <option value="Toyota Prius 2010-2024">Toyota Prius 2010-2024</option>
+      <option value="Toyota Aqua 2012-2024">Toyota Aqua 2012-2024</option>
+      <option value="Toyota Camry 2015-2024">Toyota Camry 2015-2024</option>
+      <option value="Toyota Rush 2018-2024">Toyota Rush 2018-2024</option>
+    </optgroup>
+
+    <optgroup label="HONDA">
+      <option value="Honda Civic 2001-2005">Honda Civic 2001-2005</option>
+      <option value="Honda Civic 2006-2011">Honda Civic 2006-2011</option>
+      <option value="Honda Civic 2012-2015">Honda Civic 2012-2015</option>
+      <option value="Honda Civic 2016-2021">Honda Civic 2016-2021</option>
+      <option value="Honda Civic 2022-2024">Honda Civic 2022-2024</option>
+      <option value="Honda City 2009-2013">Honda City 2009-2013</option>
+      <option value="Honda City 2014-2020">Honda City 2014-2020</option>
+      <option value="Honda City 2021-2024">Honda City 2021-2024</option>
+      <option value="Honda BRV 2017-2024">Honda BRV 2017-2024</option>
+      <option value="Honda HRV 2022-2024">Honda HRV 2022-2024</option>
+      <option value="Honda Accord 2018-2024">Honda Accord 2018-2024</option>
+    </optgroup>
+
+    <optgroup label="SUZUKI">
+      <option value="Suzuki Alto 2019-2024">Suzuki Alto 2019-2024</option>
+      <option value="Suzuki Cultus 2000-2016">Suzuki Cultus 2000-2016</option>
+      <option value="Suzuki Cultus 2017-2024">Suzuki Cultus 2017-2024</option>
+      <option value="Suzuki Swift 2010-2024">Suzuki Swift 2010-2024</option>
+      <option value="Suzuki WagonR 2014-2024">Suzuki WagonR 2014-2024</option>
+      <option value="Suzuki Mehran 1989-2019">Suzuki Mehran 1989-2019</option>
+      <option value="Suzuki Bolan 1990-2024">Suzuki Bolan 1990-2024</option>
+      <option value="Suzuki Ravi 1990-2024">Suzuki Ravi 1990-2024</option>
+      <option value="Suzuki Every 2018-2024">Suzuki Every 2018-2024</option>
+      <option value="Suzuki APV 2008-2024">Suzuki APV 2008-2024</option>
+    </optgroup>
+
+    <optgroup label="KIA">
+      <option value="Kia Sportage 2019-2024">Kia Sportage 2019-2024</option>
+      <option value="Kia Picanto 2019-2024">Kia Picanto 2019-2024</option>
+      <option value="Kia Sorento 2021-2024">Kia Sorento 2021-2024</option>
+      <option value="Kia Carnival 2021-2024">Kia Carnival 2021-2024</option>
+      <option value="Kia Stonic 2021-2024">Kia Stonic 2021-2024</option>
+    </optgroup>
+
+    <optgroup label="HYUNDAI">
+      <option value="Hyundai Tucson 2020-2024">Hyundai Tucson 2020-2024</option>
+      <option value="Hyundai Elantra 2021-2024">Hyundai Elantra 2021-2024</option>
+      <option value="Hyundai Sonata 2021-2024">Hyundai Sonata 2021-2024</option>
+      <option value="Hyundai Santa Fe 2021-2024">Hyundai Santa Fe 2021-2024</option>
+    </optgroup>
+
+    <optgroup label="CHANGAN">
+      <option value="Changan Alsvin 2021-2024">Changan Alsvin 2021-2024</option>
+      <option value="Changan Oshan X7 2022-2024">Changan Oshan X7 2022-2024</option>
+      <option value="Changan Karvaan 2019-2024">Changan Karvaan 2019-2024</option>
+      <option value="Changan M9 2020-2024">Changan M9 2020-2024</option>
+    </optgroup>
+
+    <optgroup label="MG">
+      <option value="MG HS 2021-2024">MG HS 2021-2024</option>
+      <option value="MG ZS 2021-2024">MG ZS 2021-2024</option>
+      <option value="MG 5 2022-2024">MG 5 2022-2024</option>
+      <option value="MG 6 2022-2024">MG 6 2022-2024</option>
+    </optgroup>
+
+    <optgroup label="OTHER BRANDS">
+      <option value="Proton Saga 2019-2024">Proton Saga 2019-2024</option>
+      <option value="Proton X70 2020-2024">Proton X70 2020-2024</option>
+      <option value="Haval H6 2022-2024">Haval H6 2022-2024</option>
+      <option value="Haval Jolion 2022-2024">Haval Jolion 2022-2024</option>
+      <option value="FAW V2 2015-2024">FAW V2 2015-2024</option>
+      <option value="FAW XPV 2015-2024">FAW XPV 2015-2024</option>
+      <option value="DFSK Glory 580 2020-2024">DFSK Glory 580 2020-2024</option>
+      <option value="DFSK Glory 500 2021-2024">DFSK Glory 500 2021-2024</option>
+      <option value="Nissan Sunny 2010-2024">Nissan Sunny 2010-2024</option>
+      <option value="Mitsubishi Lancer 2008-2017">Mitsubishi Lancer 2008-2017</option>
+    </optgroup>
+  </select>
+</div>
 
         <div style="display:flex; gap:15px; align-items:center;">
           <input type="number" value="1" min="1" style="width:80px; padding:14px; text-align:center; border:1px solid #ddd; border-radius:8px; font-size:1rem;">
