@@ -1,271 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>TINTX Pakistan | Best Custom Fit Car Window Shades & Car Curtains [COD]</title>
-    <meta name="description" content="Shop TINTX Premium Custom Fit Car Window Shades in Pakistan. Magnetic Car Curtains for Civic, Corolla, Yaris & All Cars. Cash on Delivery in 3 Days. Summer Sale Rs 2,499. Order Now!">
-    <meta name="keywords" content="car window shades pakistan, car curtains karachi, custom fit car shades, magnetic car window shades, tintx, car sun shades, best car curtains, honda civic shades, toyota corolla curtains">
-    <meta name="author" content="TINTX Pakistan">
-    <link rel="canonical" href="https://talha-ai-coder.github.io/TINTX/">
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Store",
-      "name": "TINTX",
-      "description": "Premium Custom Fit Car Window Shades in Pakistan",
-      "url": "https://talha-ai-coder.github.io/TINTX/",
-      "telephone": "+923112205795",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Karachi",
-        "addressCountry": "PK"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "2499",
-        "priceCurrency": "PKR",
-        "availability": "https://schema.org/InStock"
-      }
-    }
-    </script>
-
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
-
-<header>
-  <div class="menu-left">☰ MENU</div>
-  <div class="logo-center">
-    <img src="logo-new.png" alt="TINTX Car Accessories Pakistan" class="logo-img">
-  </div>
-  <a href="https://wa.me/923112205795" class="nav-btn">Order Now</a>
-</header>
-
-<!-- NEW HERO SECTION -->
-<section class="hero-new">
-  <div class="hero-text">
-    <p class="tagline">Drive with <span>Privacy.</span></p>
-    <h1>Travel in <span>Comfort.</span></h1>
-    <p class="subtext">Premium removable window shades designed for families, everyday drivers, and road trips</p>
-    <ul class="features-list">
-      <li>✓ Premium USA Fabric</li>
-      <li>✓ Full Window Coverage</li>
-      <li>✓ Easy Installation</li>
-      <li>✓ Cash on Delivery</li>
-    </ul>
-    <a href="product.html" class="btn-shop-now">SELECT YOUR CAR</a>
-    <div class="trust-badges">
-      <span>🚚 Free Delivery</span>
-      <span>↩️ 30 Day Return</span>
-      <span>✅ Cash on Delivery</span>
-    </div>
-  </div>
-  <div class="hero-img">
-    <img src="hero-car.jpg.png" alt="Luxury Car with TINTX Premium Car Window Shades" loading="lazy">
-  </div>
-</section>
-
-<!-- SELECT YOUR CAR SECTION - NEW ADDED -->
-<section class="select-car-section" style="background:#f8f8f8; padding:50px 20px; text-align:center;">
-  <h2>OUR <span style="color:#FFC107;">REMOVABLE</span> SHADES</h2>
-  <p style="color:#666; margin-bottom:30px;">ALL PAKISTANI CARS SHADES ARE AVAILABLE</p>
-  <img src="hero-car.jpg.png" alt="All Cars Window Shades" style="max-width:400px; width:100%; margin:20px auto;">
-  <h3>4 WINDOWS REMOVABLE SHADES</h3>
-  <p style="font-size:1.5rem;">
-    <span style="text-decoration:line-through; color:#999;">Rs6,000.00</span> 
-    <span style="color:#FFC107; font-weight:700;">Rs2,499</span>
-  </p>
-  <a href="product.html" class="btn-shop-now" style="background:#FFC107; color:#000; font-size:1.1rem; padding:15px 40px;">
-    SELECT YOUR CAR
-  </a>
-</section>
-
-<!-- CAR SELECTOR SECTION - ALL CARS ADDED -->
-<section class="car-selector" id="car-selector">
+<!-- CAR SELECTOR SECTION - PRO WITH SEARCH -->
+<section class="car-selector" id="car-selector" style="padding:60px 20px; background:#f8f8f8;">
   <p class="section-tag">FIND YOUR FIT</p>
-  <h2>Select Your Car Model</h2>
-  <p class="subtext">100% Perfect Fit Guarantee</p>
-  <div class="selector-box">
-    <label for="carSelect">Select your Vehicle:</label>
-    <select id="carSelect">
+  <h2 style="text-align:center; margin-bottom:10px;">Select Your Car Model</h2>
+  <p class="subtext" style="text-align:center; margin-bottom:30px;">100% Perfect Fit Guarantee</p>
+
+  <div class="selector-box" style="max-width:600px; margin:auto; background:#fff; padding:30px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.1);">
+
+    <!-- SEARCH BOX -->
+    <label for="carSearch">🔍 Search Your Car:</label>
+    <input type="text" id="carSearch" placeholder="Type car name... e.g. Civic, Corolla, Alto"
+    style="width:100%; padding:14px; margin:10px 0 20px 0; border:2px solid #FFC107; border-radius:10px; font-size:1rem; outline:none;">
+
+    <label for="carSelect">Or Select from List:</label>
+    <select id="carSelect" style="padding:14px; width:100%; margin-top:8px; border:1px solid #ddd; border-radius:8px; font-size:1rem;">
       <option value="">-- Select Your Car Model --</option>
-      
+
       <optgroup label="TOYOTA">
-        <option value="Toyota Corolla">Toyota Corolla</option>
-        <option value="Toyota Yaris">Toyota Yaris</option>
-        <option value="Toyota City">Toyota City</option>
-        <option value="Toyota Fortuner">Toyota Fortuner</option>
-        <option value="Toyota Prado">Toyota Prado</option>
-        <option value="Toyota Revo">Toyota Revo</option>
-        <option value="Toyota Vitz">Toyota Vitz</option>
-        <option value="Toyota Aqua">Toyota Aqua</option>
-        <option value="Toyota Prius">Toyota Prius</option>
+        <option value="Toyota Corolla 2003-2008">Toyota Corolla 2003-2008</option>
+        <option value="Toyota Corolla 2009-2013">Toyota Corolla 2009-2013</option>
+        <option value="Toyota Corolla 2014-2024">Toyota Corolla 2014-2024</option>
+        <option value="Toyota Yaris 2020-2024">Toyota Yaris 2020-2024</option>
+        <option value="Toyota City 2017-2024">Toyota City 2017-2024</option>
+        <option value="Toyota Fortuner 2017-2024">Toyota Fortuner 2017-2024</option>
+        <option value="Toyota Prado 2010-2024">Toyota Prado 2010-2024</option>
+        <option value="Toyota Revo 2016-2024">Toyota Revo 2016-2024</option>
+        <option value="Toyota Vitz 2011-2024">Toyota Vitz 2011-2024</option>
+        <option value="Toyota Aqua 2012-2024">Toyota Aqua 2012-2024</option>
+        <option value="Toyota Prius 2010-2024">Toyota Prius 2010-2024</option>
+        <option value="Toyota Camry 2012-2024">Toyota Camry 2012-2024</option>
+        <option value="Toyota Land Cruiser 2008-2024">Toyota Land Cruiser 2008-2024</option>
       </optgroup>
 
       <optgroup label="HONDA">
-        <option value="Honda Civic">Honda Civic</option>
-        <option value="Honda City">Honda City</option>
-        <option value="Honda BRV">Honda BRV</option>
-        <option value="Honda HRV">Honda HRV</option>
-        <option value="Honda Accord">Honda Accord</option>
-        <option value="Honda Vezel">Honda Vezel</option>
+        <option value="Honda Civic 2006-2011">Honda Civic 2006-2011</option>
+        <option value="Honda Civic 2012-2015">Honda Civic 2012-2015</option>
+        <option value="Honda Civic 2016-2021">Honda Civic 2016-2021</option>
+        <option value="Honda Civic 2022-2024">Honda Civic 2022-2024</option>
+        <option value="Honda City 2009-2021">Honda City 2009-2021</option>
+        <option value="Honda City 2021-2024">Honda City 2021-2024</option>
+        <option value="Honda BRV 2017-2024">Honda BRV 2017-2024</option>
+        <option value="Honda HRV 2016-2024">Honda HRV 2016-2024</option>
+        <option value="Honda Accord 2013-2024">Honda Accord 2013-2024</option>
+        <option value="Honda Vezel 2014-2024">Honda Vezel 2014-2024</option>
       </optgroup>
 
       <optgroup label="SUZUKI">
-        <option value="Suzuki Alto">Suzuki Alto</option>
-        <option value="Suzuki Cultus">Suzuki Cultus</option>
-        <option value="Suzuki Swift">Suzuki Swift</option>
-        <option value="Suzuki Wagon R">Suzuki Wagon R</option>
-        <option value="Suzuki Mehran">Suzuki Mehran</option>
-        <option value="Suzuki Bolan">Suzuki Bolan</option>
-        <option value="Suzuki Every">Suzuki Every</option>
-        <option value="Suzuki Jimny">Suzuki Jimny</option>
+        <option value="Suzuki Alto 2019-2024">Suzuki Alto 2019-2024</option>
+        <option value="Suzuki Cultus 2017-2024">Suzuki Cultus 2017-2024</option>
+        <option value="Suzuki Swift 2010-2024">Suzuki Swift 2010-2024</option>
+        <option value="Suzuki Wagon R 2014-2024">Suzuki Wagon R 2014-2024</option>
+        <option value="Suzuki Mehran 1989-2019">Suzuki Mehran 1989-2019</option>
+        <option value="Suzuki Bolan 1989-2024">Suzuki Bolan 1989-2024</option>
+        <option value="Suzuki Every 2010-2024">Suzuki Every 2010-2024</option>
+        <option value="Suzuki Jimny 2021-2024">Suzuki Jimny 2021-2024</option>
       </optgroup>
 
       <optgroup label="KIA">
-        <option value="Kia Sportage">Kia Sportage</option>
-        <option value="Kia Picanto">Kia Picanto</option>
-        <option value="Kia Sorento">Kia Sorento</option>
-        <option value="Kia Stonic">Kia Stonic</option>
+        <option value="Kia Sportage 2019-2024">Kia Sportage 2019-2024</option>
+        <option value="Kia Picanto 2018-2024">Kia Picanto 2018-2024</option>
+        <option value="Kia Sorento 2021-2024">Kia Sorento 2021-2024</option>
+        <option value="Kia Stonic 2021-2024">Kia Stonic 2021-2024</option>
       </optgroup>
 
       <optgroup label="HYUNDAI">
-        <option value="Hyundai Tucson">Hyundai Tucson</option>
-        <option value="Hyundai Elantra">Hyundai Elantra</option>
-        <option value="Hyundai Santa Fe">Hyundai Santa Fe</option>
+        <option value="Hyundai Tucson 2020-2024">Hyundai Tucson 2020-2024</option>
+        <option value="Hyundai Elantra 2016-2024">Hyundai Elantra 2016-2024</option>
       </optgroup>
 
       <optgroup label="MG">
-        <option value="MG HS">MG HS</option>
-        <option value="MG ZS">MG ZS</option>
+        <option value="MG HS 2021-2024">MG HS 2021-2024</option>
+        <option value="MG ZS 2021-2024">MG ZS 2021-2024</option>
       </optgroup>
 
       <optgroup label="CHANGAN">
-        <option value="Changan Alsvin">Changan Alsvin</option>
-        <option value="Changan Karvaan">Changan Karvaan</option>
-        <option value="Changan Oshan">Changan Oshan</option>
+        <option value="Changan Alsvin 2021-2024">Changan Alsvin 2021-2024</option>
+        <option value="Changan Karvaan 2018-2024">Changan Karvaan 2018-2024</option>
+        <option value="Changan Oshan X7 2022-2024">Changan Oshan X7 2022-2024</option>
       </optgroup>
     </select>
-    <a href="#" id="whatsappLink" class="btn-whatsapp-selector">📱 Get Price on WhatsApp</a>
+
+    <a href="#" id="whatsappLink" class="btn-whatsapp-selector" style="margin-top:20px; display:block; text-align:center; background:#25D366; color:#fff; padding:15px; border-radius:10px; text-decoration:none; font-weight:700;">📱 Get Price on WhatsApp</a>
   </div>
 </section>
-
-<div class="offer-banner">
-  🔥 SUMMER SPECIAL: Rs. 3,000 ki jagah Rs. 2,499 | Sirf 48 Ghante Baqi ⏰
-</div>
-
-<!-- MAIN PRODUCT SECTION -->
-<section class="main-product">
-  <div class="main-product-text">
-    <p style="background:#FFC107; color:#000; display:inline-block; padding:5px 15px; font-weight:700; border-radius:5px;">FREE SHIPPING FOR ALL OVER PAKISTAN</p>
-    <p class="section-tag">BEST SELLER</p>
-    <h2>Full Window Sun Shade</h2>
-    <p class="subtext">Premium Comfort. Complete Protection.</p>
-
-    <div style="background:#ffecec; padding:10px; border-left:4px solid red; margin:20px 0;">
-      🔥 <b>15 People watching this product now!</b>
-    </div>
-
-    <ul class="product-features">
-      <li>✓ PREMIUM USA - High-Density Mesh</li>
-      <li>✓ SUPERIOR PROTECTION - Blocks Heat, Glare & UV</li>
-      <li>✓ OEM-PERFECT FIT - Precision Engineered</li>
-      <li>✓ LUXURY CRAFTSMANSHIP - Double Stitching</li>
-      <li>✓ IMPORTED QUALITY - Engineered to Last</li>
-    </ul>
-    <p class="product-price-big">Rs. 2,499</p>
-    <a href="https://wa.me/923112205795?text=Hi%20TINTX,%20I%20want%20to%20order%20Full%20Window%20Sun%20Shade%20for%20Rs.%202499" class="btn-whatsapp-big">📱 Order on WhatsApp Now</a>
-  </div>
-  <div class="main-product-img">
-    <img src="1.jpg.png" alt="TINTX Full Window Sun Shade for Cars in Pakistan" loading="lazy">
-  </div>
-</section>
-
-<!-- PRODUCT DETAILS SECTION - NEW ADDED -->
-<section class="product-details" style="padding:50px 20px; background:#fff;">
-  <div class="container" style="max-width:1000px; margin:auto;">
-    <h3 style="margin-top:20px;">OUR CAR SHADES</h3>
-    <p>Upgrade your driving experience with our premium removable car shades. Designed for maximum UV protection, reduced heat buildup, and enhanced privacy keeping your car cooler and more comfortable than standard untinted windows.</p>
-
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px; margin:40px 0;">
-      <div>
-        <h4>🚗 OUTSIDE VIEW</h4>
-        <p>Enjoy enhanced privacy without compromising style. From the outside, our car shades create a sleek, refined appearance while blocking harsh sunlight and protecting your interior from fading.</p>
-      </div>
-      <div>
-        <h4>📦 PREMIUM PACKAGING</h4>
-        <p>Every set is securely packed in durable PVC protective tubing to prevent bending or damage during transit. We ensure your shades arrive in perfect condition - protected, secure, and ready to install.</p>
-      </div>
-      <div>
-        <h4>👁️ INSIDE VIEW</h4>
-        <p>Maintain a clear, comfortable view from inside your vehicle. Our advanced mesh technology reduces glare and UV exposure while preserving visibility, so you can drive safely and confidently.</p>
-      </div>
-    </div>
-
-    <h3 style="margin-top:40px;">WHY CHOOSE TINTX?</h3>
-    <ul style="list-style:none; padding:0; font-size:1.1rem;">
-      <li>✔ <b>Free Shipping</b> – Fast and reliable delivery all over Pakistan</li>
-      <li>✔ <b>Price Match Guarantee</b> – Premium quality at the best value</li>
-      <li>✔ <b>5.0 Star Rated</b> – Trusted and loved by 2500+ customers</li>
-      <li>✔ <b>Cash on Delivery</b> – Pay when you receive</li>
-      <li>✔ <b>30 Day Return</b> – No questions asked</li>
-    </ul>
-  </div>
-</section>
-
-<section class="products" id="products">
-  <p class="section-tag">OUR COLLECTION</p>
-  <h2>Featured Products</h2>
-  <div class="product-grid">
-    <div class="product-card">
-      <img src="corolla.png" alt="Toyota Corolla Custom Fit Car Window Shades - TINTX" loading="lazy">
-      <h4>Toyota Corolla</h4>
-      <p class="product-price">Rs. 2,499</p>
-      <a href="https://wa.me/923112205795?text=Hi%20TINTX,%20I%20want%20to%20order%20Toyota%20Corolla%20Window%20Shades" class="btn-whatsapp">📱 Order on WhatsApp</a>
-    </div>
-    <div class="product-card">
-      <img src="civic.png" alt="Honda Civic Custom Fit Car Window Shades - TINTX" loading="lazy">
-      <h4>Honda Civic</h4>
-      <p class="product-price">Rs. 2,499</p>
-      <a href="https://wa.me/923112205795?text=Hi%20TINTX,%20I%20want%20to%20order%20Honda%20Civic%20Window%20Shades" class="btn-whatsapp">📱 Order on WhatsApp</a>
-    </div>
-  </div>
-</section>
-
-<!-- PRO FOOTER - NEW ADDED -->
-<footer style="background:#000; color:#fff; padding:40px 20px;">
-  <div class="container" style="max-width:1200px; margin:auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:30px;">
-    <div>
-      <h4>TINTX</h4>
-      <p>Premium Custom Fit Car Window Shades in Pakistan</p>
-    </div>
-    <div>
-      <h4>Menu</h4>
-      <a href="index.html" style="color:#ccc; display:block; text-decoration:none; margin:8px 0;">Home</a>
-      <a href="product.html" style="color:#ccc; display:block; text-decoration:none; margin:8px 0;">Shop</a>
-      <a href="#" style="color:#ccc; display:block; text-decoration:none; margin:8px 0;">About us</a>
-      <a href="#" style="color:#ccc; display:block; text-decoration:none; margin:8px 0;">Contact us</a>
-    </div>
-    <div>
-      <h4>Categories</h4>
-      <a href="#" style="color:#ccc; display:block; text-decoration:none; margin:8px 0;">Toyota</a>
-      <a href="#" style="color:#ccc; display:block; text-decoration:none; margin:8px 0;">Honda</a>
-      <a href="#" style="color:#ccc; display:block; text-decoration:none; margin:8px 0;">Suzuki</a>
-    </div>
-    <div>
-      <h4>WhatsApp</h4>
-      <a href="https://wa.me/923112205795" style="color:#25D366; font-weight:700; font-size:1.1rem;">0311-2205795</a>
-    </div>
-  </div>
-  <p style="text-align:center; margin-top:30px; border-top:1px solid #333; padding-top:20px;">
-    Copyright © 2026 TINTX Pakistan | Powered by TINTX
-  </p>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
