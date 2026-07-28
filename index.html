@@ -70,8 +70,9 @@
     <li><a href="index.html">HOME</a></li>
     <li><a href="product.html">SHOP</a></li>
     <li><a href="about.html">ABOUT US</a></li>
-   <li><a href="contact.html">CONTACT US</a></li>
+    <li><a href="contact.html">CONTACT US</a></li>
     <li><a href="login.html">LOGIN / REGISTER</a></li>
+    <li><a href="#" onclick="viewCart()">CART (<span id="cart-count">0</span>)</a></li>  <!-- CART ADD KIYA -->
   </ul>
 </div>
 
@@ -117,9 +118,9 @@
     <span style="text-decoration:line-through; color:#999;">Rs6,000.00</span> 
     <span style="color:#FFC107; font-weight:700;">Rs2,499</span>
   </p>
-  <a href="product.html" class="btn-shop-now" style="background:#FFC107; color:#000; font-size:1.1rem; padding:15px 40px;">
-    SELECT YOUR CAR
-  </a>
+  <button onclick="addToCart('4 WINDOWS REMOVABLE SHADES', 2499)" class="btn-shop-now" style="background:#FFC107; color:#000; font-size:1.1rem; padding:15px 40px; border:none; border-radius:5px; font-weight:700; cursor:pointer;">
+  SELECT YOUR CAR
+</button>
 </section>
 
 <div class="offer-banner">
@@ -164,8 +165,8 @@
       <h4>Menu</h4>
       <a href="index.html" style="color:#ccc; display:block; text-decoration:none; margin:8px 0;">Home</a>
       <a href="product.html" style="color:#ccc; display:block; text-decoration:none; margin:8px 0;">Shop</a>
-      <a href="#" style="color:#ccc; display:block; text-decoration:none; margin:8px 0;">About us</a>
-      <a href="#" style="color:#ccc; display:block; text-decoration:none; margin:8px 0;">Contact us</a>
+      <a href="about.html" style="color:#ccc; display:block; text-decoration:none; margin:8px 0;">About us</a>
+      <a href="contact.html" style="color:#ccc; display:block; text-decoration:none; margin:8px 0;">Contact us</a>
     </div>
     <div>
       <h4>Categories</h4>
@@ -187,6 +188,34 @@
 function toggleMenu() {
   document.getElementById('mobileMenu').classList.toggle('active');
   document.querySelector('.menu-overlay').classList.toggle('active');
+}
+
+let cart = [];  // CART SYSTEM
+
+function addToCart(name, price) {
+  cart.push({name: name, price: price});
+  document.getElementById('cart-count').innerText = cart.length;
+  alert('✅ ' + name + ' Cart me add ho gaya!');
+}
+
+function viewCart() {
+  if(cart.length == 0) {
+    alert('Cart khali hai bhai');
+    return;
+  }
+  
+  let message = 'New Order from TINTX:%0A%0A';
+  let total = 0;
+  cart.forEach((item, i) => {
+    message += `${i+1}. ${item.name} - Rs${item.price}%0A`;
+    total += item.price;
+  });
+  message += `%0ATotal: Rs${total}`;
+  
+  window.open(`https://wa.me/923112205795?text=${message}`, '_blank');
+  cart = [];
+  document.getElementById('cart-count').innerText = 0;
+  toggleMenu();
 }
 </script>
 
