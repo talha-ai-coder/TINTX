@@ -45,3 +45,53 @@ header { display:flex; justify-content:space-between; align-items:center; paddin
   .hero-new, .main-product { flex-direction:column; }
   .hero-text h1 { font-size:2rem; }
 }
+/* ========== MOBILE RESPONSIVE FIX FOR TINTX ========== */
+@media (max-width: 768px) {
+  
+  /* 1. BANNER KI WHITE SPACE KHATAM + PIC BARI */
+  .hero-banner, .banner-section, .slider {
+    height: 55vh !important;  /* Screen ka 55% */
+    min-height: 380px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .hero-banner img, .banner-section img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Pic crop karke full karegi */
+  }
+
+  /* 2. TEXT CHOTA KARO - "BEST QUALITY SHADES FOR YOUR CAR" */
+  .hero-banner h1, .banner-title {
+    font-size: 24px !important;  /* Laptop: 50px tha */
+    line-height: 1.3 !important;
+    margin-bottom: 8px !important;
+    text-align: center !important;
+  }
+  
+  .hero-banner h2, .banner-subtitle {
+    font-size: 22px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* 3. SUB TEXT - "90% Heat Block..." */
+  .hero-banner p {
+    font-size: 14px !important;
+    padding: 0 15px !important;
+  }
+
+  /* 4. BUTTON CHOTA KARO */
+  .shop-now, .btn-primary {
+    font-size: 16px !important;
+    padding: 12px 25px !important;
+    margin-top: 10px !important;
+  }
+  
+  /* 5. HEADER KA GAP KAM KARO */
+  header {
+    padding: 10px 0 !important;
+  }
+}
