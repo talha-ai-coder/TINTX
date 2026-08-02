@@ -57,7 +57,34 @@
     .menu-overlay.active { display: block; }
     .menu-btn { cursor: pointer; color: white; font-size: 1.1rem; font-weight: 700; }
 
-    /* ===== BOTTOM BANNER RESPONSIVE FIX ===== */
+    /* ===== 3 IMAGE GRID ===== */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1000px;
+      margin: 30px auto;
+    }
+    .image-box {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .image-box img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .image-box h4 {
+      margin-top: 10px;
+      color: #000;
+    }
+    .image-box p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    /* ===== BOTTOM BANNER ===== */
     .bottom-banner {
       position: relative;
       width: 100%;
@@ -96,22 +123,13 @@
       margin: 0 0 25px 0;
       text-shadow: 1px 1px 6px rgba(0,0,0,0.9);
     }
-    .bottom-banner .btn-shop {
-      background: #FFC107;
-      color: #000;
-      padding: 16px 40px;
-      text-decoration: none;
-      font-weight: 800;
-      border-radius: 5px;
-      font-size: 1.1rem;
-      display: inline-block;
-    }
+    
     @media screen and (max-width: 768px) {
+      .image-grid { grid-template-columns: 1fr !important; } /* Mobile me 1 ke neeche 1 */
       .bottom-banner .banner-img { height: 400px; }
-      .bottom-banner .banner-content h2 { font-size: 1.6rem !important; margin-bottom: 10px !important; }
-      .bottom-banner .banner-content p { font-size: 0.9rem !important; margin-bottom: 15px !important; }
-      .bottom-banner .btn-shop { padding: 12px 25px !important; font-size: 0.95rem !important; }
-      body { padding-bottom: 0 !important; } /* bottom nav space hata di */
+      .bottom-banner .banner-content h2 { font-size: 1.6rem !important; }
+      .bottom-banner .banner-content p { font-size: 0.9rem !important; }
+      body { padding-bottom: 0 !important; }
     }
     @media screen and (max-width: 480px) {
       .bottom-banner .banner-img { height: 350px; }
@@ -169,11 +187,30 @@
   </div>
 </section>
 
-<!-- SELECT YOUR CAR SECTION -->
+<!-- SELECT YOUR CAR SECTION - 3 IMAGES ADDED -->
 <section class="select-car-section" style="background:#f8f8f8; padding:50px 20px; text-align:center;">
   <h2>OUR <span style="color:#FFC107;">REMOVABLE</span> SHADES</h2>
   <p style="color:#666; margin-bottom:30px;">ALL PAKISTANI CARS SHADES ARE AVAILABLE</p>
-  <img src="hero-car.jpg.png" alt="All Cars Window Shades" style="max-width:400px; width:100%; margin:20px auto;">
+  
+  <!-- 3 NEW IMAGES HERE -->
+  <div class="image-grid">
+    <div class="image-box">
+      <img src="inside.png" alt="Inside Car Shades">
+      <h4>INSIDE VIEW</h4>
+      <p>100% Privacy Inside Car</p>
+    </div>
+    <div class="image-box">
+      <img src="outside.png" alt="Outside Car Shades">
+      <h4>OUTSIDE VIEW</h4>
+      <p>Premium Look From Outside</p>
+    </div>
+    <div class="image-box">
+      <img src="both.png" alt="Both Sides Car Shades">
+      <h4>BOTH SIDES</h4>
+      <p>Complete Protection Package</p>
+    </div>
+  </div>
+
   <h3>4 WINDOWS REMOVABLE SHADES</h3>
   <p style="font-size:1.5rem;">
     <span style="text-decoration:line-through; color:#999;">Rs6,000.00</span> 
@@ -259,7 +296,7 @@ function viewCart() {
   let total = 0;
   cart.forEach((item, i) => {
     message += `${i+1}. ${item.name} - Rs${item.price}%0A`;
-    total += price;
+    total += item.price;  // YE GALTI THEEK KI
   });
   message += `%0ATotal: Rs${total}`;
   
