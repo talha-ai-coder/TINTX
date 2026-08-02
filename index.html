@@ -57,7 +57,7 @@
     .menu-overlay.active { display: block; }
     .menu-btn { cursor: pointer; color: white; font-size: 1.1rem; font-weight: 700; }
 
-    /* ===== BOTTOM BANNER RESPONSIVE FIX - NEW ADDED ===== */
+    /* ===== BOTTOM BANNER RESPONSIVE FIX ===== */
     .bottom-banner {
       position: relative;
       width: 100%;
@@ -111,6 +111,7 @@
       .bottom-banner .banner-content h2 { font-size: 1.6rem !important; margin-bottom: 10px !important; }
       .bottom-banner .banner-content p { font-size: 0.9rem !important; margin-bottom: 15px !important; }
       .bottom-banner .btn-shop { padding: 12px 25px !important; font-size: 0.95rem !important; }
+      body { padding-bottom: 0 !important; } /* bottom nav space hata di */
     }
     @media screen and (max-width: 480px) {
       .bottom-banner .banner-img { height: 350px; }
@@ -214,10 +215,9 @@
   </div>
 </section>
 
-<!-- BOTTOM BIG BANNER - FIXED FOR MOBILE -->
+<!-- BOTTOM BIG BANNER -->
 <section class="bottom-banner">
   <img src="new banner.png" alt="TINTX Premium Removable Car Window Shades Pakistan" class="banner-img">
-  
   <div class="banner-content">
     <h2>
       BEST QUALITY SHADES <br> FOR YOUR CAR
@@ -225,62 +225,25 @@
     <p>
       90% Heat Block | 100% Privacy | Easy Install
     </p>
-    
-    </a>
   </div>
 </section>
 
-<!-- PRO FOOTER -->
+<!-- PRO FOOTER - FIXED 2 COLUMN -->
 <footer style="background:#000; color:#fff; padding:40px 20px;">
-  <div class="container" style="max-width:1200px; margin:auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:30px;">
+  <div class="container" style="max-width:1200px; margin:auto; display:grid; grid-template-columns:repeat(2, 1fr); gap:30px;">
     <div>
-      <h4>TINTX</h4>
-      <p>Premium Custom Fit Car Window Shades in Pakistan</p>
+      <h4 style="color:#FFC107; margin-bottom:15px;">TINTX</h4>
+      <p style="color:#ccc;">Premium Custom Fit Car Window Shades in Pakistan</p>
     </div>
     <div>
-      <h4>Menu</h4>
+      <h4 style="color:#FFC107; margin-bottom:15px;">Menu</h4>
       <a href="index.html" style="color:#ccc; display:block; text-decoration:none; margin:8px 0;">Home</a>
       <a href="product.html" style="color:#ccc; display:block; text-decoration:none; margin:8px 0;">Shop</a>
       <a href="about.html" style="color:#ccc; display:block; text-decoration:none; margin:8px 0;">About us</a>
       <a href="contact.html" style="color:#ccc; display:block; text-decoration:none; margin:8px 0;">Contact us</a>
     </div>
-    <div>
-        </footer>
-
-<!-- MOBILE BOTTOM NAVBAR - NEW -->
-<div class="mobile-bottom-nav">
-  <a href="product.html">
-    <span>🏪</span>
-    <span>Shop</span>
-  </a>
-  <a href="#" onclick="viewCart()">
-    <span>🛍️</span>
-    <span>Cart <sup id="cart-count-bottom">0</sup></span>
-  </a>
-  <a href="index.html">
-    <span>🏠</span>
-    <span>Home</span>
-  </a>
-  <a href="https://wa.me/923112205795" target="_blank">
-    <span>💬</span>
-    <span>WhatsApp</span>
-  </a>
-</div>
-
-<script src="script.js"></script>
-</body>
-</html>
-      <h4>Categories</h4>
-      <a href="#" style="color:#ccc; display:block; text-decoration:none; margin:8px 0;">Toyota</a>
-      <a href="#" style="color:#ccc; display:block; text-decoration:none; margin:8px 0;">Honda</a>
-      <a href="#" style="color:#ccc; display:block; text-decoration:none; margin:8px 0;">Suzuki</a>
-    </div>
-    <div>
-      <h4>WhatsApp</h4>
-      <a href="https://wa.me/923112205795" style="color:#25D366; font-weight:700; font-size:1.1rem;">0311-2205795</a>
-    </div>
   </div>
-  <p style="text-align:center; margin-top:30px; border-top:1px solid #333; padding-top:20px;">
+  <p style="text-align:center; margin-top:30px; border-top:1px solid #333; padding-top:20px; color:#999;">
     Copyright © 2026 TINTX Pakistan | Powered by TINTX
   </p>
 </footer>
@@ -309,7 +272,7 @@ function viewCart() {
   let total = 0;
   cart.forEach((item, i) => {
     message += `${i+1}. ${item.name} - Rs${item.price}%0A`;
-    total += item.price;
+    total += price;
   });
   message += `%0ATotal: Rs${total}`;
   
@@ -317,10 +280,8 @@ function viewCart() {
   cart = [];
   document.getElementById('cart-count').innerText = 0;
   toggleMenu();
-    document.getElementById('cart-count-bottom').innerText = 0;
 }
 </script>
 
-<script src="script.js"></script>
 </body>
 </html>
