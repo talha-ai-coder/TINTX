@@ -187,29 +187,12 @@
   </div>
 </section>
 
-<!-- SELECT YOUR CAR SECTION - 3 IMAGES ADDED -->
+<!-- SELECT YOUR CAR SECTION - IMAGE HATA DI -->
 <section class="select-car-section" style="background:#f8f8f8; padding:50px 20px; text-align:center;">
   <h2>OUR <span style="color:#FFC107;">REMOVABLE</span> SHADES</h2>
   <p style="color:#666; margin-bottom:30px;">ALL PAKISTANI CARS SHADES ARE AVAILABLE</p>
   
-  <!-- 3 NEW IMAGES HERE -->
-  <div class="image-grid">
-    <div class="image-box">
-      <img src="inside.png" alt="Inside Car Shades">
-      <h4>INSIDE VIEW</h4>
-      <p>100% Privacy Inside Car</p>
-    </div>
-    <div class="image-box">
-      <img src="outside.png" alt="Outside Car Shades">
-      <h4>OUTSIDE VIEW</h4>
-      <p>Premium Look From Outside</p>
-    </div>
-    <div class="image-box">
-      <img src="both.png" alt="Both Sides Car Shades">
-      <h4>BOTH SIDES</h4>
-      <p>Complete Protection Package</p>
-    </div>
-  </div>
+  <img src="hero-car.jpg.png" alt="All Cars Window Shades" style="max-width:400px; width:100%; margin:20px auto;">
 
   <h3>4 WINDOWS REMOVABLE SHADES</h3>
   <p style="font-size:1.5rem;">
@@ -249,6 +232,30 @@
   </div>
   <div class="main-product-img">
     <img src="1.jpg.png" alt="TINTX Full Window Sun Shade for Cars in Pakistan" loading="lazy">
+  </div>
+</section>
+
+<!-- GALLERY SECTION - AB YE SAB SE NICHE HAI -->
+<section style="background:#fff; padding:60px 20px; text-align:center;">
+  <h2>SEE THE <span style="color:#FFC107;">DIFFERENCE</span></h2>
+  <p style="color:#666; margin-bottom:40px;">INSIDE | OUTSIDE | BOTH SIDES</p>
+  
+  <div class="image-grid">
+    <div class="image-box">
+      <img src="inside.png" alt="Inside Car Shades">
+      <h4>INSIDE VIEW</h4>
+      <p>100% Privacy Inside Car</p>
+    </div>
+    <div class="image-box">
+      <img src="outside.png" alt="Outside Car Shades">
+      <h4>OUTSIDE VIEW</h4>
+      <p>Premium Look From Outside</p>
+    </div>
+    <div class="image-box">
+      <img src="both.png" alt="Both Sides Car Shades">
+      <h4>BOTH SIDES</h4>
+      <p>Complete Protection Package</p>
+    </div>
   </div>
 </section>
 
@@ -296,7 +303,7 @@ function viewCart() {
   let total = 0;
   cart.forEach((item, i) => {
     message += `${i+1}. ${item.name} - Rs${item.price}%0A`;
-    total += item.price;  // YE GALTI THEEK KI
+    total += item.price;
   });
   message += `%0ATotal: Rs${total}`;
   
