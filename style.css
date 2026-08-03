@@ -268,3 +268,57 @@ p, li, span {
   h1, h2 { font-size: 24px !important; }
   p { font-size: 15px !important; }
 }
+/* ===== TINTX BLACK + YELLOW SYSTEM - SALE BOOSTER ===== */
+body {
+  color: #FFFFFF !important; /* White Text on Black */
+  background: #000000 !important;
+  font-family: 'Poppins', 'Arial', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  color: #FFD600 !important; /* Bright Yellow Headings */
+  font-weight: 900 !important;
+  text-shadow: 0 0 10px rgba(255,214,0,0.3); /* Halka Glow */
+}
+
+p, li, span {
+  color: #EEEEEE !important; /* Light Grey - Easy to read */
+  line-height: 1.8;
+}
+
+/* ===== BUTTONS - SABSE ZAROORI ===== */
+.btn-shop-now, .btn-whatsapp-big, .btn-order {
+  background: #FFD600 !important; /* Yellow Button */
+  color: #000 !important; /* Black Text */
+  font-weight: 900 !important;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 30px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+.btn-shop-now:hover, .btn-whatsapp-big:hover {
+  background: #FFC000 !important; /* Dark Yellow Hover */
+  transform: scale(1.05); /* Thora bara ho jaye */
+}
+
+/* ===== OFFER BANNER ===== */
+.offer-banner, .sale-badge {
+  background: #FFD600 !important; 
+  color: #000 !important; 
+  font-weight: 900;
+  padding: 12px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* ===== PRODUCT CARDS ===== */
+.product-card, .gallery-item {
+  background: #111111 !important;
+  border: 2px solid #FFD600;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,214,0,0.2);
+}
+.product-card h3 {
+  color: #FFD600 !important;
+}
