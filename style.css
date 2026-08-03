@@ -322,3 +322,63 @@ p, li, span {
 .product-card h3 {
   color: #FFD600 !important;
 }
+/* ===== TINTX MONSTER BLUE + MATTE BLACK SYSTEM ===== */
+body {
+  color: #FFFFFF !important; /* White Text */
+  background: #0A0A0A !important; /* Matte Black */
+  font-family: 'Poppins', 'Arial', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  color: #006DFF !important; /* Monster Blue */
+  font-weight: 900 !important;
+}
+
+p, li, span {
+  color: #CCCCCC !important; /* Light Grey for easy read */
+  line-height: 1.8;
+}
+
+/* ===== BUTTONS ===== */
+.btn-shop-now, .btn-whatsapp-big, .btn-order {
+  background: #006DFF !important; /* Monster Blue */
+  color: #FFFFFF !important; /* White Text */
+  font-weight: 800 !important;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 30px;
+  transition: all 0.3s ease;
+}
+.btn-shop-now:hover, .btn-whatsapp-big:hover {
+  background: #0047AB !important; /* Dark Blue Hover */
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,109,255,0.4); /* Blue Glow */
+}
+
+/* ===== PRODUCT CARDS / GALLERY ===== */
+.product-card, .gallery-item {
+  background: #171717 !important; /* Card BG */
+  border: 1px solid #2A2A2A; /* Border */
+  border-radius: 14px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+.product-card:hover {
+  border-color: #006DFF; /* Blue border on hover */
+  box-shadow: 0 0 20px rgba(0,109,255,0.2);
+}
+
+/* ===== OFFER BANNER ===== */
+.offer-banner {
+  background: #006DFF !important; 
+  color: #FFFFFF !important; 
+  font-weight: 800;
+}
+
+/* ===== LINKS ===== */
+a {
+  color: #006DFF !important;
+}
+a:hover {
+  color: #0047AB !important;
+}
