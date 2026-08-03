@@ -205,3 +205,66 @@ header {
     grid-template-columns: 1fr !important;
   }
 }
+/* ===== TINTX BLUE + WHITE SYSTEM ===== */
+body {
+  color: #222222 !important; /* Dark Grey Text - Easy to read */
+  background: #FFFFFF !important;
+  font-family: 'Poppins', 'Arial', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  color: #0057FF !important; /* Royal Blue Headings */
+  font-weight: 900 !important;
+}
+
+p, li, span {
+  color: #444444 !important; /* Readable Grey */
+  line-height: 1.8;
+}
+
+/* ===== BUTTONS ===== */
+.btn-shop-now, .btn-whatsapp-big, .btn-order {
+  background: #0057FF !important; /* Royal Blue Button */
+  color: #FFFFFF !important; /* White Text */
+  font-weight: 800 !important;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 28px;
+  transition: all 0.3s ease;
+}
+.btn-shop-now:hover, .btn-whatsapp-big:hover {
+  background: #003ECC !important; /* Dark Blue Hover */
+  transform: translateY(-2px);
+}
+
+/* ===== OFFER BANNER / BADGE ===== */
+.offer-banner, .sale-badge {
+  background: #0057FF !important; 
+  color: #FFFFFF !important; 
+  font-weight: 700;
+  padding: 10px;
+  text-align: center;
+}
+
+/* ===== PRODUCT CARDS / GALLERY ===== */
+.product-card, .gallery-item {
+  background: #FFFFFF !important;
+  border: 1px solid #E0E0E0;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,87,255,0.1);
+}
+.product-card h3 {
+  color: #0057FF !important;
+}
+
+/* ===== HIGHLIGHT TEXT ===== */
+.highlight-blue {
+  color: #0057FF !important;
+  font-weight: 800;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  h1, h2 { font-size: 24px !important; }
+  p { font-size: 15px !important; }
+}
