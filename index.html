@@ -57,31 +57,42 @@
     .menu-overlay.active { display: block; }
     .menu-btn { cursor: pointer; color: white; font-size: 1.1rem; font-weight: 700; }
 
-    /* ===== 3 IMAGE GRID ===== */
+    /* ===== BARI 3 IMAGE GRID ===== */
     .image-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      max-width: 1000px;
-      margin: 30px auto;
+      gap: 30px;
+      max-width: 1400px;
+      margin: 40px auto;
     }
     .image-box {
       background: #fff;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 0;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+      overflow: hidden;
+      transition: 0.3s;
+    }
+    .image-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     }
     .image-box img {
       width: 100%;
-      border-radius: 8px;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 0;
     }
     .image-box h4 {
-      margin-top: 10px;
+      margin: 20px 0 10px 0;
       color: #000;
+      font-size: 1.3rem;
+      font-weight: 700;
     }
     .image-box p {
       color: #666;
-      font-size: 0.9rem;
+      font-size: 1rem;
+      padding: 0 15px 20px 15px;
     }
 
     /* ===== BOTTOM BANNER ===== */
@@ -125,7 +136,8 @@
     }
     
     @media screen and (max-width: 768px) {
-      .image-grid { grid-template-columns: 1fr !important; } /* Mobile me 1 ke neeche 1 */
+      .image-grid { grid-template-columns: 1fr !important; gap: 20px; } /* Mobile me 1 ke neeche 1 */
+      .image-box img { height: 250px; }
       .bottom-banner .banner-img { height: 400px; }
       .bottom-banner .banner-content h2 { font-size: 1.6rem !important; }
       .bottom-banner .banner-content p { font-size: 0.9rem !important; }
@@ -187,7 +199,7 @@
   </div>
 </section>
 
-<!-- SELECT YOUR CAR SECTION - IMAGE HATA DI -->
+<!-- SELECT YOUR CAR SECTION -->
 <section class="select-car-section" style="background:#f8f8f8; padding:50px 20px; text-align:center;">
   <h2>OUR <span style="color:#FFC107;">REMOVABLE</span> SHADES</h2>
   <p style="color:#666; margin-bottom:30px;">ALL PAKISTANI CARS SHADES ARE AVAILABLE</p>
@@ -235,10 +247,10 @@
   </div>
 </section>
 
-<!-- GALLERY SECTION - AB YE SAB SE NICHE HAI -->
-<section style="background:#fff; padding:60px 20px; text-align:center;">
-  <h2>SEE THE <span style="color:#FFC107;">DIFFERENCE</span></h2>
-  <p style="color:#666; margin-bottom:40px;">INSIDE | OUTSIDE | BOTH SIDES</p>
+<!-- GALLERY SECTION 1 - BARI PICTURES -->
+<section style="background:#fff; padding:80px 20px; text-align:center;">
+  <h2 style="font-size:2.5rem;">SEE THE <span style="color:#FFC107;">DIFFERENCE</span></h2>
+  <p style="color:#666; margin-bottom:40px; font-size:1.1rem;">INSIDE | OUTSIDE | BOTH SIDES</p>
   
   <div class="image-grid">
     <div class="image-box">
@@ -269,6 +281,30 @@
     <p>
       90% Heat Block | 100% Privacy | Easy Install
     </p>
+  </div>
+</section>
+
+<!-- GALLERY SECTION 2 - SAB SE NICHE BHI -->
+<section style="background:#f8f8f8; padding:80px 20px; text-align:center;">
+  <h2 style="font-size:2.5rem;">WHY CHOOSE <span style="color:#FFC107;">TINTX</span>?</h2>
+  <p style="color:#666; margin-bottom:40px; font-size:1.1rem;">REAL RESULTS | REAL PRIVACY</p>
+  
+  <div class="image-grid">
+    <div class="image-box">
+      <img src="inside.png" alt="Inside Car Shades">
+      <h4>INSIDE VIEW</h4>
+      <p>100% Privacy Inside Car</p>
+    </div>
+    <div class="image-box">
+      <img src="outside.png" alt="Outside Car Shades">
+      <h4>OUTSIDE VIEW</h4>
+      <p>Premium Look From Outside</p>
+    </div>
+    <div class="image-box">
+      <img src="both.png" alt="Both Sides Car Shades">
+      <h4>BOTH SIDES</h4>
+      <p>Complete Protection Package</p>
+    </div>
   </div>
 </section>
 
