@@ -199,7 +199,7 @@
   </div>
 </section>
 
-<!-- PRO GALLERY SECTION - FIXED FULL IMAGE -->
+<!-- PRO GALLERY SECTION - MOBILE FRIENDLY -->
 <section style="background:#f8f8f8; padding:80px 20px; text-align:center;">
   <h2 style="font-size:2.8rem; font-weight:900;">BEST QUALITY <span style="color:#FFC107;">SHADES</span></h2>
   <p style="color:#666; margin-bottom:50px; font-size:1.2rem; font-weight:600;">FOR YOUR CAR</p>
@@ -208,36 +208,93 @@
     
     <!-- BOX 1 -->
     <div class="image-box" style="position:relative; overflow:hidden; border-radius:15px; box-shadow:0 10px 30px rgba(0,0,0,0.15);">
-      <img src="inside.png" alt="Inside Car Shades">
-      <div style="position:absolute; bottom:0; left:0; width:100%; background:linear-gradient(transparent, rgba(0,0,0,0.9) 60%); color:#fff; padding:30px 20px 20px 20px; text-align:left;">
-        <h3 style="font-size:1.4rem; margin:0 0 8px 0; color:#FFC107; font-weight:900;">COMPLETE PRIVACY</h3>
-        <p style="font-size:0.9rem; margin:0 0 8px 0; line-height:1.4; color:#fff;">Nobody can see inside. Drive with peace of mind</p>
-        <p style="margin:0; color:#ccc; font-size:0.85rem;">✓ INSIDE VIEW | Family and belongings 100% safe</p>
+      <img src="inside.png" alt="Inside Car Shades" style="width:100%; display:block;">
+      <div class="overlay-text">
+        <h3>COMPLETE PRIVACY</h3>
+        <p>Nobody can see inside. Drive with peace of mind</p>
+        <span>✓ 100% Confidential | INSIDE VIEW</span>
       </div>
     </div>
 
     <!-- BOX 2 -->
     <div class="image-box" style="position:relative; overflow:hidden; border-radius:15px; box-shadow:0 10px 30px rgba(0,0,0,0.15);">
-      <img src="outside.png" alt="Outside Car Shades">
-      <div style="position:absolute; bottom:0; left:0; width:100%; background:linear-gradient(transparent, rgba(0,0,0,0.9) 60%); color:#fff; padding:30px 20px 20px 20px; text-align:left;">
-        <h3 style="font-size:1.4rem; margin:0 0 8px 0; color:#FFC107; font-weight:900;">BEAT THE HEAT</h3>
-        <p style="font-size:0.9rem; margin:0 0 8px 0; line-height:1.4; color:#fff;">Stay cool at 45°C. Reduce AC usage by 50%</p>
-        <p style="margin:0; color:#ccc; font-size:0.85rem;">✓ OUTSIDE VIEW | Blocks 99% UV Rays</p>
+      <img src="outside.png" alt="Outside Car Shades" style="width:100%; display:block;">
+      <div class="overlay-text">
+        <h3>BEAT THE HEAT</h3>
+        <p>Stay cool at 45°C. Reduce AC usage by 50%</p>
+        <span>✓ Blocks 99% UV Rays | OUTSIDE VIEW</span>
       </div>
     </div>
 
     <!-- BOX 3 -->
     <div class="image-box" style="position:relative; overflow:hidden; border-radius:15px; box-shadow:0 10px 30px rgba(0,0,0,0.15);">
-      <img src="both.png" alt="Both Sides Car Shades">
-      <div style="position:absolute; bottom:0; left:0; width:100%; background:linear-gradient(transparent, rgba(0,0,0,0.9) 60%); color:#fff; padding:30px 20px 20px 20px; text-align:left;">
-        <h3 style="font-size:1.4rem; margin:0 0 8px 0; color:#FFC107; font-weight:900;">VIP LOOK GUARANTEED</h3>
-        <p style="font-size:0.9rem; margin:0 0 8px 0; line-height:1.4; color:#fff;">Make your car look like a 2026 model instantly</p>
-        <p style="margin:0; color:#ccc; font-size:0.85rem;">✓ BOTH SIDES | Premium style + Protection</p>
+      <img src="both.png" alt="Both Sides Car Shades" style="width:100%; display:block;">
+      <div class="overlay-text left">
+        <h3>VIP LOOK GUARANTEED</h3>
+        <p>Make your car look like a 2026 model instantly</p>
+        <span>✓ Premium + Protection | BOTH SIDES</span>
       </div>
     </div>
 
   </div>
 </section>
+
+<style>
+.overlay-text {
+  position:absolute; 
+  top:0; 
+  right:0; 
+  width:50%; 
+  height:100%; 
+  background:linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 30%); 
+  color:#fff; 
+  padding:30px 20px; 
+  display:flex; 
+  flex-direction:column; 
+  justify-content:center; 
+  text-align:left;
+}
+.overlay-text.left {
+  right:auto;
+  left:0;
+  background:linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 30%);
+}
+.overlay-text h3 {
+  font-size:1.6rem; 
+  margin:0 0 10px 0; 
+  color:#FFC107; 
+  font-weight:900; 
+  letter-spacing:0.5px;
+}
+.overlay-text p {
+  font-size:1rem; 
+  margin:0 0 15px 0; 
+  line-height:1.5; 
+  color:#fff;
+}
+.overlay-text span {
+  font-size:0.9rem; 
+  margin:0; 
+  color:#FFC107; 
+  font-weight:700;
+}
+
+/* MOBILE ME TEXT NEECHE AA JAYEGA */
+@media screen and (max-width: 768px) {
+  .overlay-text, .overlay-text.left {
+    position:relative !important;
+    width:100% !important;
+    height:auto !important;
+    background:rgba(0,0,0,0.9) !important;
+    padding:20px !important;
+    top:auto !important;
+    right:auto !important;
+    left:auto !important;
+  }
+  .overlay-text h3 { font-size:1.3rem; }
+  .overlay-text p { font-size:0.9rem; }
+}
+</style>
 
 <!-- SIMPLE FOOTER -->
 <footer style="background:#000; color:#fff; padding:20px; text-align:center;">
