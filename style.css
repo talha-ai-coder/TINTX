@@ -269,3 +269,28 @@ header { display:flex; justify-content:space-between; align-items:center; paddin
   .mobile-bottom-nav { display: flex; }
   body { padding-bottom: 70px !important; }
 } Ye css ki coding hn
+/* ===== WEBSITE BG - DEEP NAVY ===== */
+body {
+  background-color: #0A1B2E !important; /* Num 01 */
+  color: #34506D !important; /* Num 04 STORM BLUE for main text */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* HEADINGS KO THORA LIGHT RAKHO TAKE POP KAREIN */
+h1, h2, h3, h4 {
+  color: #C4D2E1 !important; /* Num 08 CLOUD BLUE */
+  font-weight: 700;
+}
+
+/* LINKS / BUTTONS */
+a, .btn-primary, button {
+  background: #006DFF !important; /* Monster Blue */
+  color: #FFFFFF !important;
+}
+
+/* FREE SHIPPING BAR */
+.free-shipping-bar {
+  background: #FFD600 !important; /* Yellow */
+  color: #000 !important;
+  font-weight: 900;
+}
