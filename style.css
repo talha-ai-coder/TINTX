@@ -1,25 +1,43 @@
-/* ===== WEBSITE BG - DEEP NAVY ===== */
+/* ===== TINTX MONSTER BLUE THEME ===== */
 body {
-  background-color: #0A1B2E !important; /* Num 01 */
-  color: #34506D !important; /* Num 04 STORM BLUE for main text */
+  background-color: #0A0A0A !important; /* Matte Black */
+  color: #FFFFFF !important; /* White Text */
   font-family: 'Poppins', sans-serif;
 }
 
-/* HEADINGS KO THORA LIGHT RAKHO TAKE POP KAREIN */
+/* HEADINGS */
 h1, h2, h3, h4 {
-  color: #C4D2E1 !important; /* Num 08 CLOUD BLUE */
-  font-weight: 700;
+  color: #006DFF !important; /* Monster Blue */
+  font-weight: 800;
 }
 
-/* LINKS / BUTTONS */
-a, .btn-primary, button {
+/* CARDS / SECTIONS */
+.card, .product, .section {
+  background: #171717 !important; /* Dark Grey */
+  border: 1px solid #2A2A2A;
+}
+
+/* BUTTONS */
+.btn-primary, button, a.btn {
   background: #006DFF !important; /* Monster Blue */
   color: #FFFFFF !important;
+  border: none;
+  font-weight: 700;
+}
+.btn-primary:hover {
+  background: #0050C8 !important;
 }
 
 /* FREE SHIPPING BAR */
-.free-shipping-bar {
+.free-shipping-bar, .top-notice {
   background: #FFD600 !important; /* Yellow */
   color: #000 !important;
-  font-weight: 900;
+  font-weight: 900 !important;
+  text-align: center;
+  padding: 10px;
+}
+
+/* LINKS */
+a {
+  color: #006DFF !important;
 }
