@@ -2,8 +2,12 @@
 body { 
   font-family:'Poppins', sans-serif; 
   background:#050F1A !important; /* DARKER: Pehle #0A1B2E tha */
-  color:#34506D !important; /* Num 04 STORM BLUE - main text */
+  body { 
+  color:#A1B2C4 !important; /* 07 FOGGY BLUE - Baki sara text */
   line-height:1.6; 
+    h1, h2, h3, h4, h5, h6 { 
+  color:#34506D !important; /* 04 STORM BLUE - Sirf Headings */
+}
 }
 
 header { 
