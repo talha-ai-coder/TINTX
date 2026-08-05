@@ -8,7 +8,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 { 
-  color:#8FA3B8 !important; /* Sare headings bhi same text color */
+  color:#8FA3B8 !important; 
 }
 
 header { 
@@ -16,7 +16,7 @@ header {
   justify-content:space-between; 
   align-items:center; 
   padding:15px 5%; 
-  background:#1F3A5F !important; /* Header thora dark rakh diya bg se */
+  background:#1F3A5F !important; 
   color:#8FA3B8 !important; 
   position:sticky; 
   top:0; 
@@ -25,7 +25,7 @@ header {
 .menu-left { font-weight:600; cursor:pointer; }
 .logo-img { height:45px; }
 .nav-btn { 
-  background:#006DFF !important; 
+  background:#34506D !important; /* CHANGED: Storm Blue */
   color:#fff !important; 
   padding:10px 20px; 
   border-radius:8px; 
@@ -39,17 +39,17 @@ header {
   gap:40px; 
   align-items:center; 
   flex-wrap:wrap; 
-  background:#244565 !important; /* Hero section thora dark */
+  background:#244565 !important; 
   color:#8FA3B8 !important;
 }
 .hero-text { flex:1; min-width:300px; }
 .hero-text .tagline { font-size:1.2rem; color:#8FA3B8 !important; } 
 .hero-text h1 { font-size:3rem; line-height:1.2; color:#8FA3B8 !important; }
-.hero-text span { color:#006DFF !important; } /* Highlight blue wesa hi */
+.hero-text span { color:#34506D !important; } /* CHANGED: Storm Blue - "Comfort" wala highlight */
 .features-list { list-style:none; margin:20px 0; color:#8FA3B8 !important; }
 .features-list li { margin:8px 0; }
 .btn-shop-now { 
-  background:#006DFF !important; 
+  background:#34506D !important; /* CHANGED: Storm Blue */
   color:#fff !important; 
   padding:15px 30px; 
   border-radius:10px; 
@@ -58,7 +58,7 @@ header {
   display:inline-block; 
   margin-top:15px; 
 }
-.btn-shop-now:hover { background:#0050C8 !important; }
+.btn-shop-now:hover { background:#244565 !important; }
 .hero-img { flex:1; min-width:300px; }
 .hero-img img { width:100%; border-radius:15px; }
 .trust-badges { margin-top:20px; color:#8FA3B8 !important; }
@@ -80,7 +80,7 @@ header {
 .btn-whatsapp-selector { background:#25D366 !important; color:#fff !important; }
 
 .offer-banner { 
-  background:#3A5A7A !important; /* Offer banner bg */
+  background:#3A5A7A !important; 
   color:#fff !important; 
   text-align:center; 
   padding:15px; 
@@ -122,7 +122,7 @@ header {
   .hero-banner h1, .banner-title { font-size:24px !important; line-height:1.3 !important; margin-bottom:8px !important; text-align:center !important; color:#8FA3B8 !important; }
   .hero-banner h2, .banner-subtitle { font-size:22px !important; line-height:1.3 !important; margin-bottom:8px !important; color:#8FA3B8 !important; }
   .hero-banner p { font-size:14px !important; padding:0 15px !important; color:#8FA3B8 !important; }
-  .shop-now, .btn-primary { font-size:16px !important; padding:12px 25px !important; margin-top:10px !important; background:#006DFF !important; color:#fff !important; }
+  .shop-now, .btn-primary { font-size:16px !important; padding:12px 25px !important; margin-top:10px !important; background:#34506D !important; color:#fff !important; } /* CHANGED */
   header { padding:10px 0 !important; }
 }
 
@@ -139,7 +139,7 @@ header {
   box-shadow: 0 -2px 10px rgba(0,0,0,0.3); z-index: 9999; padding: 8px 0; justify-content: space-around;
 }
 .mobile-bottom-nav a { text-align:center; text-decoration:none; color:#8FA3B8 !important; font-size:12px; font-weight:600; display:flex; flex-direction:column; align-items:center; gap:3px; }
-.mobile-bottom-nav a sup { background:#006DFF !important; color:#fff !important; border-radius:50%; padding:2px 6px; font-size:10px; font-weight:800; }
+.mobile-bottom-nav a sup { background:#34506D !important; color:#fff !important; border-radius:50%; padding:2px 6px; font-size:10px; font-weight:800; } /* CHANGED */
 @media screen and (max-width: 768px) {
   .mobile-bottom-nav { display: flex; }
   body { padding-bottom: 70px !important; }
