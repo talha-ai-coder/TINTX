@@ -1,13 +1,14 @@
 * { margin:0; padding:0; box-sizing:border-box; }
+
 body { 
   font-family:'Poppins', sans-serif; 
-  background:#050F1A !important; /* DARKER: Pehle #0A1B2E tha */
-  body { 
-  color:#A1B2C4 !important; /* 07 FOGGY BLUE - Baki sara text */
+  background:#2F4F73 !important; /* SCREENSHOT WALA TOP BG - Dark Steel Blue */
+  color:#8FA3B8 !important; /* SCREENSHOT WALA "BEST SELLER" TEXT COLOR - Light Slate Blue */
   line-height:1.6; 
-    h1, h2, h3, h4, h5, h6 { 
-  color:#34506D !important; /* 04 STORM BLUE - Sirf Headings */
 }
+
+h1, h2, h3, h4, h5, h6 { 
+  color:#8FA3B8 !important; /* Sare headings bhi same text color */
 }
 
 header { 
@@ -15,8 +16,8 @@ header {
   justify-content:space-between; 
   align-items:center; 
   padding:15px 5%; 
-  background:#081827 !important; /* DARKER: Pehle #112A46 tha */
-  color:#C4D2E1 !important; /* Num 08 CLOUD BLUE */
+  background:#1F3A5F !important; /* Header thora dark rakh diya bg se */
+  color:#8FA3B8 !important; 
   position:sticky; 
   top:0; 
   z-index:1000; 
@@ -24,7 +25,7 @@ header {
 .menu-left { font-weight:600; cursor:pointer; }
 .logo-img { height:45px; }
 .nav-btn { 
-  background:#006DFF !important; /* Monster Blue */
+  background:#006DFF !important; 
   color:#fff !important; 
   padding:10px 20px; 
   border-radius:8px; 
@@ -38,17 +39,17 @@ header {
   gap:40px; 
   align-items:center; 
   flex-wrap:wrap; 
-  background:#0E2438 !important; /* DARKER: Pehle #1B3B5A tha */
-  color:#C4D2E1 !important; /* Cards me light text */
+  background:#244565 !important; /* Hero section thora dark */
+  color:#8FA3B8 !important;
 }
 .hero-text { flex:1; min-width:300px; }
-.hero-text .tagline { font-size:1.2rem; color:#7A8CA6 !important; /* Num 06 DUSK BLUE */ } 
-.hero-text h1 { font-size:3rem; line-height:1.2; color:#C4D2E1 !important; }
-.hero-text span { color:#006DFF !important; } /* Highlight blue */
-.features-list { list-style:none; margin:20px 0; color:#C4D2E1 !important; }
+.hero-text .tagline { font-size:1.2rem; color:#8FA3B8 !important; } 
+.hero-text h1 { font-size:3rem; line-height:1.2; color:#8FA3B8 !important; }
+.hero-text span { color:#006DFF !important; } /* Highlight blue wesa hi */
+.features-list { list-style:none; margin:20px 0; color:#8FA3B8 !important; }
 .features-list li { margin:8px 0; }
 .btn-shop-now { 
-  background:#006DFF !important; /* Monster Blue */
+  background:#006DFF !important; 
   color:#fff !important; 
   padding:15px 30px; 
   border-radius:10px; 
@@ -60,17 +61,17 @@ header {
 .btn-shop-now:hover { background:#0050C8 !important; }
 .hero-img { flex:1; min-width:300px; }
 .hero-img img { width:100%; border-radius:15px; }
-.trust-badges { margin-top:20px; color:#7A8CA6 !important; }
+.trust-badges { margin-top:20px; color:#8FA3B8 !important; }
 .trust-badges span { margin-right:20px; font-size:0.9rem; }
 
-.select-car-section h2 { font-size:2rem; color:#C4D2E1 !important; }
-.car-selector { text-align:center; padding:60px 20px; background:#081827 !important; /* DARKER */ }
-.section-tag { color:#7A8CA6 !important; font-weight:700; letter-spacing:1px; }
+.select-car-section h2 { font-size:2rem; color:#8FA3B8 !important; }
+.car-selector { text-align:center; padding:60px 20px; background:#1F3A5F !important; }
+.section-tag { color:#8FA3B8 !important; font-weight:700; letter-spacing:1px; }
 .selector-box { 
   max-width:600px; 
   margin:auto; 
-  background:#0E2438 !important; /* DARKER */
-  color:#C4D2E1 !important;
+  background:#244565 !important;
+  color:#8FA3B8 !important;
   padding:30px; 
   border-radius:15px; 
   box-shadow:0 5px 20px rgba(0,0,0,0.3); 
@@ -79,7 +80,7 @@ header {
 .btn-whatsapp-selector { background:#25D366 !important; color:#fff !important; }
 
 .offer-banner { 
-  background:#557392 !important; /* Num 05 BLUE SLATE */
+  background:#3A5A7A !important; /* Offer banner bg */
   color:#fff !important; 
   text-align:center; 
   padding:15px; 
@@ -87,27 +88,27 @@ header {
   font-size:1.1rem; 
 }
 
-.main-product { display:flex; padding:60px 5%; gap:40px; flex-wrap:wrap; align-items:center; background:#050F1A !important; /* DARKER */ }
-.main-product-text { flex:1; min-width:300px; color:#34506D !important; }
+.main-product { display:flex; padding:60px 5%; gap:40px; flex-wrap:wrap; align-items:center; background:#2F4F73 !important; }
+.main-product-text { flex:1; min-width:300px; color:#8FA3B8 !important; }
 .main-product-img { flex:1; min-width:300px; }
 .main-product-img img { width:100%; border-radius:15px; }
-.product-features { list-style:none; margin:20px 0; color:#34506D !important; }
-.product-price-big { font-size:2.5rem; color:#7A8CA6 !important; /* Num 06 DUSK BLUE */ font-weight:800; margin:15px 0; }
+.product-features { list-style:none; margin:20px 0; color:#8FA3B8 !important; }
+.product-price-big { font-size:2.5rem; color:#8FA3B8 !important; font-weight:800; margin:15px 0; }
 .btn-whatsapp-big, .btn-whatsapp { background:#25D366 !important; color:#fff !important; padding:15px; border-radius:10px; text-decoration:none; display:block; text-align:center; font-weight:700; font-size:1.1rem; }
 
-.products { padding:60px 5%; text-align:center; background:#081827 !important; /* DARKER */ }
-.products h2 { color:#C4D2E1 !important; }
+.products { padding:60px 5%; text-align:center; background:#1F3A5F !important; }
+.products h2 { color:#8FA3B8 !important; }
 .product-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px; margin-top:30px; }
 .product-card { 
-  border:1px solid #34506D !important; 
-  background:#0E2438 !important; /* DARKER */
-  color:#C4D2E1 !important;
+  border:1px solid #3A5A7A !important; 
+  background:#244565 !important;
+  color:#8FA3B8 !important;
   padding:20px; 
   border-radius:10px; 
   text-align:center; 
 }
 .product-card img { width:100%; border-radius:10px; }
-.product-price { font-size:1.5rem; font-weight:700; color:#7A8CA6 !important; margin:10px 0; }
+.product-price { font-size:1.5rem; font-weight:700; color:#8FA3B8 !important; margin:10px 0; }
 
 /* MOBILE RESPONSIVE */
 @media(max-width:768px){
@@ -115,30 +116,29 @@ header {
   .hero-text h1 { font-size:2rem; }
 }
 
-/* ========== TUMHARA PURANA MOBILE FIX WAHI RAHEGA ========== */
 @media (max-width: 768px) {
   .hero-banner, .banner-section, .slider { height: 55vh !important; min-height: 380px !important; padding:0 !important; margin:0 !important; }
   .hero-banner img, .banner-section img { width:100% !important; height:100% !important; object-fit:cover !important; }
-  .hero-banner h1, .banner-title { font-size:24px !important; line-height:1.3 !important; margin-bottom:8px !important; text-align:center !important; color:#C4D2E1 !important; }
-  .hero-banner h2, .banner-subtitle { font-size:22px !important; line-height:1.3 !important; margin-bottom:8px !important; color:#C4D2E1 !important; }
-  .hero-banner p { font-size:14px !important; padding:0 15px !important; color:#7A8CA6 !important; }
+  .hero-banner h1, .banner-title { font-size:24px !important; line-height:1.3 !important; margin-bottom:8px !important; text-align:center !important; color:#8FA3B8 !important; }
+  .hero-banner h2, .banner-subtitle { font-size:22px !important; line-height:1.3 !important; margin-bottom:8px !important; color:#8FA3B8 !important; }
+  .hero-banner p { font-size:14px !important; padding:0 15px !important; color:#8FA3B8 !important; }
   .shop-now, .btn-primary { font-size:16px !important; padding:12px 25px !important; margin-top:10px !important; background:#006DFF !important; color:#fff !important; }
   header { padding:10px 0 !important; }
 }
 
 /* BOTTOM BANNER */
-.bottom-banner { position:relative; width:100%; padding:0; margin:0; background:#000; line-height:0; }
-.bottom-banner .banner-img { width:100%; height:650px; object-fit:contain; object-position:center bottom; background:#000; display:block; filter:brightness(0.8); }
-.bottom-banner .banner-content { position:absolute; top:45%; left:50%; transform:translate(-50%, -50%); text-align:center; width:90%; color:#C4D2E1 !important; z-index:2; }
+.bottom-banner { position:relative; width:100%; padding:0; margin:0; background:#1F3A5F; line-height:0; }
+.bottom-banner .banner-img { width:100%; height:650px; object-fit:contain; object-position:center bottom; background:#1F3A5F; display:block; filter:brightness(0.8); }
+.bottom-banner .banner-content { position:absolute; top:45%; left:50%; transform:translate(-50%, -50%); text-align:center; width:90%; color:#8FA3B8 !important; z-index:2; }
 
 /* MOBILE BOTTOM NAV */
 .mobile-bottom-nav {
   display: none; position: fixed; bottom: 0; left: 0; width: 100%;
-  background: #081827 !important; /* DARKER */
-  border-top: 1px solid #34506D;
+  background: #1F3A5F !important;
+  border-top: 1px solid #3A5A7A;
   box-shadow: 0 -2px 10px rgba(0,0,0,0.3); z-index: 9999; padding: 8px 0; justify-content: space-around;
 }
-.mobile-bottom-nav a { text-align:center; text-decoration:none; color:#C4D2E1 !important; font-size:12px; font-weight:600; display:flex; flex-direction:column; align-items:center; gap:3px; }
+.mobile-bottom-nav a { text-align:center; text-decoration:none; color:#8FA3B8 !important; font-size:12px; font-weight:600; display:flex; flex-direction:column; align-items:center; gap:3px; }
 .mobile-bottom-nav a sup { background:#006DFF !important; color:#fff !important; border-radius:50%; padding:2px 6px; font-size:10px; font-weight:800; }
 @media screen and (max-width: 768px) {
   .mobile-bottom-nav { display: flex; }
