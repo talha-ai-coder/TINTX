@@ -210,3 +210,27 @@ h1, h2, h3, h4, h5, h6,
 .mobile-bottom-nav {
   border-top: 1px solid #34506D !important;
 }
+/* ===== YELLOW HATAO - SIRF BLUE RAKHO ===== */
+
+/* 1. "REMOVABLE" aur sab span wale highlight */
+h2 span, 
+.section-tag span,
+.hero-text span,
+.banner-title span {
+  color: #6BA4D6 !important; /* COMFORT WALA BLUE */
+}
+
+/* 2. Heading ka normal text */
+h1, h2, h3, h4, h5, h6,
+.section-tag,
+.products h2 {
+  color: #8FA3B8 !important; /* FOGGY BLUE */
+}
+
+/* 3. Agar kahi aur yellow class lagi ho to usko bhi maar do */
+.yellow, 
+.text-yellow, 
+.highlight-yellow {
+  color: #6BA4D6 !important; /* Force blue kar do */
+  background: transparent !important;
+}
