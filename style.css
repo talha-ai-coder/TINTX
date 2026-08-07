@@ -303,3 +303,8 @@ a.button,
     color: #5ED3F7 !important; /* Comfort Blue Text */
     border-radius: 8px !important;
 }
+/* Har peeli patti ko blue kar do */
+* [style*="background"][style*="yellow"] {
+    background: #0A192F !important;
+    color: #5ED3F7 !important;
+}
