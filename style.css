@@ -294,3 +294,12 @@ a.button,
 .woocommerce-Price-amount {
     color: #5ED3F7 !important; /* Comfort Blue */
 }
+/* CHANGE YELLOW FREE SHIPPING BADGE */
+.free-shipping-badge, 
+.badge-free-shipping,
+[style*="background: yellow"],
+[style*="background:#FFC107"] {
+    background: #0A192F !important; /* Dark Blue */
+    color: #5ED3F7 !important; /* Comfort Blue Text */
+    border-radius: 8px !important;
+}
