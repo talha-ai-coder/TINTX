@@ -308,3 +308,23 @@ a.button,
     background: #0A192F !important;
     color: #5ED3F7 !important;
 }
+/* 1. BUTTON - SELECT YOUR CAR */
+.button, .btn, button {
+    background: #3A7CA5 !important;
+    color: #FFFFFF !important;
+    border-radius: 10px !important;
+    font-weight: 700 !important;
+}
+
+/* 2. PRICE + HIGHLIGHT TEXT */
+.price .amount, 
+.sale-price,
+.woocommerce-Price-amount {
+    color: #5ED3F7 !important; /* Comfort Blue */
+}
+
+/* 3. BADGE - FREE SHIPPING */
+.free-shipping-badge {
+    background: #0A192F !important;
+    color: #5ED3F7 !important;
+}
