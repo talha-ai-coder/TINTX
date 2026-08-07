@@ -269,3 +269,9 @@ a.button,
 .btn-primary:hover {
   background: #244565 !important; /* DARK STORM BLUE */
 }
+/* Yellow to Ice Blue */
+.price .amount, 
+.sale-price,
+.highlight-text {
+    color: #5ED3F7 !important;
+}
