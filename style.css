@@ -286,3 +286,11 @@ a.button,
 .woocommerce-Price-amount {
     color: #5ED3F7 !important;
 }
+/* FORCE REMOVE YELLOW - ADD COMFORT BLUE */
+[style*="yellow"], 
+[style*="#FFC107"], 
+[style*="#ffc107"],
+.price, .amount, .sale, 
+.woocommerce-Price-amount {
+    color: #5ED3F7 !important; /* Comfort Blue */
+}
