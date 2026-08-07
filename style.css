@@ -275,3 +275,14 @@ a.button,
 .highlight-text {
     color: #5ED3F7 !important;
 }
+/* REMOVE YELLOW - ADD ICE BLUE */
+.price ins .amount,
+.sale-price,
+.price > .amount {
+    color: #5ED3F7 !important; /* Comfort Blue */
+}
+
+/* Discount badge bhi */
+.woocommerce-Price-amount {
+    color: #5ED3F7 !important;
+}
