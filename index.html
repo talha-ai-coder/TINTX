@@ -7,22 +7,29 @@
   <meta name="description" content="TINTX removable car window shades — privacy, comfort and heat protection. Cash on delivery across Pakistan.">
   <title>TINTX — Removable Car Window Shades</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="ui-enhancements.css">
 </head>
 <body>
-  <div class="announcement">🚚 Nationwide delivery across Pakistan <span>•</span> Cash on Delivery available</div>
+  <div class="announcement">Nationwide delivery across Pakistan <span>•</span> Cash on Delivery available</div>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="TINTX home"><span class="brand-mark">T</span><strong>TINT<span>X</span></strong></a>
     <nav class="desktop-nav" aria-label="Primary navigation">
       <a href="#home">Home</a><a href="#shop">Shop</a><a href="#fit-guide">Fit Guide</a><a href="#help">Help</a>
     </nav>
-    <div class="header-actions"><button class="icon-btn" data-action="search" aria-label="Search">⌕</button><a class="cart-link" href="#cart" aria-label="Cart">🛒 <b id="cart-count">0</b></a><button class="menu-btn" id="menu-btn" aria-label="Open menu">☰</button></div>
+    <div class="header-actions">
+      <button class="icon-btn" data-action="search" aria-label="Search">⌕</button>
+      <a class="cart-link" href="#cart" aria-label="Cart">Cart <b id="cart-count">0</b></a>
+      <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
   </header>
-  <nav class="mobile-nav" id="mobile-nav"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#fit-guide">Fit Guide</a><a href="#help">Help</a><a href="#cart">Cart</a></nav>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#fit-guide">Fit Guide</a><a href="#help">Help</a><a href="#cart">Cart</a></nav>
   <main id="app" tabindex="-1"></main>
+  <div class="mobile-order-bar" id="mobile-order-bar" aria-label="Quick order"><div><small>TINTX ORIGINAL</small><strong>PKR 2,499</strong></div><a href="#product" class="button button-primary">Order now</a></div>
   <a class="whatsapp" href="https://wa.me/923112205795" target="_blank" rel="noreferrer" aria-label="Chat with TINTX on WhatsApp">◔<span>Chat on WhatsApp</span></a>
   <button class="ai-launcher" id="ai-launcher" aria-label="Open TINTX assistant">✦ <span>Ask TINTX AI</span></button>
-  <aside class="ai-panel" id="ai-panel" aria-label="TINTX AI assistant"><div class="ai-head"><div><strong>TINTX Assistant</strong><small>English + Roman Urdu</small></div><button id="ai-close" aria-label="Close assistant">×</button></div><div class="ai-messages" id="ai-messages"><div class="ai-msg bot">Assalam-o-alaikum. Apni car ka model batayein, main fitment aur fabric ke bare mein help karta hoon.</div></div><div class="quick-replies"><button data-question="Is this shade right for Honda City?">Fitment</button><button data-question="Fabric ke faide kya hain?">Fabric</button><button data-question="Delivery aur COD?">Delivery</button></div><form id="ai-form"><input id="ai-input" autocomplete="off" placeholder="Ask in English or Roman Urdu..."><button>Send</button></form></aside>
-  <footer class="site-footer"><div><a class="brand" href="#home"><span class="brand-mark">T</span><strong>TINT<span>X</span></strong></a><p>Privacy on demand. Comfort every drive.</p></div><div><b>Shop</b><a href="#shop">Current shade</a><a href="#fit-guide">Fit guide</a></div><div><b>Help</b><a href="#help">FAQs</a><a href="https://wa.me/923112205795" target="_blank">WhatsApp</a></div><div><b>Contact</b><span>Cash on Delivery</span><span>Free delivery Pakistan</span></div><small class="copyright">© 2026 TINTX. All rights reserved.</small></footer>
-  <script src="app.js?v=3"></script>
+  <aside class="ai-panel" id="ai-panel" aria-label="TINTX AI assistant"><div class="ai-head"><div><strong>TINTX Assistant</strong><small>English + Roman Urdu</small></div><button id="ai-close" aria-label="Close assistant">×</button></div><div class="ai-messages" id="ai-messages"><div class="ai-msg bot">Assalam-o-alaikum. Apni car ka model batayein, main fitment aur fabric ke bare mein help karta hoon.</div></div><div class="quick-replies"><button data-question="Is this shade right for Honda City?">Fitment</button><button data-question="Fabric ke faide kya hain?">Fabric</button><button data-question="Delivery aur COD?">Delivery</button></div><form id="ai-form"><input id="ai-input" autocomplete="off" placeholder="Ask in English or Roman Urdu..." aria-label="Ask TINTX AI"><button type="submit">Send</button></form></aside>
+  <footer class="site-footer"><div><a class="brand" href="#home"><span class="brand-mark">T</span><strong>TINT<span>X</span></strong></a><p>Privacy on demand. Comfort every drive.</p></div><div><b>Shop</b><a href="#shop">Current shade</a><a href="#fit-guide">Fit guide</a></div><div><b>Help</b><a href="#help">FAQs</a><a href="https://wa.me/923112205795" target="_blank" rel="noreferrer">WhatsApp</a></div><div><b>Contact</b><span>Cash on Delivery</span><span>Free delivery Pakistan</span></div><small class="copyright">© 2026 TINTX. All rights reserved.</small></footer>
+  <script src="app.js?v=4"></script>
+  <script src="ui-enhancements.js?v=1"></script>
 </body>
 </html>
