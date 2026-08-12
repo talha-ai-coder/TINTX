@@ -52,3 +52,55 @@
     height: 31px;
   }
 }
+/* Normal WhatsApp logo size */
+.whatsapp.whatsapp-logo {
+  position: fixed !important;
+  right: 18px !important;
+  bottom: 18px !important;
+  z-index: 100 !important;
+
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  max-width: 48px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  display: grid !important;
+  place-items: center !important;
+  border-radius: 50% !important;
+  background: #25d366 !important;
+  color: #fff !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  box-shadow: 0 5px 16px rgba(37, 211, 102, .30) !important;
+}
+
+.whatsapp.whatsapp-logo svg {
+  display: block !important;
+  width: 27px !important;
+  height: 27px !important;
+  max-width: 27px !important;
+  max-height: 27px !important;
+}
+
+.whatsapp.whatsapp-logo span,
+.whatsapp.whatsapp-logo .sr-only {
+  display: none !important;
+}
+
+@media (max-width: 760px) {
+  .whatsapp.whatsapp-logo {
+    right: 14px !important;
+    bottom: 76px !important;
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px !important;
+    max-width: 46px !important;
+  }
+
+  .whatsapp.whatsapp-logo svg {
+    width: 25px !important;
+    height: 25px !important;
+  }
+}
