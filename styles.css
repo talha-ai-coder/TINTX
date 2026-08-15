@@ -455,3 +455,23 @@
   display: block;
   object-fit: contain;
 }
+.brand {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.brand-logo {
+  width: 92px;
+  height: 42px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
+
+.site-footer .brand-logo {
+  width: 92px;
+  height: 42px;
+}
