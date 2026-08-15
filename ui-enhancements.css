@@ -61,3 +61,15 @@ button,a,select,input{ -webkit-tap-highlight-color:transparent }
   body{padding-bottom:78px}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+/* Floating buttons ko alag rakhne ke liye */
+.whatsapp.whatsapp-logo {
+  right: 22px !important;
+  bottom: 20px !important;
+  z-index: 60 !important;
+}
+
+.chatzy_widget {
+  right: 22px !important;
+  bottom: 100px !important;
+  z-index: 50 !important;
+}
