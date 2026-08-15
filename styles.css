@@ -449,3 +449,9 @@
   background-repeat: no-repeat;
   background-color: #06131b;
 }
+.brand-logo {
+  width: 125px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
