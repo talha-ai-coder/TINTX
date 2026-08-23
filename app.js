@@ -71,35 +71,11 @@ function home(){
   `).join('');
 
   return `
-    <section class="hero">
-      <div>
-        <p class="eyebrow">REMOVABLE · CUSTOM-FIT · PAKISTAN</p>
-        <h1>Privacy on demand.<br><em>Comfort every drive.</em></h1>
-        <p class="hero-lede">One carefully designed high-density mesh shade product that keeps your cabin comfortable and your car looking refined.</p>
-        <div class="button-row">
-          <a class="button button-primary" href="#product">Shop the TINTX shade →</a>
-          <a class="button button-ghost" href="#vehicle-browser">Find my car →</a>
-        </div>
-        <div class="hero-proof">
-          <span>✓ Full coverage</span><span>✓ Easy to install</span><span>✓ Cash on delivery</span>
-        </div>
-      </div>
-      <div class="hero-media hero-media-unique">
-        <span class="hero-window-contour" aria-hidden="true"></span>
-        ${img(HERO_IMAGE,'TINTX removable window shade installed on a car')}
-        <div class="image-caption">
-          <span>MESH SHADE INSTALLED</span>
-          <strong>Fitment, without compromise.</strong>
-        </div>
-        <div class="hero-fit-badge" aria-label="Custom fit perfect fit every time">
-          <span class="hero-fit-icon">◇</span>
-          <span><b>CUSTOM FIT</b><small>Perfect fit.<br>Every time.</small></span>
-        </div>
-        <div class="hero-system-meter" aria-label="Custom-fit shade system">
-          <span class="meter-label">CUSTOM-FIT SHADE SYSTEM</span>
-          <span class="meter-line"><i></i><i></i><i class="active"></i><i></i><i></i></span>
-        </div>
-        <div class="hero-drive-badge"><small>BUILT FOR</small><strong>YOUR DRIVE</strong></div>
+    <section class="hero exact-hero" aria-label="TINTX hero banner">
+      <img class="exact-hero-art" src="hero-exact-tintx.jpg" alt="TINTX removable car window shades — privacy on demand, comfort every drive">
+      <div class="exact-hero-links" aria-label="Hero actions">
+        <a class="exact-hero-link exact-hero-shop" href="#product" aria-label="Shop the TINTX shade"></a>
+        <a class="exact-hero-link exact-hero-fit" href="#vehicle-browser" aria-label="Find my car"></a>
       </div>
     </section>
 

@@ -1001,3 +1001,51 @@
   .site-header .brand-logo { width: 96px; height: 52px; }
   .site-footer .footer-brand-logo .brand-logo { width: 150px; height: 78px; }
 }
+
+/* Exact approved hero artwork */
+.exact-hero {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #06131b;
+}
+
+.exact-hero-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.exact-hero-links {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.exact-hero-link {
+  position: absolute;
+  display: block;
+  pointer-events: auto;
+  border-radius: 4px;
+}
+
+.exact-hero-link:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 4px;
+}
+
+/* Coordinates follow the buttons baked into the approved 16:9 artwork. */
+.exact-hero-shop { left: 5.4%; top: 73.8%; width: 16.8%; height: 6.1%; }
+.exact-hero-fit { left: 23.2%; top: 73.8%; width: 10.5%; height: 6.1%; }
+
+@media (max-width: 760px) {
+  .exact-hero-art { min-height: 0; width: 100%; object-fit: cover; }
+  .exact-hero-shop { left: 5.4%; top: 73.8%; width: 16.8%; height: 6.5%; }
+  .exact-hero-fit { left: 23.2%; top: 73.8%; width: 10.5%; height: 6.5%; }
+}
