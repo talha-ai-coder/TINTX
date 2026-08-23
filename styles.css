@@ -101,7 +101,6 @@
 
   .whatsapp.whatsapp-logo svg {
     width: 25px !important;
-    height: 25px !important;
   }
 }
 /* TINTX mobile optimization — paste at the very end of styles.css */
@@ -474,4 +473,322 @@
 .site-footer .brand-logo {
   width: 92px;
   height: 42px;
+}
+
+/* --- AutoShades-style Brand & Vehicle Browser --- */
+.brand-strip {
+  background: #040d12;
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  overflow: hidden;
+  position: relative;
+}
+
+.brand-marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 40px;
+}
+
+.brand-row {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: 40px;
+  animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+.brand-item {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  filter: grayscale(1) invert(1);
+}
+
+.brand-item:hover, .brand-item.active {
+  opacity: 1;
+  filter: grayscale(0) invert(0);
+  transform: scale(1.1);
+}
+
+.brand-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.brand-item span {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+
+.vehicle-browser {
+  padding: 80px 20px;
+  background: #06131b;
+  text-align: center;
+}
+
+.browser-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.browser-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 15px;
+  margin-top: 40px;
+  background: #0a1a24;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+@media (max-width: 768px) {
+  .browser-selector {
+    grid-template-columns: 1fr;
+  }
+  .brand-row {
+    gap: 20px;
+  }
+  .brand-item {
+    width: 80px;
+  }
+}
+
+.browser-select {
+  padding: 15px;
+  background: #06131b;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.browser-select:focus {
+  border-color: #00f2ff;
+}
+
+.browser-results {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.car-card {
+  background: #0a1a24;
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: left;
+  transition: all 0.3s ease;
+  max-width: 350px;
+  width: 100%;
+}
+
+.car-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0,242,255,0.4);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.car-card-img {
+  width: 100%;
+  height: 220px;
+  background: #040d12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.car-card-img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.car-card-content {
+  padding: 25px;
+}
+
+.car-card-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.car-card-price {
+  color: #00f2ff;
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.car-card-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: #00f2ff;
+  color: #06131b;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 800;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.car-card-btn:hover {
+  background: #fff;
+  transform: scale(1.02);
+}
+
+.empty-state {
+  padding: 60px;
+  color: rgba(255,255,255,0.3);
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* Final AutoShades-style brand marquee overrides */
+.brand-strip {
+  padding: 34px 0;
+  background: #f7f9fa;
+  border-block: 1px solid #dfe7ea;
+  overflow: hidden;
+}
+
+.brand-marquee {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+
+.brand-track {
+  display: flex;
+  align-items: stretch;
+  flex: 0 0 auto;
+  gap: 18px;
+  padding-right: 18px;
+  min-width: max-content;
+  animation: tintxBrandScroll 48s linear infinite;
+}
+
+.brand-marquee:hover .brand-track {
+  animation-play-state: paused;
+}
+
+@keyframes tintxBrandScroll {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-100%, 0, 0); }
+}
+
+.brand-item {
+  flex: 0 0 112px;
+  width: 112px;
+  height: 106px;
+  padding: 12px 8px 9px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  background: #fff;
+  border: 1px solid #e0e7ea;
+  border-radius: 8px;
+  opacity: 1;
+  filter: none;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(8, 35, 45, .08);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.brand-item:hover,
+.brand-item.active {
+  opacity: 1;
+  filter: none;
+  transform: translateY(-4px);
+  border-color: var(--cyan);
+  box-shadow: 0 8px 20px rgba(39, 212, 255, .2);
+}
+
+.brand-item img {
+  width: 76px;
+  height: 62px;
+  max-width: 100%;
+  max-height: 62px;
+  object-fit: contain;
+  margin: 0;
+}
+
+.brand-item span {
+  display: block;
+  color: #17313b;
+  font-size: 9px;
+  line-height: 1.1;
+  font-weight: 900;
+  letter-spacing: .07em;
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .brand-strip {
+    padding: 22px 0;
+  }
+
+  .brand-track {
+    gap: 12px;
+    padding-right: 12px;
+    animation-duration: 38s;
+  }
+
+  .brand-item {
+    flex-basis: 92px;
+    width: 92px;
+    height: 88px;
+    padding: 9px 6px 7px;
+    border-radius: 7px;
+  }
+
+  .brand-item img {
+    width: 62px;
+    height: 50px;
+    max-height: 50px;
+  }
+
+  .brand-item span {
+    font-size: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-track {
+    animation: none;
+  }
 }
