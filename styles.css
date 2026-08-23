@@ -963,3 +963,16 @@
   .hero-media-unique .hero-system-meter { bottom: 18px; width: 48%; }
   .hero-media-unique .hero-drive-badge { right: 14px; bottom: 14px; }
 }
+
+/* Final desktop viewport balance for the approved hero composition */
+@media (min-width: 761px) {
+  .hero {
+    min-height: 560px;
+    padding: 48px 24px;
+    gap: 28px;
+  }
+
+  .hero-media-unique {
+    align-self: center;
+  }
+}
