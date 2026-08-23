@@ -84,12 +84,22 @@ function home(){
           <span>✓ Full coverage</span><span>✓ Easy to install</span><span>✓ Cash on delivery</span>
         </div>
       </div>
-      <div class="hero-media">
+      <div class="hero-media hero-media-unique">
+        <span class="hero-window-contour" aria-hidden="true"></span>
         ${img(HERO_IMAGE,'TINTX removable window shade installed on a car')}
         <div class="image-caption">
           <span>MESH SHADE INSTALLED</span>
           <strong>Fitment, without compromise.</strong>
         </div>
+        <div class="hero-fit-badge" aria-label="Custom fit perfect fit every time">
+          <span class="hero-fit-icon">◇</span>
+          <span><b>CUSTOM FIT</b><small>Perfect fit.<br>Every time.</small></span>
+        </div>
+        <div class="hero-system-meter" aria-label="Custom-fit shade system">
+          <span class="meter-label">CUSTOM-FIT SHADE SYSTEM</span>
+          <span class="meter-line"><i></i><i></i><i class="active"></i><i></i><i></i></span>
+        </div>
+        <div class="hero-drive-badge"><small>BUILT FOR</small><strong>YOUR DRIVE</strong></div>
       </div>
     </section>
 
