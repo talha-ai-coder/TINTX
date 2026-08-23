@@ -1049,3 +1049,25 @@
   .exact-hero-shop { left: 5.4%; top: 73.8%; width: 16.8%; height: 6.5%; }
   .exact-hero-fit { left: 23.2%; top: 73.8%; width: 10.5%; height: 6.5%; }
 }
+
+/* Exact reference hero must not inherit the old framed main/container layout */
+main:has(.exact-hero) {
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.exact-hero {
+  max-width: none;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+@media (max-width: 760px) {
+  .exact-hero {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+}
