@@ -792,3 +792,15 @@
     animation: none;
   }
 }
+
+/* Approved hero banner: edge-to-edge presentation without the old frame */
+.hero-media {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.hero-media img {
+  border-radius: 0;
+}

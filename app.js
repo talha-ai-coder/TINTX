@@ -1,4 +1,5 @@
 const PRODUCT={id:'tintx-removable-shades',name:'TINTX Removable Car Window Shades',price:2499,oldPrice:5999,badge:'TINTX ORIGINAL',models:['Honda City'],image:'1.jpg.jpg',description:'High-Density Polyester Mesh Fabric shades for privacy, heat protection and a comfortable clear inside view.'};
+const HERO_IMAGE='hero-banner-tintx.jpg';
 
 const VEHICLE_DATA = {
   "SUZUKI": ["Alto 2019-2024", "Cultus 2000-2016", "Cultus 2017-2024", "Swift 2010-2024", "WagonR 2014-2024", "Mehran 1989-2019", "Bolan 1990-2024", "Ravi 1990-2024", "Every 2018-2024", "APV 2008-2024", "Liana 2006-2014", "Jimny 2021-2024", "Grand Vitara 2008-2024"],
@@ -84,7 +85,7 @@ function home(){
         </div>
       </div>
       <div class="hero-media">
-        ${img(PRODUCT.image,'TINTX removable window shade installed on a car')}
+        ${img(HERO_IMAGE,'TINTX removable window shade installed on a car')}
         <div class="image-caption">
           <span>MESH SHADE INSTALLED</span>
           <strong>Fitment, without compromise.</strong>
