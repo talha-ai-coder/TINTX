@@ -976,3 +976,28 @@
     align-self: center;
   }
 }
+
+/* User-provided TINTX emblem for header and footer only */
+.site-header .brand-logo {
+  width: 112px;
+  height: 58px;
+  object-fit: contain;
+  display: block;
+}
+
+.site-footer .footer-brand-logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.site-footer .footer-brand-logo .brand-logo {
+  width: 178px;
+  height: 92px;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 760px) {
+  .site-header .brand-logo { width: 96px; height: 52px; }
+  .site-footer .footer-brand-logo .brand-logo { width: 150px; height: 78px; }
+}
