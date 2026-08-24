@@ -1330,3 +1330,27 @@ main:has(.exact-hero) {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+
+/* Keep the full Why TINTX infographic visible — its text is part of the artwork */
+.why-tintx-media img {
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  object-position: center;
+  background: #06131b;
+}
+
+@media (max-width: 760px) {
+  .why-tintx-media {
+    width: 100%;
+    overflow: hidden;
+    background: #06131b;
+  }
+
+  .why-tintx-media img {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+  }
+}
