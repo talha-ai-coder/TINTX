@@ -1184,3 +1184,149 @@ main:has(.exact-hero) {
     object-position: 78% 52%;
   }
 }
+
+
+/* Final mobile smoothness pass — desktop layout remains unchanged */
+@media (max-width: 760px) {
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  .exact-hero-mobile-copy {
+    padding: 36px 16px 22px;
+    border-bottom: 1px solid rgba(39, 212, 255, .14);
+  }
+
+  .exact-hero-mobile-copy h1 {
+    max-width: 11ch;
+    font-size: clamp(37px, 11.5vw, 50px);
+    letter-spacing: -.035em;
+  }
+
+  .exact-hero-mobile-copy .hero-lede {
+    max-width: 34ch;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .exact-hero-mobile-copy .button-row {
+    margin: 20px 0 0;
+    gap: 9px;
+  }
+
+  .exact-hero-mobile-copy .button {
+    min-height: 48px;
+    padding: 12px 8px;
+    font-size: 10px;
+    letter-spacing: .045em;
+  }
+
+  .exact-hero-mobile-copy .hero-proof {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 7px;
+    margin: 17px 0 0;
+    line-height: 1.35;
+  }
+
+  .exact-hero-mobile-art {
+    height: clamp(218px, 59vw, 250px);
+  }
+
+  .exact-hero-mobile-art img {
+    object-position: 75% 52%;
+  }
+
+  .brand-strip {
+    padding: 18px 0;
+  }
+
+  .brand-track {
+    will-change: transform;
+    animation-timing-function: linear;
+  }
+
+  .vehicle-browser {
+    padding: 52px 16px 56px;
+  }
+
+  .vehicle-browser h2 {
+    font-size: clamp(31px, 9vw, 42px);
+  }
+
+  .vehicle-browser .hero-lede {
+    max-width: 34ch;
+    margin-inline: auto;
+    font-size: 14px;
+  }
+
+  .browser-selector {
+    margin-top: 28px;
+    padding: 13px;
+    gap: 9px;
+    border-radius: 14px;
+  }
+
+  .browser-select,
+  .browser-selector .button {
+    width: 100%;
+    min-height: 50px;
+    font-size: 14px;
+  }
+
+  .browser-results {
+    min-height: 0;
+    margin-top: 26px;
+  }
+
+  .empty-state {
+    padding: 28px 12px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .car-card {
+    max-width: none;
+    border-radius: 14px;
+  }
+
+  .car-card-img {
+    height: 190px;
+    padding: 20px;
+  }
+
+  .car-card-content {
+    padding: 20px;
+  }
+
+  .car-card-btn {
+    min-height: 50px;
+    display: grid;
+    place-items: center;
+  }
+
+  .installed-proof-media img,
+  .why-tintx-media img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .privacy-proof-grid img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .site-footer {
+    padding-bottom: 112px;
+  }
+}
+
+@media (max-width: 380px) {
+  .exact-hero-mobile-copy .button-row {
+    grid-template-columns: 1fr;
+  }
+
+  .exact-hero-mobile-copy .hero-proof {
+    grid-template-columns: 1fr 1fr;
+  }
+}
