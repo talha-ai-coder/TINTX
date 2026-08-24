@@ -1138,3 +1138,49 @@ main:has(.exact-hero) {
   .why-tintx-media img { height: 300px; }
   .privacy-proof-grid img { height: 270px; }
 }
+
+/* Mobile hero composition: readable copy first, focused car image second */
+.exact-hero-mobile-copy,
+.exact-hero-mobile-art { display: none; }
+
+@media (max-width: 760px) {
+  .exact-hero { display: block; overflow: hidden; }
+  .exact-hero-desktop-art,
+  .exact-hero-links { display: none; }
+  .exact-hero-mobile-copy {
+    display: block;
+    padding: 42px 18px 26px;
+    background: linear-gradient(145deg, #06131b 0%, #0b2632 100%);
+  }
+  .exact-hero-mobile-copy .eyebrow { font-size: 9px; }
+  .exact-hero-mobile-copy h1 {
+    margin: 13px 0 17px;
+    font-size: clamp(39px, 12vw, 53px);
+    line-height: .98;
+  }
+  .exact-hero-mobile-copy .hero-lede { font-size: 15px; line-height: 1.45; }
+  .exact-hero-mobile-copy .button-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .exact-hero-mobile-copy .button { padding: 12px 9px; text-align: center; font-size: 11px; }
+  .exact-hero-mobile-copy .hero-proof { gap: 8px; margin-top: 18px; font-size: 10px; }
+  .exact-hero-mobile-art {
+    display: block;
+    position: relative;
+    height: 238px;
+    overflow: hidden;
+    background: #06131b;
+  }
+  .exact-hero-mobile-art::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, transparent 62%, rgba(6,19,27,.72));
+  }
+  .exact-hero-mobile-art img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 78% 52%;
+  }
+}

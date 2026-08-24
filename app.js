@@ -72,11 +72,19 @@ function home(){
 
   return `
     <section class="hero exact-hero" aria-label="TINTX hero banner">
-      <img class="exact-hero-art" src="hero-exact-tintx.jpg" alt="TINTX removable car window shades — privacy on demand, comfort every drive">
+      <img class="exact-hero-art exact-hero-desktop-art" src="hero-exact-tintx.jpg" alt="TINTX removable car window shades — privacy on demand, comfort every drive">
       <div class="exact-hero-links" aria-label="Hero actions">
         <a class="exact-hero-link exact-hero-shop" href="#product" aria-label="Shop the TINTX shade"></a>
         <a class="exact-hero-link exact-hero-fit" href="#vehicle-browser" aria-label="Find my car"></a>
       </div>
+      <div class="exact-hero-mobile-copy">
+        <p class="eyebrow">REMOVABLE · CUSTOM-FIT · PAKISTAN</p>
+        <h1>Privacy on demand.<br><em>Comfort every drive.</em></h1>
+        <p class="hero-lede">High-density mesh shades for privacy, comfort and a clear view inside.</p>
+        <div class="button-row"><a class="button button-primary" href="#product">Shop the TINTX shade →</a><a class="button button-ghost" href="#vehicle-browser">Find my car →</a></div>
+        <div class="hero-proof"><span>✓ Full coverage</span><span>✓ Easy to install</span><span>✓ Cash on delivery</span></div>
+      </div>
+      <div class="exact-hero-mobile-art"><img src="hero-exact-tintx.jpg" alt="TINTX shade installed on a premium car"></div>
     </section>
 
     <div class="brand-strip" aria-label="Shop shades by car brand">
