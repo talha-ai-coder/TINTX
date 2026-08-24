@@ -1412,3 +1412,63 @@ main:has(.exact-hero) {
     font-size: 35px;
   }
 }
+
+
+/* Refined marquee scale: smaller brand cards, cleaner movement */
+.brand-strip {
+  padding: 26px 0;
+}
+
+.brand-track {
+  gap: 14px;
+  padding-right: 14px;
+}
+
+.brand-item {
+  flex-basis: 94px;
+  width: 94px;
+  height: 88px;
+  padding: 9px 6px 7px;
+  border-radius: 7px;
+}
+
+.brand-item img {
+  width: 62px;
+  height: 52px;
+  max-height: 52px;
+}
+
+.brand-item span {
+  font-size: 8.5px;
+}
+
+@media (max-width: 760px) {
+  .brand-strip {
+    padding: 15px 0;
+  }
+
+  .brand-track {
+    gap: 8px;
+    padding-right: 8px;
+    animation-duration: 34s;
+  }
+
+  .brand-item {
+    flex-basis: 76px;
+    width: 76px;
+    height: 72px;
+    padding: 7px 4px 5px;
+    border-radius: 6px;
+  }
+
+  .brand-item img {
+    width: 50px;
+    height: 40px;
+    max-height: 40px;
+  }
+
+  .brand-item span {
+    font-size: 7px;
+    letter-spacing: .05em;
+  }
+}
