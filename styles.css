@@ -1354,3 +1354,61 @@ main:has(.exact-hero) {
     object-fit: contain;
   }
 }
+
+
+/* Mobile first-viewport refinement inspired by the reference flow */
+@media (max-width: 760px) {
+  .exact-hero-mobile-copy {
+    padding: 24px 16px 16px;
+  }
+
+  .exact-hero-mobile-copy .eyebrow {
+    font-size: 8px;
+    letter-spacing: .16em;
+  }
+
+  .exact-hero-mobile-copy h1 {
+    max-width: 12ch;
+    margin: 10px 0 13px;
+    font-size: clamp(36px, 10.2vw, 43px);
+    line-height: .96;
+  }
+
+  .exact-hero-mobile-copy .hero-lede {
+    max-width: 33ch;
+    font-size: 13px;
+    line-height: 1.42;
+  }
+
+  .exact-hero-mobile-copy .button-row {
+    grid-template-columns: 1.12fr .88fr;
+    margin: 15px 0 0;
+    gap: 8px;
+  }
+
+  .exact-hero-mobile-copy .button {
+    min-height: 44px;
+    padding: 10px 7px;
+    font-size: 9px;
+  }
+
+  .exact-hero-mobile-copy .hero-proof {
+    gap: 5px;
+    margin-top: 12px;
+    font-size: 9px;
+  }
+
+  .exact-hero-mobile-art {
+    height: clamp(178px, 48vw, 198px);
+  }
+
+  .exact-hero-mobile-art img {
+    object-position: 76% 52%;
+  }
+}
+
+@media (max-width: 380px) {
+  .exact-hero-mobile-copy h1 {
+    font-size: 35px;
+  }
+}
