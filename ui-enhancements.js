@@ -72,11 +72,65 @@
     });
   }
 
+  function bindBrandCarouselDrag(){
+    const viewport=document.querySelector('.brand-marquee');
+    if(!viewport||viewport.dataset.dragBound) return;
+    viewport.dataset.dragBound='1';
+    let dragging=false;
+    let startX=0;
+    let startScroll=0;
+    let moved=false;
+    let suppressClick=false;
+    const tracks=()=>viewport.querySelectorAll('.brand-track');
+    const pauseAnimation=(pause)=>tracks().forEach(track=>{
+      track.style.animationPlayState=pause?'paused':'';
+    });
+    const finish=(event)=>{
+      if(!dragging) return;
+      dragging=false;
+      if(moved){
+        suppressClick=true;
+        window.setTimeout(()=>{suppressClick=false;},300);
+      }
+      viewport.classList.remove('is-dragging');
+      pauseAnimation(false);
+      try{viewport.releasePointerCapture(event.pointerId);}catch(error){}
+    };
+    viewport.addEventListener('pointerdown',event=>{
+      if(event.pointerType==='mouse'&&event.button!==0) return;
+      dragging=true;
+      moved=false;
+      startX=event.clientX;
+      startScroll=viewport.scrollLeft;
+      viewport.classList.add('is-dragging');
+      pauseAnimation(true);
+      try{viewport.setPointerCapture(event.pointerId);}catch(error){}
+    });
+    viewport.addEventListener('pointermove',event=>{
+      if(!dragging) return;
+      const distance=event.clientX-startX;
+      if(Math.abs(distance)>6) moved=true;
+      if(moved){
+        viewport.scrollLeft=startScroll-distance;
+        event.preventDefault();
+      }
+    },{passive:false});
+    viewport.addEventListener('pointerup',finish);
+    viewport.addEventListener('pointercancel',finish);
+    viewport.addEventListener('click',event=>{
+      if(!suppressClick) return;
+      event.preventDefault();
+      event.stopPropagation();
+      suppressClick=false;
+    },true);
+  }
+
   function enhance(){
     updateMobileOrderBar();
     bindMenuAccessibility();
     bindFitmentEnhancement();
     decorateProductCards();
+    bindBrandCarouselDrag();
   }
 
   window.addEventListener('hashchange',()=>setTimeout(enhance,0));

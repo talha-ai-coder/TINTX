@@ -194,3 +194,28 @@ img, video, iframe, svg, canvas {
     transform: none !important;
   }
 }
+
+
+/* Allow users to swipe or drag the logo marquee manually on mobile */
+@media (max-width: 760px) {
+  .brand-marquee {
+    overflow-x: auto;
+    overflow-y: hidden;
+    cursor: grab;
+    touch-action: pan-x;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .brand-marquee::-webkit-scrollbar {
+    display: none;
+  }
+
+  .brand-marquee.is-dragging {
+    cursor: grabbing;
+  }
+
+  .brand-marquee.is-dragging .brand-track {
+    animation-play-state: paused !important;
+  }
+}
