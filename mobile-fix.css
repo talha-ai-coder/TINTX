@@ -171,3 +171,26 @@ img, video, iframe, svg, canvas {
     object-fit: cover;
   }
 }
+
+
+/* Keep the complete mobile hero artwork visible — no crop or zoom */
+@media (max-width: 760px) {
+  .exact-hero-mobile-art {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .exact-hero-mobile-art img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    object-position: center;
+    transform: none !important;
+  }
+}
