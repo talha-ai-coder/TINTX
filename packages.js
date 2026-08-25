@@ -1,22 +1,25 @@
-/* TINTX — three package cards inspired by the package structure requested */
+/* TINTX — package selector styled like the reference layout */
 (function(){
   const packages = [
     {
       id:'package-1',
       name:'Package 1',
-      title:'Essential Shade',
+      image:'installed-shade.jpeg',
+      count:'4 SHADES',
       items:['4 Door Window Shades']
     },
     {
       id:'package-2',
       name:'Package 2',
-      title:'Complete Shade',
+      image:'privacy-proof.jpeg',
+      count:'5 SHADES',
       items:['4 Door Window Shades','Rear WindScreen Shade']
     },
     {
       id:'package-3',
       name:'Package 3',
-      title:'Full Coverage',
+      image:'hero-exact-tintx.jpg',
+      count:'7 SHADES',
       items:['4 Door Window Shades','Rear WindScreen Shade','Third Row Quarter Shades']
     }
   ];
@@ -31,22 +34,23 @@
     section.className='section tintx-packages';
     section.id='packages';
     section.innerHTML=`
-      <div class="section-heading tintx-packages-heading">
-        <div>
-          <p class="eyebrow">CHOOSE YOUR PACKAGE</p>
-          <h2>Pick the coverage that fits your car.</h2>
-        </div>
-        <p class="hero-lede">From the essential 4-door setup to full coverage, choose your TINTX package.</p>
+      <div class="tintx-packages-heading">
+        <p class="eyebrow">CHOOSE YOUR PACKAGE</p>
+        <h2>Pick your coverage</h2>
       </div>
       <div class="tintx-package-grid">
-        ${packages.map((p,i)=>`
-          <article class="tintx-package-card ${i===1?'is-featured':''}">
-            ${i===1?'<span class="tintx-package-badge">MOST POPULAR</span>':''}
-            <div class="tintx-package-number">0${i+1}</div>
-            <h3>${p.name}</h3>
-            <h4>${p.title}</h4>
-            <ul>${p.items.map(x=>`<li>✓ ${x}</li>`).join('')}</ul>
-            <a class="button button-primary" href="#product" data-package="${p.id}">Choose ${p.name} →</a>
+        ${packages.map(p=>`
+          <article class="tintx-package-card">
+            <div class="tintx-package-image">
+              <img src="${p.image}" alt="${p.name} TINTX removable car window shades">
+              <span class="tintx-package-ribbon">${p.name.toUpperCase()}</span>
+              <span class="tintx-package-count">${p.count}</span>
+            </div>
+            <div class="tintx-package-content">
+              <h3>${p.name}</h3>
+              <ul>${p.items.map(x=>`<li>${x}</li>`).join('')}</ul>
+              <a class="tintx-package-button" href="#product" data-package="${p.id}">Choose ${p.name} →</a>
+            </div>
           </article>
         `).join('')}
       </div>
