@@ -16,3 +16,19 @@
 .tintx-package-price-card .tintx-package-button{width:100%;margin-top:auto;border:0;cursor:pointer}
 .tintx-package-price-card.is-popular .tintx-package-button{background:#08b99e;color:#071b20}
 @media(max-width:760px){.tintx-packages{padding:48px 14px 66px}.tintx-packages-heading h2{font-size:34px}.tintx-packages-heading>p:last-child{font-size:14px}.tintx-package-picture{border-radius:9px}.tintx-package-price-grid{grid-template-columns:1fr;gap:14px}.tintx-package-price-card,.tintx-package-price-card.is-popular{min-height:0;padding:20px}.tintx-package-price-card.is-popular{padding-top:24px}}
+
+
+/* Match each package picture with its own details */
+.tintx-package-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start}
+.tintx-package-card{min-width:0;background:#fff;border:1px solid #d8e2e5;border-radius:12px;overflow:hidden;box-shadow:0 8px 22px rgba(6,19,27,.07)}
+.tintx-package-card.is-popular{border:2px solid #08b99e}
+.tintx-package-image{width:100%;height:auto;overflow:hidden;background:#f4f6f6}
+.tintx-package-image img{display:block;width:100%;height:auto;object-fit:contain}
+.tintx-package-content{position:relative;display:flex;flex-direction:column;min-height:205px;padding:20px 20px 18px;text-align:left}
+.tintx-package-price-name{display:block;padding-right:8px;color:#06131b;font-size:15px;font-weight:900;line-height:1.35;text-transform:uppercase}
+.tintx-package-content strong{display:block;margin:12px 0 7px;color:#06131b;font-size:30px;letter-spacing:-.03em}
+.tintx-package-content small{display:block;min-height:39px;color:#526b73;font-size:13px;line-height:1.45}
+.tintx-package-content .tintx-package-button{width:100%;margin-top:auto;border:0;cursor:pointer}
+.tintx-package-card.is-popular .tintx-package-button{background:#08b99e;color:#071b20}
+@media(max-width:900px){.tintx-package-grid{grid-template-columns:1fr 1fr;gap:18px}.tintx-package-grid .tintx-package-card:last-child{grid-column:1/-1;max-width:calc(50% - 9px);margin:0 auto;width:100%}}
+@media(max-width:600px){.tintx-package-grid{grid-template-columns:1fr;gap:16px}.tintx-package-grid .tintx-package-card:last-child{grid-column:auto;max-width:none}.tintx-package-content{min-height:185px;padding:18px}.tintx-package-content strong{font-size:28px}}
