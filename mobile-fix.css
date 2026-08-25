@@ -141,3 +141,12 @@ img, video, iframe, svg, canvas {
     height: clamp(330px, 92vw, 400px);
   }
 }
+
+
+/* Make the actual lower hero artwork larger on mobile */
+@media (max-width: 760px) {
+  .exact-hero-mobile-art img {
+    transform: scale(1.22);
+    transform-origin: center center;
+  }
+}
