@@ -136,3 +136,67 @@ button,a,select,input{ -webkit-tap-highlight-color:transparent }
 
   body { padding-bottom: 72px; }
 }
+
+
+/* Keep the external AI widget clear of the fixed mobile order bar */
+@media (max-width:760px) {
+  .chatzy_widget {
+    right: 14px !important;
+    bottom: 142px !important;
+    z-index: 50 !important;
+  }
+}
+
+
+@media (max-width:760px) {
+  #chatzy-shadow-host {
+    position: fixed !important;
+    right: 14px !important;
+    bottom: 142px !important;
+    z-index: 50 !important;
+  }
+}
+
+
+@media (max-width:760px) {
+  #chatzy-shadow-host {
+    left: 14px !important;
+    right: auto !important;
+    bottom: 142px !important;
+    transform: none !important;
+  }
+}
+
+
+/* Reserve the external-widget lane instead of letting it cover the order CTA */
+@media (max-width:760px) {
+  .mobile-order-bar {
+    right: 108px;
+    min-width: 0;
+  }
+
+  .mobile-order-bar > div {
+    flex: 0 0 auto;
+  }
+
+  .mobile-order-bar .button {
+    flex: 1 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width:360px) {
+  .mobile-order-bar {
+    right: 104px;
+    padding-left: 10px;
+    gap: 7px;
+  }
+
+  .mobile-order-bar small { font-size: .5rem; }
+  .mobile-order-bar strong { font-size: .82rem; }
+  .mobile-order-bar .button {
+    padding-inline: 9px;
+    font-size: .68rem;
+  }
+}
