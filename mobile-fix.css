@@ -150,3 +150,24 @@ img, video, iframe, svg, canvas {
     transform-origin: center center;
   }
 }
+
+
+/* Full-bleed lower hero image on mobile */
+@media (max-width: 760px) {
+  .exact-hero {
+    padding: 0 !important;
+  }
+
+  .exact-hero-mobile-art {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .exact-hero-mobile-art img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+  }
+}
