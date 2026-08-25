@@ -1472,3 +1472,40 @@ main:has(.exact-hero) {
     letter-spacing: .05em;
   }
 }
+
+
+/* Mobile hero scale correction: smaller copy, larger full artwork, no crop zoom */
+@media (max-width:760px) {
+  html {
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  .exact-hero-mobile-copy h1 {
+    width: 100%;
+    max-width: none;
+    margin: 9px 0 14px;
+    font-size: clamp(30px, 8.7vw, 36px);
+    line-height: 1.02;
+    letter-spacing: -.045em;
+  }
+
+  .exact-hero-mobile-art {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+  }
+
+  .exact-hero-mobile-art img {
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    background: #06131b;
+  }
+}
+
+@media (max-width:360px) {
+  .exact-hero-mobile-copy h1 {
+    font-size: 30px;
+  }
+}
