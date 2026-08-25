@@ -133,3 +133,11 @@ img, video, iframe, svg, canvas {
     padding: 24px 18px;
   }
 }
+
+
+/* Mobile-only hero banner enlargement */
+@media (max-width: 760px) {
+  .exact-hero-mobile-art {
+    height: clamp(260px, 72vw, 320px);
+  }
+}
