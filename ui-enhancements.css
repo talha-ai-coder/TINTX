@@ -200,3 +200,15 @@ button,a,select,input{ -webkit-tap-highlight-color:transparent }
     font-size: .68rem;
   }
 }
+
+
+/* User-requested mobile cleanup: remove the fixed price/order strip */
+@media (max-width:760px) {
+  .mobile-order-bar {
+    display: none !important;
+  }
+
+  body {
+    padding-bottom: 0 !important;
+  }
+}
