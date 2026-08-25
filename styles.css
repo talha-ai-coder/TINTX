@@ -1538,3 +1538,82 @@ main:has(.exact-hero) {
     font-size: 27px;
   }
 }
+
+
+/* Final mobile hero correction requested after visual review */
+@media (max-width:760px) {
+  .exact-hero-mobile-copy h1 {
+    font-size: clamp(24px, 6.4vw, 28px);
+    line-height: 1.08;
+    letter-spacing: -.025em;
+    margin: 8px 0 12px;
+  }
+
+  .exact-hero-mobile-art {
+    height: clamp(250px, 75vw, 300px);
+    aspect-ratio: auto;
+    overflow: hidden;
+  }
+
+  .exact-hero-mobile-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transform: none;
+  }
+}
+
+@media (max-width:360px) {
+  .exact-hero-mobile-copy h1 {
+    font-size: 24px;
+  }
+
+  .exact-hero-mobile-art {
+    height: 250px;
+  }
+}
+
+
+/* Mobile footer cleanup: each navigation group gets its own clear row */
+@media (max-width:760px) {
+  .site-footer {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 34px 18px 42px;
+  }
+
+  .site-footer > div,
+  .site-footer > div:first-child {
+    grid-column: 1 / -1;
+    min-width: 0;
+    padding: 18px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .site-footer > div:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .site-footer > div:not(:first-child) b {
+    margin-bottom: 8px;
+    color: var(--cyan);
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+
+  .site-footer a,
+  .site-footer span {
+    margin: 8px 0;
+    line-height: 1.45;
+  }
+
+  .site-footer .copyright {
+    grid-column: 1 / -1;
+    padding-top: 18px;
+    margin-top: 0;
+    line-height: 1.4;
+  }
+}
