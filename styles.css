@@ -1617,3 +1617,17 @@ main:has(.exact-hero) {
     line-height: 1.4;
   }
 }
+
+
+/* Return & Exchange Policy */
+.policy-section{margin-top:32px;padding:42px 0 12px;border-top:1px solid rgba(120,160,170,.24)}
+.policy-section .section-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:24px}
+.policy-section .section-heading .hero-lede{max-width:420px;margin:0}
+.policy-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.policy-card{position:relative;padding:24px;background:rgba(255,255,255,.04);border:1px solid rgba(120,190,200,.22);border-radius:14px}
+.policy-card h3{margin:12px 0 10px;font-size:20px;color:#f6fbfc}
+.policy-card p{margin:0;color:#a9c0c5;font-size:15px;line-height:1.65}
+.policy-number{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#08b99e;color:#06131b;font-size:12px;font-weight:900}
+.policy-note{margin:18px 0;padding:16px 18px;border-left:3px solid #08b99e;background:rgba(8,185,158,.08);color:#c4d7da;font-size:14px;line-height:1.6}
+.policy-disclaimer{margin:16px 0 0;color:#809aa1;font-size:12px;line-height:1.5}
+@media(max-width:700px){.policy-section{padding-top:32px}.policy-section .section-heading{display:block}.policy-section .section-heading .hero-lede{margin-top:10px}.policy-grid{grid-template-columns:1fr}.policy-card{padding:20px}.policy-card h3{font-size:18px}}
