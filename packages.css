@@ -1,20 +1,18 @@
-/* TINTX package section — reference-style three package layout */
-.tintx-packages{background:#fff;padding:56px 24px 76px;scroll-margin-top:80px}
-.tintx-packages-heading{max-width:1180px;margin:0 auto 28px;text-align:center}
-.tintx-packages-heading .eyebrow{margin:0 0 7px}
-.tintx-packages-heading h2{margin:0;font-size:clamp(28px,3.4vw,42px);letter-spacing:-.025em;color:#111b21}
-.tintx-package-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px;align-items:start}
-.tintx-package-card{min-width:0;background:#fff;border:0;border-radius:0;overflow:visible;box-shadow:none}
-.tintx-package-image{position:relative;width:100%;height:280px;overflow:hidden;background:#eef0f0}
-.tintx-package-image img{display:block;width:100%;height:100%;object-fit:cover}
-.tintx-package-ribbon{position:absolute;left:0;top:0;padding:7px 34px 7px 42px;background:linear-gradient(90deg,#08c5a6,#111b21);color:#fff;font-size:17px;line-height:1;font-weight:800;letter-spacing:.06em;border-radius:0 0 20px 0}
-.tintx-package-count{position:absolute;right:14px;top:10px;display:grid;place-items:center;min-width:66px;height:48px;padding:0 10px;border-radius:999px;background:#08b99e;color:#071b20;font-size:11px;font-weight:900;letter-spacing:.04em}
-.tintx-package-content{padding:22px 12px 0;text-align:left}
-.tintx-package-content h3{display:inline-block;margin:0 0 20px;padding:4px 8px;background:#dfe1e2;color:#111;font-size:22px;line-height:1.05;font-weight:800}
-.tintx-package-content ul{list-style:none;margin:0 0 22px;padding:0 0 0 0;display:grid;gap:12px}
-.tintx-package-content li{position:relative;padding-left:28px;color:#35434c;font-size:18px;line-height:1.45}
-.tintx-package-content li::before{content:'○';position:absolute;left:0;top:0;color:#303a40;font-size:18px}
-.tintx-package-button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 20px;background:#111f27;color:#fff;text-decoration:none;font-size:14px;font-weight:800;border-radius:4px;transition:transform .15s ease,background .15s ease}
-.tintx-package-button:hover{background:#08b99e;color:#071b20;transform:translateY(-1px)}
-@media(max-width:900px){.tintx-package-grid{grid-template-columns:1fr 1fr;gap:24px}.tintx-package-image{height:240px}.tintx-package-grid .tintx-package-card:last-child{grid-column:1/-1;max-width:calc(50% - 12px);margin:0 auto;width:100%}}
-@media(max-width:600px){.tintx-packages{padding:44px 14px 60px}.tintx-package-grid{grid-template-columns:1fr;gap:38px}.tintx-package-grid .tintx-package-card:last-child{grid-column:auto;max-width:none}.tintx-package-image{height:230px}.tintx-package-content{padding-left:6px;padding-right:6px}.tintx-package-content h3{font-size:20px}.tintx-package-content li{font-size:16px}}
+/* TINTX package section — exact customer-supplied image */
+.tintx-packages{background:#f7f9fa;padding:68px 20px 84px;scroll-margin-top:80px}
+.tintx-packages-heading{max-width:1200px;margin:0 auto 24px;text-align:left}
+.tintx-packages-heading .eyebrow{margin:0 0 8px}
+.tintx-packages-heading h2{margin:0 0 10px;color:#06131b;font-size:clamp(30px,4vw,48px);letter-spacing:-.03em}
+.tintx-packages-heading>p:last-child{margin:0;color:#526b73;font-size:16px}
+.tintx-package-picture{max-width:1200px;margin:0 auto;overflow:hidden;background:#fff;border:1px solid #d8e2e5;border-radius:12px;box-shadow:0 12px 28px rgba(6,19,27,.08)}
+.tintx-package-picture img{display:block;width:100%;height:auto}
+.tintx-package-price-grid{max-width:1200px;margin:20px auto 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.tintx-package-price-card{position:relative;display:flex;flex-direction:column;min-height:210px;padding:22px;background:#fff;border:1px solid #d8e2e5;border-radius:12px;box-shadow:0 8px 20px rgba(6,19,27,.06)}
+.tintx-package-price-card.is-popular{border:2px solid #08b99e;padding:21px}
+.tintx-popular-label{position:absolute;top:-12px;left:20px;padding:5px 10px;border-radius:999px;background:#08b99e;color:#071b20;font-size:10px;font-weight:900;letter-spacing:.08em}
+.tintx-package-price-name{color:#526b73;font-size:13px;font-weight:900;letter-spacing:.05em;text-transform:uppercase}
+.tintx-package-price-card strong{display:block;margin:13px 0 7px;color:#06131b;font-size:30px;letter-spacing:-.03em}
+.tintx-package-price-card small{display:block;min-height:38px;color:#526b73;font-size:13px;line-height:1.45}
+.tintx-package-price-card .tintx-package-button{width:100%;margin-top:auto;border:0;cursor:pointer}
+.tintx-package-price-card.is-popular .tintx-package-button{background:#08b99e;color:#071b20}
+@media(max-width:760px){.tintx-packages{padding:48px 14px 66px}.tintx-packages-heading h2{font-size:34px}.tintx-packages-heading>p:last-child{font-size:14px}.tintx-package-picture{border-radius:9px}.tintx-package-price-grid{grid-template-columns:1fr;gap:14px}.tintx-package-price-card,.tintx-package-price-card.is-popular{min-height:0;padding:20px}.tintx-package-price-card.is-popular{padding-top:24px}}
