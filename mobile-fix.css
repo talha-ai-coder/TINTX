@@ -18,53 +18,60 @@ img, video, iframe, svg, canvas {
   max-width: 100%;
 }
 
-@media (max-width: 760px) {
-  body {
-    overflow-x: hidden;
-  }
+/* Hero: bigger product banner, cleaner smaller headline */
+.hero-media img {
+  height: 500px;
+}
 
-  .site-header,
-  .hero,
-  .section,
-  .page-wrap,
-  .site-footer,
-  .fitment-banner {
+.hero h1 {
+  font-size: clamp(38px, 5.2vw, 62px);
+  line-height: 1.04;
+}
+
+@media (max-width: 760px) {
+  body { overflow-x: hidden; }
+
+  .site-header, .hero, .section, .page-wrap, .site-footer, .fitment-banner {
     width: 100%;
     max-width: 100%;
   }
 
-  .hero,
-  .section,
-  .page-wrap {
+  .hero, .section, .page-wrap {
     padding-left: 16px;
     padding-right: 16px;
   }
 
-  .hero h1,
-  .page-title,
-  .detail-copy h2,
-  .section h2 {
+  /* Smaller "Privacy on demand. Comfort every drive." headline */
+  .hero h1 {
+    font-size: clamp(32px, 9.5vw, 42px);
+    line-height: 1.06;
+    letter-spacing: -.055em;
+    margin: 10px 0 14px;
+  }
+
+  /* Make the hero banner/image noticeably larger */
+  .hero-media {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero-media img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+  }
+
+  .hero h1, .page-title, .detail-copy h2, .section h2 {
     overflow-wrap: anywhere;
     word-break: normal;
   }
 
-  .hero-media,
-  .fabric-photo,
-  .detail-main,
-  .product-card,
-  .fit-card,
-  .form-card,
-  .filters,
-  .order-summary {
+  .hero-media, .fabric-photo, .detail-main, .product-card, .fit-card, .form-card, .filters, .order-summary {
     min-width: 0;
     max-width: 100%;
   }
 
-  .hero-media img,
-  .fabric-photo img,
-  .detail-main img,
-  .material-grid img,
-  .product-image img {
+  .hero-media img, .fabric-photo img, .detail-main img, .material-grid img, .product-image img {
     max-width: 100%;
   }
 
@@ -73,57 +80,27 @@ img, video, iframe, svg, canvas {
     max-width: 100%;
   }
 
-  .trust-strip div {
-    min-width: 0;
-  }
+  .trust-strip div { min-width: 0; }
 
-  .fitment-banner,
-  .section-heading,
-  .catalogue-head,
-  .shop-toolbar,
-  .button-row,
-  .qty-row,
-  .cod-box {
+  .fitment-banner, .section-heading, .catalogue-head, .shop-toolbar, .button-row, .qty-row, .cod-box {
     min-width: 0;
     max-width: 100%;
   }
 
-  .shop-toolbar,
-  .section-heading,
-  .catalogue-head,
-  .fitment-banner {
-    flex-wrap: wrap;
-  }
+  .shop-toolbar, .section-heading, .catalogue-head, .fitment-banner { flex-wrap: wrap; }
 
-  .shop-toolbar input,
-  .shop-toolbar select,
-  .shop-search,
-  .field,
-  .form-field,
-  .fit-fields select {
+  .shop-toolbar input, .shop-toolbar select, .shop-search, .field, .form-field, .fit-fields select {
     min-width: 0;
     max-width: 100%;
   }
 
-  .shop-layout,
-  .detail-grid,
-  .checkout-grid,
-  .cart-grid,
-  .fabric-section,
-  .material-grid,
-  .form-grid {
+  .shop-layout, .detail-grid, .checkout-grid, .cart-grid, .fabric-section, .material-grid, .form-grid {
     grid-template-columns: minmax(0, 1fr);
     min-width: 0;
   }
 
-  .product-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .fit-fields,
-  .fit-points {
-    grid-template-columns: minmax(0, 1fr);
-  }
+  .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fit-fields, .fit-points { grid-template-columns: minmax(0, 1fr); }
 
   .site-footer {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -131,39 +108,23 @@ img, video, iframe, svg, canvas {
     padding-right: 18px;
   }
 
-  .copyright {
-    grid-column: 1 / -1;
-  }
-
-  .ai-panel {
-    max-width: calc(100vw - 20px);
-  }
-
-  #chatzy-shadow-host {
-    max-width: calc(100vw - 28px) !important;
-  }
+  .copyright { grid-column: 1 / -1; }
+  .ai-panel { max-width: calc(100vw - 20px); }
+  #chatzy-shadow-host { max-width: calc(100vw - 28px) !important; }
 }
 
 @media (max-width: 480px) {
-  .product-grid,
-  .site-footer {
-    grid-template-columns: minmax(0, 1fr);
-  }
+  .product-grid, .site-footer { grid-template-columns: minmax(0, 1fr); }
 
   .hero h1 {
-    font-size: clamp(2.5rem, 13vw, 3.6rem);
+    font-size: clamp(30px, 9vw, 38px);
+    line-height: 1.06;
   }
 
-  .section,
-  .page-wrap {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
+  .hero-media img { height: 330px; }
 
-  .hero {
-    padding-top: 42px;
-    padding-bottom: 42px;
-  }
+  .section, .page-wrap { padding-top: 70px; padding-bottom: 70px; }
+  .hero { padding-top: 38px; padding-bottom: 42px; }
 
   .fitment-banner {
     margin-left: 12px;
