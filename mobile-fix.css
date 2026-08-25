@@ -1,0 +1,174 @@
+/* TINTX mobile overflow / accidental zoom fix */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, video, iframe, svg, canvas {
+  max-width: 100%;
+}
+
+#app, main, section, header, footer, nav {
+  min-width: 0;
+  max-width: 100%;
+}
+
+@media (max-width: 760px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .site-header,
+  .hero,
+  .section,
+  .page-wrap,
+  .site-footer,
+  .fitment-banner {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero,
+  .section,
+  .page-wrap {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero h1,
+  .page-title,
+  .detail-copy h2,
+  .section h2 {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .hero-media,
+  .fabric-photo,
+  .detail-main,
+  .product-card,
+  .fit-card,
+  .form-card,
+  .filters,
+  .order-summary {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero-media img,
+  .fabric-photo img,
+  .detail-main img,
+  .material-grid img,
+  .product-image img {
+    max-width: 100%;
+  }
+
+  .trust-strip {
+    width: calc(100% - 24px);
+    max-width: 100%;
+  }
+
+  .trust-strip div {
+    min-width: 0;
+  }
+
+  .fitment-banner,
+  .section-heading,
+  .catalogue-head,
+  .shop-toolbar,
+  .button-row,
+  .qty-row,
+  .cod-box {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .shop-toolbar,
+  .section-heading,
+  .catalogue-head,
+  .fitment-banner {
+    flex-wrap: wrap;
+  }
+
+  .shop-toolbar input,
+  .shop-toolbar select,
+  .shop-search,
+  .field,
+  .form-field,
+  .fit-fields select {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .shop-layout,
+  .detail-grid,
+  .checkout-grid,
+  .cart-grid,
+  .fabric-section,
+  .material-grid,
+  .form-grid {
+    grid-template-columns: minmax(0, 1fr);
+    min-width: 0;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fit-fields,
+  .fit-points {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .site-footer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .copyright {
+    grid-column: 1 / -1;
+  }
+
+  .ai-panel {
+    max-width: calc(100vw - 20px);
+  }
+
+  #chatzy-shadow-host {
+    max-width: calc(100vw - 28px) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid,
+  .site-footer {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 13vw, 3.6rem);
+  }
+
+  .section,
+  .page-wrap {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .hero {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+
+  .fitment-banner {
+    margin-left: 12px;
+    margin-right: 12px;
+    width: calc(100% - 24px);
+    padding: 24px 18px;
+  }
+}
