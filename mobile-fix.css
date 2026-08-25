@@ -138,6 +138,6 @@ img, video, iframe, svg, canvas {
 /* Mobile-only hero banner enlargement */
 @media (max-width: 760px) {
   .exact-hero-mobile-art {
-    height: clamp(260px, 72vw, 320px);
+    height: clamp(330px, 92vw, 400px);
   }
 }
