@@ -1509,3 +1509,32 @@ main:has(.exact-hero) {
     font-size: 30px;
   }
 }
+
+
+/* Strong mobile correction requested after visual review */
+@media (max-width:760px) {
+  .exact-hero-mobile-copy h1 {
+    font-size: clamp(27px, 7.2vw, 31px);
+    line-height: 1.04;
+    letter-spacing: -.035em;
+    margin: 8px 0 13px;
+  }
+
+  .exact-hero-mobile-art {
+    height: clamp(238px, 62vw, 270px);
+    aspect-ratio: auto;
+  }
+
+  .exact-hero-mobile-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+@media (max-width:360px) {
+  .exact-hero-mobile-copy h1 {
+    font-size: 27px;
+  }
+}
