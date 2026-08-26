@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TINTX Orders Dashboard</title>
+  <style>
+    :root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#0b1820;background:#f4f7f8}
+    *{box-sizing:border-box}body{margin:0}.wrap{max-width:1200px;margin:auto;padding:28px}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px}.brand{font-weight:900;letter-spacing:.08em}.sub{color:#63717a}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}.card{background:#fff;border:1px solid #e0e7ea;border-radius:16px;padding:16px;box-shadow:0 8px 24px rgba(0,0,0,.05)}.stat b{display:block;font-size:27px}.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}.filters input,.filters select{padding:11px 12px;border:1px solid #d6dfe3;border-radius:10px;background:#fff}.orders{overflow:auto}.orders table{width:100%;border-collapse:collapse;min-width:900px}.orders th,.orders td{text-align:left;padding:13px;border-bottom:1px solid #edf1f2;vertical-align:top}.orders th{font-size:12px;text-transform:uppercase;color:#6b7880}.pill{display:inline-block;padding:5px 9px;border-radius:999px;font-size:12px;font-weight:800;background:#eef3f5}.actions{display:flex;gap:6px;flex-wrap:wrap}.actions button{border:1px solid #d5dde1;background:#fff;border-radius:8px;padding:7px 9px;cursor:pointer}.empty{padding:35px;text-align:center;color:#6d7980}.note{font-size:13px;color:#69767e;margin-top:12px}
+    @media(max-width:800px){.stats{grid-template-columns:repeat(2,1fr)}.wrap{padding:16px}.top{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><div><div class="brand">TINTX ORDERS</div><h1 style="margin:6px 0 4px">Orders Dashboard</h1><div class="sub">Website orders · COD · fitment</div></div><button id="refresh" class="card" style="cursor:pointer">Refresh</button></div>
+  <div class="stats">
+    <div class="card stat"><span class="sub">Total</span><b id="s-total">0</b></div>
+    <div class="card stat"><span class="sub">New</span><b id="s-new">0</b></div>
+    <div class="card stat"><span class="sub">Shipped</span><b id="s-shipped">0</b></div>
+    <div class="card stat"><span class="sub">Delivered</span><b id="s-delivered">0</b></div>
+  </div>
+  <div class="filters">
+    <input id="search" placeholder="Search name, phone, city, car...">
+    <select id="status"><option value="">All statuses</option><option>New</option><option>Confirmed</option><option>Shipped</option><option>Delivered</option><option>Cancelled</option></select>
+  </div>
+  <div class="card orders"><table><thead><tr><th>Order</th><th>Customer</th><th>Car / Fitment</th><th>Total</th><th>Status</th><th>Date</th><th>Actions</th></tr></thead><tbody id="rows"><tr><td colspan="7" class="empty">Loading orders…</td></tr></tbody></table></div>
+  <div class="note">Admin dashboard is designed to connect to the Google Sheet backend in <code>google-apps-script.gs</code>.</div>
+</div>
+<script>
+const API_URL='';
+let orders=[];
+function esc(v){return String(v??'').replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[c]));}
+function fmt(d){try{return new Date(d).toLocaleString('en-PK')}catch{return d||''}}
+function render(){
+  const q=document.getElementById('search').value.toLowerCase().trim(), st=document.getElementById('status').value;
+  const filtered=orders.filter(o=>{const blob=Object.values(o).join(' ').toLowerCase();return(!q||blob.includes(q))&&(!st||o.status===st)});
+  const counts={Total:orders.length,New:0,Shipped:0,Delivered:0};orders.forEach(o=>{if(counts[o.status]!==undefined)counts[o.status]++});
+  Object.entries(counts).forEach(([k,v])=>document.getElementById('s-'+k.toLowerCase()).textContent=v);
+  const rows=document.getElementById('rows');
+  if(!filtered.length){rows.innerHTML='<tr><td colspan="7" class="empty">No orders found.</td></tr>';return}
+  rows.innerHTML=filtered.map((o,i)=>`<tr><td><b>${esc(o.order_id)}</b><div class="sub">${esc(o.payment||'COD')}</div></td><td><b>${esc(o.name)}</b><div>${esc(o.phone)}</div><div>${esc(o.city)}</div><div>${esc(o.address)}</div></td><td>${esc(o.car)}</td><td><b>PKR ${Number(o.total||0).toLocaleString('en-PK')}</b><div>${esc(o.quantity)} item(s)</div></td><td><span class="pill">${esc(o.status||'New')}</span></td><td>${esc(fmt(o.created_at))}</td><td><div class="actions"><button onclick="setStatus('${esc(o.order_id)}','Confirmed')">Confirm</button><button onclick="setStatus('${esc(o.order_id)}','Shipped')">Ship</button><button onclick="setStatus('${esc(o.order_id)}','Delivered')">Done</button></div></td></tr>`).join('');
+}
+async function load(){
+  if(!API_URL){orders=[];render();return}
+  try{const r=await fetch(API_URL);orders=await r.json();render()}catch(e){document.getElementById('rows').innerHTML='<tr><td colspan="7" class="empty">Could not load orders.</td></tr>'}
+}
+async function setStatus(id,status){
+  if(!API_URL){const o=orders.find(x=>x.order_id===id);if(o){o.status=status;render()}return}
+  await fetch(API_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'status',order_id:id,status})});load();
+}
+document.getElementById('refresh').onclick=load;document.getElementById('search').oninput=render;document.getElementById('status').onchange=render;load();
+</script>
+</body></html>
