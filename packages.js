@@ -52,7 +52,7 @@
       if(typeof save==='function') save();
       button.textContent='Added ✓';
       window.setTimeout(()=>{button.textContent='Order this package →';},1200);
-      window.location.hash='cart';
+      window.location.href='checkout.html';
     });
   }
 

@@ -10,14 +10,10 @@
       e.preventDefault();
       e.stopImmediatePropagation();
       const selected = model.value;
-      const existing = cartFromStorage();
-      const product = {id:'tintx-removable-shades', name:'TINTX Removable Car Window Shades', price:2499, qty:1, fitment:`${make.value} ${selected}`};
-      localStorage.setItem('tintx-cart', JSON.stringify(existing.length ? existing : [product]));
+      const product = {id:'tintx-removable-shades', name:'TINTX Removable Car Window Shades', price:2499, qty:1, image:'product-main.jpg', fitment:`${make.value} ${selected}`};
+      localStorage.setItem('tintx-cart', JSON.stringify([product]));
       window.openCheckout();
     }, true);
-  }
-  function cartFromStorage() {
-    try { return JSON.parse(localStorage.getItem('tintx-cart') || '[]'); } catch (_) { return []; }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();

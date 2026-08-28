@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#06131b">
+  <meta name="description" content="Complete your TINTX removable car window shades order with Cash on Delivery across Pakistan.">
+  <title>Checkout — TINTX</title>
+  <link rel="stylesheet" href="styles.css?v=19">
+  <link rel="stylesheet" href="checkout-page.css?v=1">
+</head>
+<body class="checkout-page-body">
+  <div class="announcement">Nationwide delivery across Pakistan <span>•</span> Cash on Delivery available</div>
+  <header class="checkout-header">
+    <a class="checkout-brand" href="index.html" aria-label="Back to TINTX home">
+      <img src="logo-new.png" alt="TINTX Logo">
+    </a>
+    <a class="checkout-back-link" href="index.html#product">← Continue shopping</a>
+  </header>
+
+  <main class="checkout-page-main">
+    <section class="checkout-intro" aria-labelledby="checkout-title">
+      <p class="eyebrow">TINTX CHECKOUT</p>
+      <h1 id="checkout-title">Complete your order</h1>
+      <p>Enter your delivery details below. We will confirm fitment and deliver anywhere in Pakistan.</p>
+      <div class="checkout-steps" aria-label="Order steps">
+        <span class="checkout-step is-active"><b>1</b> Your details</span>
+        <span class="checkout-step"><b>2</b> Confirmation</span>
+        <span class="checkout-cod-badge">Cash on Delivery</span>
+      </div>
+    </section>
+
+    <div id="checkout-app" class="checkout-layout">
+      <section class="checkout-card checkout-form-card" aria-labelledby="delivery-title">
+        <div class="checkout-card-heading">
+          <div>
+            <p class="checkout-card-kicker">DELIVERY INFORMATION</p>
+            <h2 id="delivery-title">Where should we deliver?</h2>
+          </div>
+          <span class="secure-note">Private &amp; secure</span>
+        </div>
+        <form id="tintx-order-form" novalidate>
+          <div class="checkout-form-grid">
+            <label>Full name<input name="name" required autocomplete="name" placeholder="Your name"></label>
+            <label>Phone number<input name="phone" required autocomplete="tel" inputmode="tel" placeholder="03XXXXXXXXX"></label>
+            <label>City<input name="city" required autocomplete="address-level2" placeholder="Karachi"></label>
+            <label>Car make &amp; model<input id="car-field" name="car" required autocomplete="off" placeholder="e.g. Honda City 2018"></label>
+            <label class="checkout-full-width">Full delivery address<textarea name="address" required autocomplete="street-address" rows="4" placeholder="House number, street, area and nearby landmark"></textarea></label>
+          </div>
+          <input type="hidden" name="product">
+          <input type="hidden" name="quantity">
+          <input type="hidden" name="total">
+          <input type="hidden" name="payment" value="Cash on Delivery">
+          <input type="hidden" name="_subject" value="New TINTX Website Order">
+          <input type="hidden" name="_template" value="table">
+          <button class="checkout-submit" type="submit">Place order <span id="submit-total">— PKR 2,499</span> <b>→</b></button>
+          <p class="checkout-form-note">By placing this order, you agree to receive a delivery confirmation call from TINTX.</p>
+        </form>
+      </section>
+
+      <aside class="checkout-card order-card" aria-labelledby="summary-title">
+        <div class="checkout-card-heading">
+          <div>
+            <p class="checkout-card-kicker">YOUR ORDER</p>
+            <h2 id="summary-title">Order summary</h2>
+          </div>
+          <span class="order-count" id="order-count">1 item</span>
+        </div>
+        <div id="order-summary" class="order-summary" aria-live="polite"></div>
+        <div class="order-total-row"><span>Total</span><strong id="order-total">PKR 2,499</strong></div>
+        <div class="checkout-benefits">
+          <p><span>✓</span> Cash on Delivery available</p>
+          <p><span>✓</span> Delivery across Pakistan</p>
+          <p><span>✓</span> Fitment confirmed before dispatch</p>
+        </div>
+        <a class="checkout-whatsapp" href="https://wa.me/923112205795" target="_blank" rel="noopener noreferrer">Need help? Chat on WhatsApp</a>
+      </aside>
+    </div>
+
+    <p class="checkout-footer-note">TINTX — Privacy on demand. Comfort every drive.</p>
+  </main>
+
+  <script src="checkout-page.js?v=1"></script>
+</body>
+</html>

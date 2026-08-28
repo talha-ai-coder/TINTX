@@ -22,7 +22,7 @@
 <header>
   <div class="menu-left"><a href="index.html" style="color:white; text-decoration:none;">← BACK</a></div>
   <div class="logo-center"><img src="logo-new.png" alt="TINTX" class="logo-img"></div>
-  <a href="https://wa.me/923112205795" class="nav-btn">Order Now</a>
+  <a href="checkout.html" class="nav-btn">Order Now</a>
 </header>
 
 <section style="padding:50px 20px;">
@@ -245,10 +245,22 @@ document.getElementById('carSearchProduct').addEventListener('keyup', function()
   }
 });
 
-document.getElementById('buyNowBtn').onclick = function() {
+document.getElementById('buyNowBtn').onclick = function(event) {
+  event.preventDefault();
   var car = document.getElementById('carSelectProduct').value;
+  var quantity = Math.max(1, Number(document.querySelector('input[type="number"]').value || 1));
   if(car == "") { alert("Please Select Your Car Model First"); return false; }
-  window.open("https://wa.me/923112205795?text=Hi%20TINTX,%20I%20want%20to%20order%204%20Windows%20Removable%20Shades%20for%20" + car, "_blank");
+  localStorage.setItem('tintx-cart', JSON.stringify([{
+    id: 'tintx-removable-shades',
+    name: 'TINTX Removable Car Window Shades',
+    price: 2499,
+    oldPrice: 6000,
+    image: 'product-main.jpg',
+    qty: quantity,
+    fitment: car
+  }]));
+  window.location.href = 'checkout.html';
+  return false;
 }
 </script>
 
