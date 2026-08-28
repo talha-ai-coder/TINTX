@@ -1631,3 +1631,18 @@ main:has(.exact-hero) {
 .policy-note{margin:18px 0;padding:16px 18px;border-left:3px solid #08b99e;background:rgba(8,185,158,.08);color:#c4d7da;font-size:14px;line-height:1.6}
 .policy-disclaimer{margin:16px 0 0;color:#809aa1;font-size:12px;line-height:1.5}
 @media(max-width:700px){.policy-section{padding-top:32px}.policy-section .section-heading{display:block}.policy-section .section-heading .hero-lede{margin-top:10px}.policy-grid{grid-template-columns:1fr}.policy-card{padding:20px}.policy-card h3{font-size:18px}}
+
+/* TINTX logo background match: keep the original logo artwork and match its #03111e canvas. */
+.site-header,
+.site-footer,
+.checkout-header,
+.product-page-body header {
+  background-color: #03111e !important;
+}
+
+.site-header .brand-logo,
+.site-footer .footer-brand-logo .brand-logo,
+.checkout-brand img,
+.product-page-body .logo-img {
+  background-color: #03111e;
+}
