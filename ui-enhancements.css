@@ -212,3 +212,21 @@ button,a,select,input{ -webkit-tap-highlight-color:transparent }
     padding-bottom: 0 !important;
   }
 }
+
+/* Smaller external agent launcher */
+.chatzy_widget,
+#chatzy-shadow-host {
+  transform: scale(.72) !important;
+  transform-origin: bottom right !important;
+}
+
+@media (max-width:760px) {
+  .chatzy_widget,
+  #chatzy-shadow-host {
+    left: auto !important;
+    right: 10px !important;
+    bottom: 142px !important;
+    transform: scale(.62) !important;
+    transform-origin: bottom right !important;
+  }
+}
