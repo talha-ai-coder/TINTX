@@ -275,3 +275,33 @@ button,a,select,input{ -webkit-tap-highlight-color:transparent }
 .exact-hero-mobile-art img { animation: tintxHeroSweep 1.25s cubic-bezier(.22,1,.36,1) both; }
 .reveal-item { transform: translateY(42px); transition-duration: .9s; }
 .reveal-item.is-visible { transform: translateY(0); }
+
+
+/* Demo highlight: one-time cinematic light sweep across the hero */
+@keyframes tintxLightSweep {
+  0% { transform: translateX(-115%) skewX(-16deg); opacity: 0; }
+  18% { opacity: .7; }
+  58% { opacity: .22; }
+  100% { transform: translateX(250%) skewX(-16deg); opacity: 0; }
+}
+@keyframes tintxCtaPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(39,212,255,0); }
+  45% { box-shadow: 0 0 0 5px rgba(39,212,255,.35), 0 0 24px rgba(39,212,255,.28); }
+}
+.exact-hero::after {
+  content: '';
+  position: absolute;
+  z-index: 3;
+  top: -20%;
+  left: 0;
+  width: 16%;
+  height: 140%;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(104,235,255,.48), transparent);
+  filter: blur(7px);
+  animation: tintxLightSweep 2.2s .35s ease-out both;
+}
+.exact-hero-link { animation: tintxCtaPulse 1.7s 1.05s ease-out 2; }
+@media (prefers-reduced-motion: reduce) {
+  .exact-hero::after, .exact-hero-link { animation: none; }
+}
