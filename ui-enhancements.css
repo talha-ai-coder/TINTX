@@ -263,3 +263,15 @@ button,a,select,input{ -webkit-tap-highlight-color:transparent }
   .exact-hero-desktop-art, .exact-hero-mobile-copy, .exact-hero-mobile-art, .button-primary { animation: none; }
   .reveal-item { opacity: 1; transform: none; transition: none; }
 }
+
+
+/* More visible demo timing: motion remains restrained but is easy to notice */
+@keyframes tintxHeroSweep {
+  0% { opacity: .35; transform: scale(1.08); filter: brightness(.78) saturate(.82); }
+  70% { opacity: 1; }
+  100% { opacity: 1; transform: scale(1); filter: brightness(1) saturate(1); }
+}
+.exact-hero-desktop-art { animation: tintxHeroSweep 1.25s cubic-bezier(.22,1,.36,1) both; }
+.exact-hero-mobile-art img { animation: tintxHeroSweep 1.25s cubic-bezier(.22,1,.36,1) both; }
+.reveal-item { transform: translateY(42px); transition-duration: .9s; }
+.reveal-item.is-visible { transform: translateY(0); }
