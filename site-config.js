@@ -1,5 +1,5 @@
 // TINTX deployment configuration.
-// After deploying google-apps-script.gs as a Web app, paste its /exec URL here.
+// Google Apps Script Web app endpoint for order storage and dashboard reads.
 window.TINTX_CONFIG = Object.freeze({
-  orderApiUrl: ''
+  orderApiUrl: 'https://script.google.com/macros/s/AKfycbyLbEZHEHSbMtftyX84S4CsKCwiZSyw-38H5dhcmGTq6U-hwgfbK7qvSx-TsGtKjKhhMw/exec'
 });
