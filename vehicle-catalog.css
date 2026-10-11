@@ -1,0 +1,128 @@
+/* TINTX car-first product catalog */
+.vehicle-browser .browser-selector { grid-template-columns: minmax(220px, 360px); justify-content: start; }
+.vehicle-browser .browser-selector #browser-model,
+.vehicle-browser .browser-selector #browser-search { display: none !important; }
+.brand-item { appearance: none; font: inherit; cursor: pointer; }
+.brand-item.active { outline: 2px solid var(--cyan); outline-offset: 4px; border-radius: 9px; }
+.tintx-shop-layout { grid-template-columns: minmax(0, 1fr); }
+.tintx-product-option[hidden] { display: none !important; }
+.cart-fitment { margin: 7px 0; color: #94aab1; font-size: .82rem; line-height: 1.45; }
+.brand-item:focus-visible,
+.tintx-generation-select:focus-visible,
+.tintx-year-button:focus-visible,
+.tintx-product-option button:focus-visible,
+.tintx-product-option a:focus-visible,
+.tintx-back-link:focus-visible { outline: 3px solid #ffd166; outline-offset: 3px; }
+.product-section .tintx-product-option-grid { max-width: 100%; }
+.tintx-product-option-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.tintx-product-option { min-width: 0; overflow: hidden; display: flex; flex-direction: column; background: linear-gradient(160deg, #0c222d, #071820); border: 1px solid rgba(39,212,255,.18); box-shadow: 0 12px 32px rgba(0,0,0,.2); transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+.tintx-product-option:hover,
+.tintx-product-option.is-pending { transform: translateY(-3px); border-color: var(--cyan); box-shadow: 0 16px 38px rgba(0,0,0,.28); }
+.tintx-product-option-art { min-height: 128px; display: grid; place-items: center; position: relative; overflow: hidden; background: radial-gradient(circle at 50% 15%, rgba(39,212,255,.16), transparent 64%), linear-gradient(135deg, #102e3b, #061219); border-bottom: 1px solid var(--line); }
+.tintx-product-option-art > span { position: absolute; left: 12px; bottom: 9px; color: #8fa9b2; font-size: 9px; font-weight: 900; letter-spacing: .12em; }
+.tintx-product-icon { width: 100px; height: 92px; fill: rgba(39,212,255,.16); stroke: #72e6ff; stroke-width: 2.4; stroke-linejoin: round; }
+.tintx-product-icon circle { fill: #071820; stroke: #72e6ff; }
+.tintx-product-option-copy { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 17px; }
+.tintx-product-kicker { margin: 0 0 6px; color: var(--cyan); font-size: 9px; font-weight: 900; letter-spacing: .14em; }
+.tintx-product-option-copy h3 { min-height: 45px; margin: 0 0 8px; color: #f4fbff; font-size: 15px; line-height: 1.35; }
+.tintx-product-price { display: block; margin: 0 0 8px; color: var(--cyan); font-size: 21px; letter-spacing: -.03em; }
+.tintx-product-option-copy > p:not(.tintx-product-kicker) { min-height: 48px; margin: 0 0 14px; color: var(--muted); font-size: 11px; line-height: 1.5; }
+.tintx-product-option .button { width: 100%; min-height: 42px; margin-top: auto; padding: 10px 12px; font-size: 12px; }
+.tintx-product-option .tintx-whatsapp-order { margin-top: 9px; color: #72e6a4; border-color: rgba(114,230,164,.55); }
+.tintx-product-option .tintx-whatsapp-order:hover { background: rgba(34,217,121,.1); }
+.tintx-model-step,
+.tintx-year-step,
+.tintx-product-step { margin-top: 24px; padding: 20px; border: 1px solid rgba(39,212,255,.2); border-radius: 14px; background: linear-gradient(145deg, rgba(12,35,46,.96), rgba(4,15,21,.98)); text-align: left; }
+.tintx-step-heading { display: flex; align-items: end; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+.tintx-step-heading .eyebrow { margin: 0 0 5px; }
+.tintx-step-heading h3 { margin: 0; color: #f4fbff; font-size: 22px; letter-spacing: -.03em; }
+.tintx-step-heading > span { color: #93aab3; font-size: 11px; text-align: right; }
+.tintx-fitment-disclaimer { max-width: 760px; margin: 0 0 15px; color: #a9bec5; font-size: 12px; line-height: 1.5; }
+.tintx-generation-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px; }
+.tintx-generation-card { min-width: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.1); border-radius: 11px; background: #071820; transition: transform .2s ease, border-color .2s ease; }
+.tintx-generation-card:hover { transform: translateY(-2px); border-color: var(--cyan); }
+.tintx-generation-select { display: block; width: 100%; padding: 0; border: 0; background: transparent; color: inherit; text-align: left; cursor: pointer; }
+.tintx-car-photo { position: relative; display: block; min-width: 0; margin: 0; overflow: hidden; background: linear-gradient(145deg, #143440, #061219); }
+.tintx-car-photo img { display: block; width: 100%; height: 168px; object-fit: cover; }
+.tintx-car-photo figcaption { padding: 5px 8px; color: #93aab3; font-size: 8px; line-height: 1.35; overflow-wrap: anywhere; }
+.tintx-car-photo figcaption a { color: inherit; }
+.tintx-generation-photo { height: 168px; }
+.tintx-photo-badge { position: absolute; right: 7px; bottom: 7px; padding: 4px 6px; border-radius: 4px; background: rgba(2,8,12,.78); color: #d5e4e8; font-size: 7px; font-weight: 800; letter-spacing: .06em; }
+.tintx-generation-photo figcaption { position: absolute; right: 5px; bottom: 4px; left: 5px; width: fit-content; max-width: calc(100% - 10px); overflow: hidden; padding: 4px 7px; border-radius: 4px; background: rgba(2,8,12,.78); color: #d5e4e8; font-size: 8px; text-overflow: ellipsis; white-space: nowrap; }
+.tintx-generation-photo figcaption a { color: inherit; }
+.tintx-car-photo-fallback { display: flex; min-height: 168px; flex-direction: column; align-items: center; justify-content: center; gap: 6px; background: linear-gradient(145deg, #143440, #061219); color: #a7bec5; }
+.tintx-car-photo-fallback svg { width: 110px; max-width: 60%; fill: rgba(39,212,255,.24); stroke: #5dcde6; stroke-width: 2; }
+.tintx-car-photo-fallback span { font-size: 10px; }
+.tintx-generation-meta { display: flex; min-height: 106px; flex-direction: column; align-items: flex-start; padding: 12px 13px; }
+.tintx-generation-meta > span { color: #72dff6; font-size: 9px; font-weight: 900; letter-spacing: .12em; }
+.tintx-generation-meta strong { margin-top: 4px; color: #f4fbff; font-size: 16px; line-height: 1.25; }
+.tintx-generation-meta small { margin-top: 5px; color: #9eb4bc; font-size: 11px; }
+.tintx-generation-meta b { margin-top: auto; padding-top: 11px; color: var(--cyan); font-size: 9px; letter-spacing: .1em; }
+.tintx-credit { display: block; padding: 5px 9px 7px; color: #93aab3; font-size: 8px; line-height: 1.35; overflow-wrap: anywhere; }
+.tintx-credit:hover { color: #c7f5ff; text-decoration: underline; }
+.tintx-back-link { margin: 0 0 15px; padding: 6px 0; border: 0; background: transparent; color: var(--cyan); font-size: 12px; font-weight: 800; cursor: pointer; }
+.tintx-selected-vehicle { display: grid; grid-template-columns: minmax(180px, .7fr) 1.3fr; align-items: center; gap: 18px; margin: 0 0 20px; padding: 12px; border: 1px solid rgba(39,212,255,.15); border-radius: 10px; background: rgba(4,15,21,.52); }
+.tintx-selected-vehicle-photo { align-self: stretch; min-height: 140px; border-radius: 7px; }
+.tintx-selected-vehicle-photo img { min-height: 140px; height: 100%; max-height: 240px; object-fit: cover; }
+.tintx-selected-vehicle > div .eyebrow { margin: 0 0 5px; }
+.tintx-selected-vehicle h3 { margin: 0 0 6px; color: #f4fbff; font-size: 22px; }
+.tintx-selected-vehicle > div > span { color: #a9bec5; font-size: 12px; }
+.tintx-selected-vehicle .tintx-fitment-disclaimer { margin: 7px 0 0; font-size: 11px; }
+.tintx-fitment-status { display: inline-flex; margin-top: 4px; padding: 4px 8px; border: 1px solid rgba(255,209,102,.4); border-radius: 999px; color: #ffd166 !important; font-size: 10px !important; font-weight: 800; }
+.tintx-fitment-status.is-current { border-color: rgba(57,233,140,.4); color: #71e9aa !important; }
+.tintx-year-picker { padding: 15px 0 5px; }
+.tintx-picker-label { margin: 0 0 9px; color: #f4fbff; font-weight: 800; }
+.tintx-year-grid { display: flex; flex-wrap: wrap; gap: 7px; max-height: 220px; overflow: auto; padding: 4px; }
+.tintx-year-button { min-width: 58px; padding: 9px 11px; border: 1px solid rgba(255,255,255,.14); border-radius: 7px; background: #071820; color: #e9f7fa; font-size: 12px; font-weight: 800; cursor: pointer; }
+.tintx-year-button:hover { border-color: var(--cyan); background: rgba(39,212,255,.12); color: #fff; }
+.tintx-manual-year { display: flex; align-items: end; gap: 10px; flex-wrap: wrap; }
+.tintx-manual-year label,
+.tintx-custom-model-label { display: block; width: 100%; color: #f4fbff; font-size: 12px; font-weight: 800; }
+.tintx-manual-year input,
+.tintx-year-step input { min-width: 200px; padding: 12px; border: 1px solid var(--line); border-radius: 5px; background: #071820; color: #f4fbff; }
+.tintx-custom-model-label { margin-top: 8px; }
+.tintx-year-step > input { width: min(100%, 380px); }
+.tintx-product-step .tintx-step-heading { margin-top: 15px; }
+.tintx-product-option-grid-selected { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.tintx-product-option-grid-selected .tintx-product-option { display: grid; grid-template-columns: 120px minmax(0,1fr); }
+.tintx-product-option-grid-selected .tintx-product-option-art { min-height: 100%; border-right: 1px solid var(--line); border-bottom: 0; }
+.tintx-product-option-grid-selected .tintx-product-icon { width: 84px; }
+.tintx-product-option-grid-selected .tintx-product-option-copy { padding: 14px; }
+.tintx-product-option-grid-selected .tintx-product-option-copy h3 { min-height: auto; font-size: 14px; }
+.tintx-product-option-grid-selected .tintx-product-option-copy > p:not(.tintx-product-kicker) { min-height: 0; }
+.tintx-product-option-grid-selected .tintx-product-option .button { margin-top: 8px; }
+.tintx-catalog-footer { margin-top: 22px; }
+@media (max-width:1000px) {
+  .tintx-product-option-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tintx-generation-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width:650px) {
+  .tintx-model-step,.tintx-year-step,.tintx-product-step { margin-top: 16px; padding: 14px; border-radius: 11px; }
+  .tintx-generation-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .tintx-generation-photo,.tintx-car-photo img { height: 118px; }
+  .tintx-car-photo-fallback { min-height: 118px; }
+  .tintx-generation-meta { min-height: 96px; padding: 10px; }
+  .tintx-generation-meta strong { font-size: 13px; }
+  .tintx-generation-meta small { font-size: 10px; }
+  .tintx-generation-meta b { font-size: 8px; }
+  .tintx-credit { font-size: 7px; padding-inline: 7px; }
+  .tintx-step-heading { align-items: flex-start; flex-direction: column; }
+  .tintx-step-heading > span { text-align: left; }
+  .tintx-selected-vehicle { grid-template-columns: 1fr; gap: 10px; }
+  .tintx-selected-vehicle-photo img { height: 190px; }
+  .tintx-product-option-grid-selected { grid-template-columns: 1fr; }
+  .tintx-product-option-grid-selected .tintx-product-option { grid-template-columns: 88px minmax(0,1fr); }
+  .tintx-product-option-grid-selected .tintx-product-option-art { min-height: 100%; }
+  .tintx-product-option-grid-selected .tintx-product-icon { width: 66px; }
+  .tintx-product-option-grid-selected .tintx-product-option-copy { padding: 12px; }
+  .tintx-product-option-grid-selected .tintx-product-option-copy h3 { font-size: 13px; }
+  .tintx-product-option-grid-selected .tintx-product-option .button { font-size: 10px; padding: 8px 6px; }
+}
+@media (max-width:390px) {
+  .tintx-product-option-grid:not(.tintx-product-option-grid-selected) { grid-template-columns: 1fr; }
+  .tintx-generation-meta { min-height: 90px; }
+  .tintx-year-button { min-width: 51px; padding: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tintx-product-option,.tintx-generation-card { transition: none; }
+}

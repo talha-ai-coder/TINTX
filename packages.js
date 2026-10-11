@@ -9,6 +9,7 @@
   function moneyValue(value){return `PKR ${Number(value).toLocaleString('en-PK')}`;}
 
   function render(){
+    if(window.TINTX_FOUR_PRODUCT_CATALOG) return;
     const app=document.getElementById('app');
     if(!app || !app.querySelector('.exact-hero') || app.querySelector('.tintx-packages')) return;
     const section=document.createElement('section');
@@ -56,7 +57,7 @@
     });
   }
 
-  function init(){render();bindButtons();}
+  function init(){if(window.TINTX_FOUR_PRODUCT_CATALOG) return;render();bindButtons();}
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init);
   else init();
   new MutationObserver(render).observe(document.documentElement,{childList:true,subtree:true});
