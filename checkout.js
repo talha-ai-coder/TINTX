@@ -8,7 +8,7 @@
 
   function shouldOpenCheckout(target) {
     if (!target || !target.closest) return false;
-    return Boolean(target.closest('a[href="#cart"], a.cart-link, [data-order], .order-button'));
+    return Boolean(target.closest('[data-order], .order-button'));
   }
 
   document.addEventListener('click', event => {
