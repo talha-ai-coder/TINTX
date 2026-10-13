@@ -63,6 +63,12 @@ const WA='https://wa.me/923112205795';
 const money=n=>`PKR ${Number(n).toLocaleString('en-PK')}`;
 let cart=JSON.parse(localStorage.getItem('tintx-cart')||'[]');
 const app=document.getElementById('app');
+if('scrollRestoration' in history)history.scrollRestoration='manual';
+function resetHomeScroll(){
+  const route=location.hash.replace('#','')||'home';
+  if(route==='home'&&!location.pathname.endsWith('/honda.html'))window.scrollTo(0,0);
+}
+window.addEventListener('pageshow',resetHomeScroll);
 let hondaNavigationStarted=false;
 const openHondaCatalog=event=>{
   const hondaLink=event.target.closest?.('a.brand-item[data-brand="HONDA"]');
@@ -231,7 +237,7 @@ function render(){
   if(route.startsWith('car-honda?'))route='car-honda';
   const views={home:home,shop:shop,product, 'fit-guide':fitGuide,cart:cartPage,checkout,help,'brand-honda':hondaBrandPage,'car-honda':hondaResultsPage};
   app.innerHTML=(views[route]||home)();
-  app.focus();
+  app.focus({preventScroll:true});
   bind();
   save();
 }
