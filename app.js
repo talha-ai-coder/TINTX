@@ -308,10 +308,13 @@ function bind(){
 
     // Brand logo clicks
     document.querySelectorAll('.brand-item').forEach(item => {
-      item.onclick = () => {
+      item.onclick = event => {
         const brand = item.dataset.brand;
         if (String(brand).toUpperCase() === 'HONDA') {
+          event.preventDefault();
           location.hash = 'brand-honda';
+          render();
+          window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
           return;
         }
         makeSelect.value = brand;
