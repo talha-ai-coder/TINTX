@@ -686,11 +686,17 @@
 .brand-marquee {
   display: flex;
   width: 100%;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+  scroll-behavior: smooth;
   user-select: none;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+  -webkit-mask-image: none;
+  mask-image: none;
 }
+
+.brand-marquee::-webkit-scrollbar { display: none; }
 
 .brand-track {
   display: flex;
@@ -699,8 +705,10 @@
   gap: 18px;
   padding-right: 18px;
   min-width: max-content;
-  animation: tintxBrandScroll 48s linear infinite;
+  animation: none;
 }
+
+.brand-track[aria-hidden="true"] { display: none; }
 
 .brand-marquee:hover .brand-track {
   animation-play-state: paused;

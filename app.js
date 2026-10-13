@@ -63,13 +63,18 @@ const WA='https://wa.me/923112205795';
 const money=n=>`PKR ${Number(n).toLocaleString('en-PK')}`;
 let cart=JSON.parse(localStorage.getItem('tintx-cart')||'[]');
 const app=document.getElementById('app');
-document.addEventListener('click',event=>{
+let hondaNavigationStarted=false;
+const openHondaCatalog=event=>{
   const hondaLink=event.target.closest?.('a.brand-item[data-brand="HONDA"]');
   if(!hondaLink)return;
+  if(hondaNavigationStarted)return;
+  hondaNavigationStarted=true;
   event.preventDefault();
   event.stopImmediatePropagation();
-  window.location.assign(new URL('index.html#brand-honda',window.location.href).href);
-},true);
+  window.location.assign(hondaLink.href);
+};
+document.addEventListener('pointerdown',openHondaCatalog,true);
+document.addEventListener('click',openHondaCatalog,true);
 const save=()=>{localStorage.setItem('tintx-cart',JSON.stringify(cart));document.getElementById('cart-count').textContent=cart.reduce((s,i)=>s+i.qty,0)};
 function img(src,alt){return `<img src="${src}" alt="${alt}" onerror="this.style.opacity='.08'">`}
 function shell(eyebrow,title,intro,body){return `<div class="page-wrap"><p class="eyebrow">${eyebrow}</p><h1 class="page-title">${title}</h1><p class="page-intro">${intro}</p>${body}</div>`}
@@ -91,7 +96,7 @@ function getLogoUrl(brand) {
 function home(){
   const brands = Object.keys(VEHICLE_DATA).filter(b => b !== 'OTHER');
   const brandLogos = brands.map(brand => `
-    ${brand === 'HONDA' ? `<a class="brand-item" data-brand="${brand}" href="index.html#brand-honda" title="Shop Honda models" aria-label="Shop Honda models">` : `<div class="brand-item" data-brand="${brand}" title="${brand}">`}
+    ${brand === 'HONDA' ? `<a class="brand-item" data-brand="${brand}" href="honda.html" title="Shop Honda models" aria-label="Shop Honda models">` : `<div class="brand-item" data-brand="${brand}" title="${brand}">`}
       <img src="${getLogoUrl(brand)}" alt="${brand} logo">
       <span>${brand}</span>
     ${brand === 'HONDA' ? '</a>' : '</div>'}
@@ -221,6 +226,7 @@ function hondaResultsPage(){
 
 function render(){
   let route=location.hash.replace('#','')||'home';
+  if(location.pathname.endsWith('/honda.html')&&route==='home')route='brand-honda';
   if(route.startsWith('product'))route='product';
   if(route.startsWith('car-honda?'))route='car-honda';
   const views={home:home,shop:shop,product, 'fit-guide':fitGuide,cart:cartPage,checkout,help,'brand-honda':hondaBrandPage,'car-honda':hondaResultsPage};
