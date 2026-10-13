@@ -63,6 +63,13 @@ const WA='https://wa.me/923112205795';
 const money=n=>`PKR ${Number(n).toLocaleString('en-PK')}`;
 let cart=JSON.parse(localStorage.getItem('tintx-cart')||'[]');
 const app=document.getElementById('app');
+document.addEventListener('click',event=>{
+  const hondaLink=event.target.closest?.('a.brand-item[data-brand="HONDA"]');
+  if(!hondaLink)return;
+  event.preventDefault();
+  event.stopImmediatePropagation();
+  window.location.assign(new URL('index.html#brand-honda',window.location.href).href);
+},true);
 const save=()=>{localStorage.setItem('tintx-cart',JSON.stringify(cart));document.getElementById('cart-count').textContent=cart.reduce((s,i)=>s+i.qty,0)};
 function img(src,alt){return `<img src="${src}" alt="${alt}" onerror="this.style.opacity='.08'">`}
 function shell(eyebrow,title,intro,body){return `<div class="page-wrap"><p class="eyebrow">${eyebrow}</p><h1 class="page-title">${title}</h1><p class="page-intro">${intro}</p>${body}</div>`}
