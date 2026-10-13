@@ -84,7 +84,7 @@ function getLogoUrl(brand) {
 function home(){
   const brands = Object.keys(VEHICLE_DATA).filter(b => b !== 'OTHER');
   const brandLogos = brands.map(brand => `
-    ${brand === 'HONDA' ? `<a class="brand-item" data-brand="${brand}" href="#brand-honda" title="Shop Honda models" aria-label="Shop Honda models">` : `<div class="brand-item" data-brand="${brand}" title="${brand}">`}
+    ${brand === 'HONDA' ? `<a class="brand-item" data-brand="${brand}" href="index.html#brand-honda" title="Shop Honda models" aria-label="Shop Honda models">` : `<div class="brand-item" data-brand="${brand}" title="${brand}">`}
       <img src="${getLogoUrl(brand)}" alt="${brand} logo">
       <span>${brand}</span>
     ${brand === 'HONDA' ? '</a>' : '</div>'}
@@ -311,10 +311,8 @@ function bind(){
       item.onclick = event => {
         const brand = item.dataset.brand;
         if (String(brand).toUpperCase() === 'HONDA') {
-          event.preventDefault();
-          location.hash = 'brand-honda';
-          render();
-          window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+          // Let the anchor perform a full document navigation. This avoids
+          // hash-only routing failures on browsers clicking the moving marquee.
           return;
         }
         makeSelect.value = brand;
