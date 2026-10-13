@@ -84,10 +84,10 @@ function getLogoUrl(brand) {
 function home(){
   const brands = Object.keys(VEHICLE_DATA).filter(b => b !== 'OTHER');
   const brandLogos = brands.map(brand => `
-    <div class="brand-item" data-brand="${brand}" title="${brand}">
+    ${brand === 'HONDA' ? `<a class="brand-item" data-brand="${brand}" href="#brand-honda" title="Shop Honda models" aria-label="Shop Honda models">` : `<div class="brand-item" data-brand="${brand}" title="${brand}">`}
       <img src="${getLogoUrl(brand)}" alt="${brand} logo">
       <span>${brand}</span>
-    </div>
+    ${brand === 'HONDA' ? '</a>' : '</div>'}
   `).join('');
 
   return `
