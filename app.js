@@ -310,6 +310,10 @@ function bind(){
     document.querySelectorAll('.brand-item').forEach(item => {
       item.onclick = () => {
         const brand = item.dataset.brand;
+        if (String(brand).toUpperCase() === 'HONDA') {
+          location.hash = 'brand-honda';
+          return;
+        }
         makeSelect.value = brand;
         makeSelect.onchange();
         document.querySelectorAll('.brand-item').forEach(i => i.classList.remove('active'));
