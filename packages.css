@@ -1,4 +1,4 @@
-/* TINTX package section — exact customer-supplied image */
+/* TINTX coverage option cards */
 .tintx-packages{background:#f7f9fa;padding:68px 20px 84px;scroll-margin-top:80px}
 .tintx-packages-heading{max-width:1200px;margin:0 auto 24px;text-align:left}
 .tintx-packages-heading .eyebrow{margin:0 0 8px}
@@ -19,11 +19,18 @@
 
 
 /* Match each package picture with its own details */
-.tintx-package-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start}
+.tintx-package-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;align-items:stretch}
 .tintx-package-card{min-width:0;background:#fff;border:1px solid #d8e2e5;border-radius:12px;overflow:hidden;box-shadow:0 8px 22px rgba(6,19,27,.07)}
 .tintx-package-card.is-popular{border:2px solid #08b99e}
-.tintx-package-image{width:100%;height:auto;overflow:hidden;background:#f4f6f6}
-.tintx-package-image img{display:block;width:100%;height:auto;object-fit:contain}
+.tintx-coverage-art{display:grid;place-items:center;min-height:130px;padding:16px;background:linear-gradient(145deg,#f4f8f8,#e9f1f2)}
+.coverage-visual{width:min(100%,210px);height:auto;overflow:visible}
+.coverage-car{fill:#d9e4e6;stroke:#567078;stroke-width:2.5;stroke-linejoin:round}
+.coverage-glass{fill:#c8d9dc;stroke:#526b73;stroke-width:2}
+.coverage-wheel{fill:#193039;stroke:#fff;stroke-width:2}
+.tintx-coverage-full .coverage-glass{fill:#08b99e}
+.tintx-coverage-half .coverage-front{fill:#08b99e}
+.tintx-coverage-front .coverage-front{fill:#08b99e}
+.tintx-coverage-rear .coverage-rear{fill:#08b99e}
 .tintx-package-content{position:relative;display:flex;flex-direction:column;min-height:205px;padding:20px 20px 18px;text-align:left}
 .tintx-package-price-name{display:block;padding-right:8px;color:#06131b;font-size:15px;font-weight:900;line-height:1.35;text-transform:uppercase}
 .tintx-package-content strong{display:block;margin:12px 0 7px;color:#06131b;font-size:30px;letter-spacing:-.03em}
@@ -32,3 +39,93 @@
 .tintx-package-card.is-popular .tintx-package-button{background:#08b99e;color:#071b20}
 @media(max-width:900px){.tintx-package-grid{grid-template-columns:1fr 1fr;gap:18px}.tintx-package-grid .tintx-package-card:last-child{grid-column:1/-1;max-width:calc(50% - 9px);margin:0 auto;width:100%}}
 @media(max-width:600px){.tintx-package-grid{grid-template-columns:1fr;gap:16px}.tintx-package-grid .tintx-package-card:last-child{grid-column:auto;max-width:none}.tintx-package-content{min-height:185px;padding:18px}.tintx-package-content strong{font-size:28px}}
+
+/* Product-page coverage chooser */
+.tintx-detail-options{margin:18px 0 22px}
+.tintx-detail-label{margin:0 0 9px;font-size:14px;font-weight:800;color:#14252b}
+.tintx-detail-option-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.tintx-detail-option{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:48px;padding:10px 12px;border:1px solid #cad6d9;border-radius:9px;background:#fff;color:#183039;text-align:left;cursor:pointer}
+.tintx-detail-option strong{font-size:13px;white-space:nowrap}
+.tintx-detail-option.is-selected{border:2px solid #08b99e;background:#e9faf7}
+@media(max-width:900px){.tintx-package-grid .tintx-package-card:last-child{grid-column:auto;max-width:none;margin:0;width:auto}}
+@media(max-width:600px){.tintx-detail-option{padding:9px;font-size:13px}.tintx-detail-option strong{font-size:12px}}
+
+
+/* Honda pilot: brand click -> model/year -> coverage options */
+.browser-results.honda-fitment-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;justify-content:stretch;align-items:start}
+.honda-results-heading{grid-column:1/-1;color:#fff;margin:0 0 4px}
+.honda-results-heading .eyebrow{margin:0 0 7px;color:#08b99e}
+.honda-results-heading h3{margin:0 0 7px;font-size:clamp(20px,3vw,28px)}
+.honda-results-heading p:last-child{margin:0;color:#a8b8bd;font-size:14px}
+.honda-model-card{padding:18px;background:#0a1a24;border:1px solid rgba(255,255,255,.1);border-radius:14px;color:#fff}
+.honda-model-meta{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:13px;color:#a8b8bd;font-size:11px;font-weight:800;letter-spacing:.08em}
+.honda-model-meta b{padding:5px 8px;border-radius:999px;background:rgba(8,185,158,.14);color:#60e3d1;letter-spacing:0}
+.honda-model-card h3{margin:0 0 16px;font-size:19px}
+.honda-view-options{width:100%;min-height:44px;padding:11px 13px;border:0;border-radius:8px;background:#08b99e;color:#071b20;font-weight:900;cursor:pointer}
+.honda-option-list{display:grid;gap:8px;margin-top:12px}
+.honda-option-list[hidden]{display:none}
+.honda-order-option{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 11px;border:1px solid rgba(255,255,255,.14);border-radius:8px;background:#102832;color:#fff;text-align:left;cursor:pointer}
+.honda-order-option:hover{border-color:#08b99e;background:#14343d}
+.honda-order-option strong{color:#60e3d1;white-space:nowrap}
+@media(max-width:900px){.browser-results.honda-fitment-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.browser-results.honda-fitment-list{grid-template-columns:1fr;gap:11px;margin-top:24px}.honda-model-card{padding:16px}.honda-model-card h3{font-size:17px}}
+
+
+/* Dedicated Honda brand catalogue: model cards, year selectors, and View Options */
+.honda-catalog-page,.honda-results-page{min-height:calc(100vh - 70px);background:#f8f9fa;color:#20262a;padding:30px 22px 72px}
+.honda-catalog-inner,.honda-results-inner{max-width:1200px;margin:0 auto}
+.honda-breadcrumb{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 28px;color:#70797d;font-size:13px}
+.honda-breadcrumb a{color:#4c5b60;text-decoration:none}
+.honda-breadcrumb a:hover{text-decoration:underline}
+.honda-breadcrumb b{color:#20262a}
+.honda-brand-heading{text-align:center;margin:0 auto 32px}
+.honda-brand-heading>img{width:78px;height:78px;object-fit:contain;margin-bottom:9px}
+.honda-brand-heading h1{margin:0;color:#20262a;font-size:clamp(28px,4vw,42px);font-weight:900;letter-spacing:-.04em}
+.honda-brand-heading h1 span{color:#08a98f}
+.honda-brand-heading>p{margin:9px 0 20px;color:#69757a;font-size:15px}
+.honda-promise-row{display:flex;justify-content:center;flex-wrap:wrap;gap:9px 20px;color:#39454a;font-size:11px;font-weight:900;letter-spacing:.035em}
+.honda-promise-row span{white-space:nowrap}
+.honda-catalog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.honda-catalog-card{overflow:hidden;border:1px solid #e5e8e9;border-radius:12px;background:#fff;box-shadow:0 3px 12px rgba(18,31,36,.07);text-align:center}
+.honda-catalog-image{height:176px;padding:14px 18px;background:#fff}
+.honda-catalog-image img{display:block;width:100%;height:100%;object-fit:contain}
+.honda-catalog-copy{padding:14px 15px 16px}
+.honda-card-brand{display:block;color:#6e777a;font-size:10px;font-weight:800;letter-spacing:.09em}
+.honda-catalog-copy h2{margin:5px 0 9px;color:#20262a;font-size:24px;line-height:1.1}
+.honda-available-label{margin:0 0 8px;color:#6c7477;font-size:10px;font-weight:700}
+.honda-year-list{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin:0 auto 12px}
+.honda-year-chip{min-height:29px;padding:5px 9px;border:1px solid #cfd6d8;border-radius:6px;background:#fff;color:#333d41;font-size:11px;font-weight:800;cursor:pointer}
+.honda-year-chip:hover,.honda-year-chip.is-selected{border-color:#08a98f;background:#08a98f;color:#fff}
+.honda-view-button{width:100%;min-height:42px;border:0;border-radius:7px;background:#101b20;color:#fff;font-size:12px;font-weight:900;letter-spacing:.04em;cursor:pointer}
+.honda-view-button:hover{background:#08a98f;color:#071b20}
+.honda-results-heading{display:grid;grid-template-columns:minmax(220px,380px) 1fr;gap:28px;align-items:center;padding:22px;background:#fff;border:1px solid #e5e8e9;border-radius:14px}
+.honda-selected-car-image{height:210px;background:#f7f9fa;border-radius:10px;padding:10px}
+.honda-selected-car-image img{width:100%;height:100%;object-fit:contain}
+.honda-results-heading h1{margin:8px 0 5px;font-size:clamp(28px,4vw,40px);color:#20262a}
+.honda-selected-year{display:inline-block;margin:0 0 12px;padding:6px 10px;border-radius:999px;background:#e7f7f4;color:#087964;font-size:13px;font-weight:900}
+.honda-results-heading p:last-child{margin:0;color:#657176}
+.honda-results-title{margin:36px 0 17px}
+.honda-results-title h2{margin:6px 0;font-size:clamp(24px,3vw,34px)}
+.honda-results-title p:last-child{margin:5px 0;color:#68767b}
+.honda-shade-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.honda-shade-card{overflow:hidden;border:1px solid #e4e8e9;border-radius:12px;background:#fff;box-shadow:0 4px 14px rgba(18,31,36,.06)}
+.honda-shade-art{display:grid;place-items:center;height:128px;padding:16px;background:#f2f6f6}
+.honda-shade-art svg{width:min(100%,190px);height:auto}
+.honda-shade-copy{display:flex;flex-direction:column;align-items:flex-start;min-height:178px;padding:17px}
+.honda-shade-copy>span{color:#6a777c;font-size:11px;font-weight:800}
+.honda-shade-copy h3{margin:6px 0 9px;font-size:18px}
+.honda-shade-copy>strong{margin-bottom:15px;color:#15262b;font-size:23px}
+.honda-shade-copy button{width:100%;min-height:42px;margin-top:auto;border:0;border-radius:7px;background:#08a98f;color:#061b19;font-size:12px;font-weight:900;cursor:pointer}
+.honda-shade-copy button:hover{filter:brightness(.94)}
+@media(max-width:900px){.honda-catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.honda-shade-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.honda-catalog-page,.honda-results-page{padding:18px 13px 48px}.honda-brand-heading>img{width:62px;height:62px}.honda-brand-heading{margin-bottom:23px}.honda-promise-row{gap:8px 11px;font-size:9px}.honda-catalog-grid{grid-template-columns:1fr;gap:13px}.honda-catalog-image{height:190px}.honda-results-heading{grid-template-columns:1fr;gap:16px;padding:15px}.honda-selected-car-image{height:175px}.honda-shade-grid{grid-template-columns:1fr 1fr;gap:10px}.honda-shade-copy{padding:12px;min-height:164px}.honda-shade-copy h3{font-size:16px}.honda-shade-copy>strong{font-size:19px}.honda-shade-art{height:104px;padding:10px}}
+
+.cart-fitment,.honda-fitment-note{display:block;margin-top:5px;color:#557078;font-size:12px;font-weight:650;line-height:1.5}
+.honda-fitment-note{padding:9px 11px;border-radius:7px;background:#edf8f6;color:#126b5f}
+
+.honda-photo-credits{max-width:1200px;margin:22px auto 0;padding:14px 16px;border:1px solid #e2e7e8;border-radius:9px;background:#fff;color:#59656a;font-size:12px;line-height:1.55}
+.honda-photo-credits summary{color:#39464b;font-weight:800;cursor:pointer}
+.honda-photo-credits p{margin:10px 0 6px}
+.honda-photo-credits ul{margin:6px 0 0;padding-left:19px}
+.honda-photo-credits li{margin:5px 0}
+.honda-photo-credits a{color:#087964;text-underline-offset:2px}

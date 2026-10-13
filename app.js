@@ -38,6 +38,26 @@ const VEHICLE_DATA = {
   "OTHER": ["Other / not listed — WhatsApp check"]
 };
 
+const HONDA_CATALOG = [
+  { id:'br-v', name:'BR-V', years:['2017-2024'], image:'br-v.png' },
+  { id:'city', name:'City', years:['2009-2013','2014-2020','2021-2024'], image:'assets/honda/city.jpg' },
+  { id:'civic', name:'Civic', years:['2001-2005','2006-2011','2012-2015','2016-2021','2022-2024'], image:'civic.png' },
+  { id:'hr-v', name:'HR-V', years:['2022-2024'], image:'assets/honda/hr-v.jpg' },
+  { id:'accord', name:'Accord', years:['2018-2024'], image:'assets/honda/accord.jpg' },
+  { id:'vezel', name:'Vezel', years:['2014-2024'], image:'assets/honda/vezel.jpg' },
+  { id:'fit', name:'Fit', years:['2010-2024'], image:'assets/honda/fit.jpg' },
+  { id:'cr-v', name:'CR-V', years:['2018-2024'], image:'assets/honda/cr-v.jpg' }
+];
+
+const HONDA_IMAGE_CREDITS = [
+  {model:'Honda City', author:'M 93', source:'https://commons.wikimedia.org/wiki/File%3AHonda_City_1.5_i-VTEC_V_%28VIII%2C_Facelift%29_%E2%80%93_f_22032025.jpg', license:'CC BY-SA 3.0 Germany', licenseUrl:'https://creativecommons.org/licenses/by-sa/3.0/de/deed.en'},
+  {model:'Honda HR-V', author:'Alexander Migl', source:'https://commons.wikimedia.org/wiki/File%3A2025_Honda_HR-V_Hybrid_DSC_7908.jpg', license:'CC BY-SA 4.0', licenseUrl:'https://creativecommons.org/licenses/by-sa/4.0'},
+  {model:'Honda Accord', author:'Kevauto', source:'https://commons.wikimedia.org/wiki/File%3A2018_Honda_Accord_2.13.18.jpg', license:'CC BY-SA 4.0', licenseUrl:'https://creativecommons.org/licenses/by-sa/4.0'},
+  {model:'Honda Vezel', author:'TTTNIS', source:'https://commons.wikimedia.org/wiki/File%3A2013-2018_Honda_Vezel_Hybrid_X.jpg', license:'CC0 1.0', licenseUrl:'https://creativecommons.org/publicdomain/zero/1.0/'},
+  {model:'Honda Fit / Jazz', author:'M 93', source:'https://commons.wikimedia.org/wiki/File:Honda_Jazz_III_front_20100529.jpg', license:'Attribution-only permission', licenseUrl:'https://commons.wikimedia.org/wiki/File:Honda_Jazz_III_front_20100529.jpg'},
+  {model:'Honda CR-V', author:'Chanokchon', source:'https://commons.wikimedia.org/wiki/File%3A2023_Honda_CR-V_EL_4WD.jpg', license:'CC BY-SA 4.0', licenseUrl:'https://creativecommons.org/licenses/by-sa/4.0'}
+];
+
 const CAR_MODELS = Object.values(VEHICLE_DATA).flat();
 const WA='https://wa.me/923112205795';
 const money=n=>`PKR ${Number(n).toLocaleString('en-PK')}`;
@@ -172,10 +192,31 @@ function cartPage(){let total=cart.reduce((s,i)=>s+i.price*i.qty,0);return shell
 function checkout(){let total=cart.reduce((s,i)=>s+i.price*i.qty,0);return shell('CASH ON DELIVERY','Complete your order.','Tell us where to deliver. We’ll confirm the fit before dispatch.',`<div class="checkout-grid"><form class="form-card" id="checkout-form"><h3>Customer details</h3><div class="form-grid"><input class="form-field" required placeholder="Full name"><input class="form-field" required type="tel" placeholder="Phone number"></div><input class="form-field" required placeholder="Complete delivery address"><div class="form-grid"><input class="form-field" required placeholder="City"><input class="form-field" placeholder="Order notes (optional)"></div><h3>Car details</h3><div class="form-grid"><input class="form-field" required placeholder="Car make"><input class="form-field" required placeholder="Car model"></div><input class="form-field" placeholder="Year / variant"><div class="cod-box">✓ <div><b>Cash on Delivery</b><br><small>Pay when your shade arrives. No online payment required.</small></div></div><button class="button button-primary full">Place COD order →</button></form><aside class="order-summary"><h3>Your order</h3><div class="summary-line"><span>TINTX shade</span><b>${money(total||PRODUCT.price)}</b></div><div class="summary-total"><span>Total</span><strong>${money(total||PRODUCT.price)}</strong></div><p>🚚 Free nationwide delivery</p></aside></div>`)}
 function help(){return shell('HELP · FAQS · CONTACT','Questions? We’ve got you.','Everything you need to know about TINTX fabric, fitment, delivery, returns and Cash on Delivery.',`<div class="form-card"><h2>High-Density Polyester Mesh Fabric</h2><div class="faq"><details open><summary>Privacy aur view kaisa hai?</summary><p>Bahar se visibility kam hoti hai, andar se view clear rehta hai.</p></details><details><summary>Garmi kitni kam hoti hai?</summary><p>Mesh dhoop aur UV ka asar kam karne mein madad karta hai, jis se cabin zyada comfortable rehta hai.</p></details><details><summary>Hawa pass hoti hai?</summary><p>Haan, fabric breathable, halka aur washable hai; fogging kam hoti hai.</p></details><details><summary>Delivery aur payment?</summary><p>Pakistan-wide delivery available hai. Payment sirf Cash on Delivery par hoti hai.</p></details><details><summary>Agar meri car Honda City nahi hai?</summary><p><a class="text-link" href="${WA}" target="_blank">WhatsApp par model bhejein</a>; team manual fitment check karegi.</p></details></div><a class="button button-primary" href="${WA}" target="_blank">Chat with TINTX on WhatsApp →</a></div><section class="policy-section" id="return-exchange"><div class="section-heading"><div><p class="eyebrow">TINTX CUSTOMER CARE</p><h2>Return & Exchange Policy</h2></div><p class="hero-lede">We want you to receive the right fit and a product in perfect condition.</p></div><div class="policy-grid"><article class="policy-card"><span class="policy-number">01</span><h3>Exchange for a wrong or damaged item</h3><p>If you receive a damaged, defective or incorrect package, contact us within <b>48 hours of delivery</b>. Send your order details and clear photos/videos on WhatsApp so we can arrange the exchange.</p></article><article class="policy-card"><span class="policy-number">02</span><h3>Product condition</h3><p>For an exchange, the shades must be unused, uninstalled and returned with the original packaging. Products damaged after installation or modified by the customer may not qualify.</p></article><article class="policy-card"><span class="policy-number">03</span><h3>Fitment support</h3><p>Before dispatch, we confirm your car details. If you are unsure about fitment, message us before ordering so our team can check your make, model and year.</p></article><article class="policy-card"><span class="policy-number">04</span><h3>How to request help</h3><p>Share your order number, car details and a short description of the issue. Our team will guide you through the next steps. Return shipping instructions will be provided after review.</p></article></div><div class="policy-note"><b>Please note:</b> Change-of-mind returns and incorrect orders caused by unconfirmed vehicle details may not be eligible. Each request is reviewed fairly based on the product condition and issue reported.</div><a class="button button-primary" href="${WA}" target="_blank">Request an exchange on WhatsApp →</a><p class="policy-disclaimer">Policy draft — please review these terms for your business operations and local requirements before relying on them.</p></section>`)}
 
+function hondaBrandPage(){
+  const cards=HONDA_CATALOG.map(car=>`<article class="honda-catalog-card" data-honda-model="${car.id}"><div class="honda-catalog-image">${img(car.image,`Honda ${car.name}`)}</div><div class="honda-catalog-copy"><span class="honda-card-brand">HONDA</span><h2>${car.name}</h2><p class="honda-available-label">AVAILABLE MODEL${car.years.length>1?'S':''}</p><div class="honda-year-list">${car.years.map((year,index)=>`<button type="button" class="honda-year-chip${index===0?' is-selected':''}" data-honda-year="${year}" onclick="this.parentElement.querySelectorAll('.honda-year-chip').forEach(b=>b.classList.toggle('is-selected',b===this))">${year.replace('-',' – ')}</button>`).join('')}</div><button type="button" class="honda-view-button" data-honda-view="${car.id}" onclick="const c=this.closest('.honda-catalog-card');location.hash='car-honda?model=${car.id}&year='+encodeURIComponent(c.querySelector('.honda-year-chip.is-selected').dataset.hondaYear)">VIEW OPTIONS →</button></div></article>`).join('');
+  const credits=HONDA_IMAGE_CREDITS.map(item=>`<li><b>${item.model}</b> photo by <a href="${item.source}" target="_blank" rel="noopener noreferrer">${item.author} / Wikimedia Commons</a>, licensed <a href="${item.licenseUrl}" target="_blank" rel="noopener noreferrer">${item.license}</a>. Resized for web; no other edits.</li>`).join('');
+  return `<section class="honda-catalog-page"><div class="honda-catalog-inner"><nav class="honda-breadcrumb"><a href="#home">Home</a><span>/</span><span>Shop by Brand</span><span>/</span><b>Honda</b></nav><header class="honda-brand-heading"><img src="brand-logos/honda.png" alt="Honda logo"><h1>ALL <span>HONDA</span> MODELS</h1><p>Select your Honda model and year to find the right TINTX shades for your car.</p><div class="honda-promise-row"><span>✓ CUSTOM FIT</span><span>✓ UV PROTECTION</span><span>✓ EASY TO INSTALL</span><span>✓ PREMIUM MESH</span></div></header><div class="honda-catalog-grid">${cards}</div><details class="honda-photo-credits"><summary>Photo credits &amp; image licenses</summary><p>These six photos are independently licensed by their creators. The remaining Honda model illustrations are TINTX artwork.</p><ul>${credits}</ul></details></div></section>`;
+}
+
+function hondaShadeArt(id){
+  const front=id==='full'||id==='half'||id==='front'?'#08b99e':'#d5e0e3';
+  const rear=id==='full'||id==='rear'?'#08b99e':'#d5e0e3';
+  return `<svg viewBox="0 0 180 72" aria-hidden="true"><path d="M13 48h13l13-20c4-6 9-9 16-9h73c8 0 13 3 18 9l13 20h8v11H13z" fill="#e6ecee" stroke="#60777d" stroke-width="3"/><path d="M42 29c2-4 6-6 11-6h31v21H32z" fill="${front}" stroke="#526b73" stroke-width="2"/><path d="M88 23h36c6 0 10 3 13 7l10 14H88z" fill="${rear}" stroke="#526b73" stroke-width="2"/><circle cx="48" cy="59" r="8" fill="#193039"/><circle cx="135" cy="59" r="8" fill="#193039"/></svg>`;
+}
+
+function hondaResultsPage(){
+  const query=location.hash.includes('?')?location.hash.slice(location.hash.indexOf('?')+1):'';
+  const params=new URLSearchParams(query),car=HONDA_CATALOG.find(item=>item.id===params.get('model'))||HONDA_CATALOG[0];
+  const year=params.get('year')||car.years[0],fitment=`Honda ${car.name} ${year}`;
+  const shades=[{id:'full',name:'Full',detail:'Full Window Coverage',price:2499},{id:'half',name:'Half',detail:'Half Window Coverage',price:2499},{id:'front',name:'Front',detail:'Front Window Shades',price:4100},{id:'rear',name:'Rear',detail:'Rear Window Shades',price:3600}];
+  return `<section class="honda-results-page"><div class="honda-results-inner"><nav class="honda-breadcrumb"><a href="#home">Home</a><span>/</span><a href="#brand-honda">Honda Models</a><span>/</span><b>${car.name} · ${year.replace('-',' – ')}</b></nav><header class="honda-results-heading"><div class="honda-selected-car-image">${img(car.image,`Honda ${car.name}`)}</div><div><p class="honda-card-brand">SELECTED CAR</p><h1>Honda ${car.name}</h1><p class="honda-selected-year">${year.replace('-',' – ')}</p><p>Choose the shade coverage you want for this vehicle.</p></div></header><div class="honda-results-title"><p class="honda-card-brand">CUSTOM-FIT TINTX SHADES</p><h2>Select shade type to view</h2><p>Selected car: <b>${fitment}</b></p></div><div class="honda-shade-grid">${shades.map(item=>`<article class="honda-shade-card"><div class="honda-shade-art">${hondaShadeArt(item.id)}</div><div class="honda-shade-copy"><span>${item.detail}</span><h3>${item.name} Coverage</h3><strong>${money(item.price)}</strong><button type="button" data-result-coverage="${item.id}" data-fitment="${fitment}">Add to cart →</button></div></article>`).join('')}</div></div></section>`;
+}
+
 function render(){
   let route=location.hash.replace('#','')||'home';
   if(route.startsWith('product'))route='product';
-  const views={home:home,shop:shop,product, 'fit-guide':fitGuide,cart:cartPage,checkout,help};
+  if(route.startsWith('car-honda?'))route='car-honda';
+  const views={home:home,shop:shop,product, 'fit-guide':fitGuide,cart:cartPage,checkout,help,'brand-honda':hondaBrandPage,'car-honda':hondaResultsPage};
   app.innerHTML=(views[route]||home)();
   app.focus();
   bind();
@@ -217,6 +258,16 @@ function bind(){
   const modelSelect = document.getElementById('browser-model');
   const searchBtn = document.getElementById('browser-search');
   const resultsDiv = document.getElementById('browser-results');
+
+  document.querySelectorAll('.honda-year-chip').forEach(button=>button.onclick=()=>{
+    const card=button.closest('.honda-catalog-card');
+    card?.querySelectorAll('.honda-year-chip').forEach(chip=>chip.classList.toggle('is-selected',chip===button));
+  });
+  document.querySelectorAll('.honda-view-button').forEach(button=>button.onclick=()=>{
+    const card=button.closest('.honda-catalog-card');
+    const selectedYear=card?.querySelector('.honda-year-chip.is-selected')?.dataset.hondaYear;
+    if(selectedYear) location.hash=`car-honda?model=${button.dataset.hondaView}&year=${encodeURIComponent(selectedYear)}`;
+  });
 
   if(makeSelect && modelSelect) {
     makeSelect.onchange = () => {

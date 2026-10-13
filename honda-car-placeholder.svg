@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-label="Car illustration">
+  <defs><linearGradient id="road" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7f9fa"/><stop offset="1" stop-color="#e9eef0"/></linearGradient></defs>
+  <rect width="900" height="520" rx="22" fill="url(#road)"/>
+  <ellipse cx="452" cy="390" rx="300" ry="28" fill="#dce3e6"/>
+  <path d="M168 345h44l61-112c24-43 59-65 112-65h161c52 0 91 22 123 67l65 89h31c24 0 42 18 42 41v41H154v-29c0-18 7-32 14-32z" fill="#fff" stroke="#526b73" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M293 231c18-31 43-46 82-46h79v92H251zM474 185h68c35 0 61 16 84 49l30 43H474z" fill="#c4d8de" stroke="#526b73" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M196 332h35M650 332h84" stroke="#526b73" stroke-width="11" stroke-linecap="round"/>
+  <circle cx="288" cy="382" r="52" fill="#202a2d"/><circle cx="288" cy="382" r="23" fill="#dce4e6"/>
+  <circle cx="670" cy="382" r="52" fill="#202a2d"/><circle cx="670" cy="382" r="23" fill="#dce4e6"/>
+  <path d="M165 330h50M748 328h42" stroke="#08b99e" stroke-width="10" stroke-linecap="round"/>
+</svg>

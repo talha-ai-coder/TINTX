@@ -46,7 +46,7 @@
         <h1 style="font-size:2rem;">4 Windows Removable Shades</h1>
         <p style="font-size:1.8rem; margin:15px 0;">
           <span style="text-decoration:line-through; color:#999; font-size:1.2rem;">Rs6,000.00</span>
-          <span style="color:#FFC107; font-weight:800;"> Rs2,499.00</span>
+          <span id="product-price" style="color:#FFC107; font-weight:800;"> Rs2,499.00</span>
         </p>
 
         <div style="margin:25px 0;">
@@ -178,6 +178,16 @@
   </select>
 </div>
 
+        <div style="margin:18px 0;">
+          <label for="coverageSelect"><b>Select Shade Coverage:</b></label>
+          <select id="coverageSelect" style="padding:14px; margin-top:8px; width:100%; border:1px solid #ddd; border-radius:8px; font-size:1rem;">
+            <option value="Full" data-price="2499">Full — PKR 2,499</option>
+            <option value="Half" data-price="2499">Half — PKR 2,499</option>
+            <option value="Front" data-price="4100">Front — PKR 4,100</option>
+            <option value="Rear" data-price="3600">Rear — PKR 3,600</option>
+          </select>
+        </div>
+
         <div style="display:flex; gap:15px; align-items:center;">
           <input type="number" value="1" min="1" style="width:80px; padding:14px; text-align:center; border:1px solid #ddd; border-radius:8px; font-size:1rem;">
           <a href="#" id="buyNowBtn" class="btn-shop-now" style="background:#FFC107; color:#000; padding:14px 40px; font-weight:800; border-radius:8px; flex:1; text-align:center;">BUY NOW</a>
@@ -249,12 +259,15 @@ document.getElementById('carSearchProduct').addEventListener('keyup', function()
 document.getElementById('buyNowBtn').onclick = function(event) {
   event.preventDefault();
   var car = document.getElementById('carSelectProduct').value;
+  var coverageSelect = document.getElementById('coverageSelect');
+  var coverage = coverageSelect.value;
+  var price = Number(coverageSelect.selectedOptions[0].dataset.price);
   var quantity = Math.max(1, Number(document.querySelector('input[type="number"]').value || 1));
   if(car == "") { alert("Please Select Your Car Model First"); return false; }
   localStorage.setItem('tintx-cart', JSON.stringify([{
-    id: 'tintx-removable-shades',
-    name: 'TINTX Removable Car Window Shades',
-    price: 2499,
+    id: `tintx-${coverage.toLowerCase()}-coverage`,
+    name: `TINTX ${coverage} Coverage Shades`,
+    price,
     oldPrice: 6000,
     image: 'product-main.jpg',
     qty: quantity,
@@ -263,6 +276,11 @@ document.getElementById('buyNowBtn').onclick = function(event) {
   window.location.href = 'checkout.html';
   return false;
 }
+
+document.getElementById('coverageSelect').addEventListener('change', function() {
+  var price = Number(this.selectedOptions[0].dataset.price);
+  document.getElementById('product-price').textContent = ` PKR ${price.toLocaleString('en-PK')}`;
+});
 </script>
 
 </body>
