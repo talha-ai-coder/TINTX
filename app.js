@@ -220,20 +220,20 @@ function hondaShadeImage(id,model){
   const genericImages={
     full:'assets/honda/shades/full.webp',
     half:'assets/honda/shades/half.webp',
-    front:'assets/honda/shades/front-reference.webp',
-    rear:'assets/honda/shades/rear-reference.webp'
+    front:'assets/honda/shades/front-shield-card.webp',
+    rear:'assets/honda/shades/rear-shield-card.webp'
   };
   const brvImages={
     full:'assets/honda/shades/br-v-full-option.webp',
     half:'assets/honda/shades/br-v-half-option.webp',
-    front:'assets/honda/shades/front-reference.webp',
-    rear:'assets/honda/shades/rear-reference.webp'
+    front:'assets/honda/shades/front-shield-card.webp',
+    rear:'assets/honda/shades/rear-shield-card.webp'
   };
   const modelImages=model && model!=='br-v'?{
     full:`assets/honda/shades/${model}-fitted-card.webp`,
     half:`assets/honda/shades/${model}-half-card.webp`,
-    front:'assets/honda/shades/front-reference.webp',
-    rear:'assets/honda/shades/rear-reference.webp'
+    front:'assets/honda/shades/front-shield-card.webp',
+    rear:'assets/honda/shades/rear-shield-card.webp'
   }:null;
   const images=model==='br-v'?brvImages:(modelImages||genericImages);
   return images[id]||images.full;
