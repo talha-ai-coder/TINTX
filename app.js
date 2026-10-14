@@ -42,7 +42,7 @@ const HONDA_CATALOG = [
   { id:'br-v', name:'BR-V', years:['2017-2024'], image:'assets/honda/shades/br-v-fitted-mesh.webp' },
   { id:'city', name:'City', years:['2009-2013','2014-2020','2021-2024'], image:'assets/honda/shades/city-fitted-card.webp' },
   { id:'civic', name:'Civic', years:['2001-2005','2006-2011','2012-2015','2016-2021','2022-2024'], image:'assets/honda/shades/civic-fitted-card.webp' },
-  { id:'hr-v', name:'HR-V', years:['2022-2024'], image:'assets/honda/hr-v.jpg' },
+  { id:'hr-v', name:'HR-V', years:['2022-2024'], image:'assets/honda/shades/hr-v-fitted-card.webp' },
   { id:'accord', name:'Accord', years:['2018-2024'], image:'assets/honda/shades/accord-fitted-card.webp' },
   { id:'vezel', name:'Vezel', years:['2014-2024'], image:'assets/honda/shades/vezel-fitted-card.webp' },
   { id:'fit', name:'Fit', years:['2010-2024'], image:'assets/honda/shades/fit-fitted-card.webp' },
