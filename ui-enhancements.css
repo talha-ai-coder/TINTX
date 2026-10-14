@@ -307,13 +307,13 @@ button,a,select,input{ -webkit-tap-highlight-color:transparent }
 }
 
 
-/* Keep the external AI assistant pinned above WhatsApp, so focusing it cannot scroll the page. */
+/* Keep the external AI assistant fixed below WhatsApp, without scrolling the page. */
 #chatzy-shadow-host {
   position: fixed !important;
   top: auto !important;
   left: auto !important;
   right: 22px !important;
-  bottom: 100px !important;
+  bottom: 20px !important;
   z-index: 50 !important;
   transform: scale(.72) !important;
   transform-origin: bottom right !important;
@@ -322,7 +322,7 @@ button,a,select,input{ -webkit-tap-highlight-color:transparent }
 @media (max-width:760px) {
   #chatzy-shadow-host {
     right: 14px !important;
-    bottom: 142px !important;
+    bottom: 16px !important;
     transform: scale(.62) !important;
     transform-origin: bottom right !important;
   }
