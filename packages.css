@@ -130,3 +130,53 @@
 .honda-photo-credits ul{margin:6px 0 0;padding-left:19px}
 .honda-photo-credits li{margin:5px 0}
 .honda-photo-credits a{color:#087964;text-underline-offset:2px}
+
+
+/* Reference-inspired Honda product gallery: crisp text stays in HTML, not baked into photos. */
+.honda-product-layout{display:grid;grid-template-columns:minmax(0,1.28fr) minmax(330px,.82fr);gap:30px;align-items:start}
+.honda-gallery-column{min-width:0}
+.honda-gallery-hero{position:relative;isolation:isolate;overflow:hidden;height:clamp(310px,34vw,430px);border:1px solid #e4e8e9;border-radius:16px;background:#fff;box-shadow:0 8px 24px rgba(16,31,36,.08)}
+.honda-gallery-hero>img{display:block;width:100%;height:100%;object-fit:contain;background:#fff}
+.honda-photo-features{position:absolute;z-index:2;top:16px;left:16px;width:min(205px,38%);padding:13px 15px;border:1px solid rgba(226,232,234,.92);border-radius:10px;background:rgba(255,255,255,.94);box-shadow:0 5px 16px rgba(12,30,38,.1)}
+.honda-photo-features>strong{display:block;margin-bottom:7px;color:#173d64;font-size:13px;font-style:italic;font-weight:900;letter-spacing:.035em;line-height:1.15;text-transform:uppercase}
+.honda-photo-features ul{display:grid;gap:4px;margin:0;padding:0;list-style:none}
+.honda-photo-features li{display:flex;align-items:center;gap:7px;color:#36444a;font-size:11px;font-weight:700;line-height:1.2}
+.honda-photo-features li:before{display:grid;place-items:center;flex:none;width:15px;height:15px;border-radius:50%;background:#174b79;color:#fff;content:'✓';font-size:10px;font-weight:900}
+.honda-photo-benefits{position:absolute;z-index:2;right:0;bottom:0;left:0;display:flex;align-items:center;gap:0;min-height:43px;padding:0 16px;background:rgba(8,35,57,.94);color:#fff}
+.honda-photo-benefits span{display:flex;align-items:center;gap:6px;padding:0 12px;border-right:1px solid rgba(255,255,255,.22);font-size:9px;font-weight:900;letter-spacing:.035em;white-space:nowrap}
+.honda-photo-benefits span:first-child{padding-left:0}
+.honda-photo-benefits span:last-child{border-right:0}
+.honda-photo-benefits b{color:#d9edf7;font-size:14px}
+.honda-photo-fullsize{position:absolute;z-index:3;right:14px;bottom:55px;padding:8px 13px;border:1px solid #e4e8e9;border-radius:999px;background:#fff;color:#26343a;font-size:11px;font-weight:850;text-decoration:none;box-shadow:0 3px 9px rgba(0,0,0,.12)}
+.honda-photo-fullsize:hover{border-color:#08a98f;color:#087964}
+.honda-gallery-heading{margin:17px 0 10px;color:#697478;font-size:11px;font-weight:850;letter-spacing:.12em}
+.honda-gallery-thumbs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.honda-gallery-thumb{display:flex;min-width:0;flex-direction:column;gap:8px;padding:8px;border:1px solid #e3e7e8;border-radius:12px;background:#fff;color:#111c20;text-align:left;cursor:pointer;transition:border-color .15s,box-shadow .15s,transform .15s}
+.honda-gallery-thumb:hover{transform:translateY(-2px);border-color:#91cfc3;box-shadow:0 5px 14px rgba(16,31,36,.08)}
+.honda-gallery-thumb.is-selected{border:2px solid #08a98f;padding:7px;box-shadow:0 3px 12px rgba(8,169,143,.13)}
+.honda-thumb-image{display:block;width:100%;height:92px;overflow:hidden;border-radius:7px;background:#fff}
+.honda-thumb-image img{display:block;width:100%;height:100%;object-fit:contain;background:#fff}
+.honda-thumb-title{display:block;min-height:43px;color:#1d292e;font-size:11px;font-weight:800;line-height:1.3}
+.honda-product-panel{padding:26px 27px 24px;border:1px solid #e4e8e9;border-radius:16px;background:#fff;box-shadow:0 8px 24px rgba(16,31,36,.07)}
+.honda-product-panel h1{margin:5px 0 2px;color:#b31e27;font-size:clamp(32px,4vw,42px);font-weight:900;line-height:1.03}
+.honda-product-year{margin:0;color:#a42a30;font-size:14px;font-weight:700}
+.honda-product-panel hr{height:1px;margin:18px 0;border:0;background:#e3e6e7}
+.honda-selected-label{margin:0 0 5px;color:#687478;font-size:10px;font-weight:850;letter-spacing:.12em}
+.honda-product-panel h2{margin:0 0 10px;color:#151d20;font-size:17px;font-weight:900;line-height:1.32}
+.honda-product-description{margin:0 0 17px;color:#697478;font-size:14px;line-height:1.55}
+.honda-quality-block{margin:0 0 17px}
+.honda-quality-block strong{color:#202a2e;font-size:10px;font-weight:900;letter-spacing:.11em}
+.honda-quality-block p{margin:5px 0 0;color:#697478;font-size:13px;line-height:1.5}
+.honda-selection-chips{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0 13px}
+.honda-selection-chip{min-height:37px;padding:8px 12px;border:1px solid #dfe4e5;border-radius:999px;background:#fff;color:#687175;font-size:10px;font-weight:900;letter-spacing:.045em;cursor:pointer}
+.honda-selection-chip:hover{border-color:#08a98f;color:#087964}
+.honda-selection-chip.is-selected{border-color:#08a98f;background:#08a98f;color:#fff}
+.honda-product-price{margin:9px 0 4px;color:#171f22;font-size:28px;font-weight:950;line-height:1.15}
+.honda-availability{display:inline-flex;align-items:center;gap:7px;margin:6px 0 3px;padding:5px 9px;border:1px solid #e1e5e6;border-radius:999px;color:#414c50;font-size:9px;font-weight:900;letter-spacing:.06em}
+.honda-availability span{width:8px;height:8px;border-radius:50%;background:#e1404c;box-shadow:0 0 0 3px #fbe9eb}
+.honda-order-note{margin:2px 0 13px;color:#798286;font-size:11px}
+.honda-add-to-cart{width:100%;min-height:48px;border:0;border-radius:999px;background:#08a98f;color:#06201c;font-size:12px;font-weight:950;letter-spacing:.04em;cursor:pointer}
+.honda-add-to-cart:hover{filter:brightness(.94)}
+@media(max-width:960px){.honda-product-layout{grid-template-columns:minmax(0,1.12fr) minmax(300px,.88fr);gap:18px}.honda-gallery-thumbs{gap:7px}.honda-gallery-thumb{padding:6px}.honda-gallery-thumb.is-selected{padding:5px}.honda-thumb-image{height:76px}.honda-thumb-title{font-size:10px}.honda-product-panel{padding:21px}}
+@media(max-width:760px){.honda-product-layout{grid-template-columns:1fr}.honda-gallery-hero{height:clamp(280px,62vw,400px)}.honda-product-panel{padding:22px}}
+@media(max-width:520px){.honda-gallery-thumbs{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.honda-thumb-image{height:112px}.honda-thumb-title{min-height:32px;font-size:11px}.honda-photo-features{top:10px;left:10px;width:156px;padding:9px 10px}.honda-photo-features>strong{font-size:10px}.honda-photo-features li{font-size:9px}.honda-photo-features li:before{width:13px;height:13px;font-size:9px}.honda-photo-benefits{min-height:37px;padding:0 7px}.honda-photo-benefits span{gap:3px;padding:0 6px;font-size:7px}.honda-photo-benefits b{font-size:11px}.honda-photo-fullsize{right:8px;bottom:46px;padding:6px 9px;font-size:9px}.honda-product-panel{padding:19px}.honda-selection-chip{font-size:9px;padding:7px 10px}}
