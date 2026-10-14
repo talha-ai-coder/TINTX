@@ -40,13 +40,13 @@ const VEHICLE_DATA = {
 
 const HONDA_CATALOG = [
   { id:'br-v', name:'BR-V', years:['2017-2024'], image:'assets/honda/shades/br-v-fitted-mesh.webp' },
-  { id:'city', name:'City', years:['2009-2013','2014-2020','2021-2024'], image:'assets/honda/shades/city-fitted-mesh.webp' },
-  { id:'civic', name:'Civic', years:['2001-2005','2006-2011','2012-2015','2016-2021','2022-2024'], image:'assets/honda/shades/civic-fitted-mesh.webp' },
+  { id:'city', name:'City', years:['2009-2013','2014-2020','2021-2024'], image:'assets/honda/shades/city-fitted-card.webp' },
+  { id:'civic', name:'Civic', years:['2001-2005','2006-2011','2012-2015','2016-2021','2022-2024'], image:'assets/honda/shades/civic-fitted-card.webp' },
   { id:'hr-v', name:'HR-V', years:['2022-2024'], image:'assets/honda/hr-v.jpg' },
-  { id:'accord', name:'Accord', years:['2018-2024'], image:'assets/honda/shades/accord-fitted-mesh.webp' },
-  { id:'vezel', name:'Vezel', years:['2014-2024'], image:'assets/honda/shades/vezel-fitted-mesh.webp' },
-  { id:'fit', name:'Fit', years:['2010-2024'], image:'assets/honda/shades/fit-fitted-mesh.webp' },
-  { id:'cr-v', name:'CR-V', years:['2018-2024'], image:'assets/honda/shades/cr-v-fitted-mesh.webp' }
+  { id:'accord', name:'Accord', years:['2018-2024'], image:'assets/honda/shades/accord-fitted-card.webp' },
+  { id:'vezel', name:'Vezel', years:['2014-2024'], image:'assets/honda/shades/vezel-fitted-card.webp' },
+  { id:'fit', name:'Fit', years:['2010-2024'], image:'assets/honda/shades/fit-fitted-card.webp' },
+  { id:'cr-v', name:'CR-V', years:['2018-2024'], image:'assets/honda/shades/cr-v-fitted-card.webp' }
 ];
 
 const HONDA_IMAGE_CREDITS = [
@@ -230,10 +230,10 @@ function hondaShadeImage(id,model){
     rear:'assets/honda/shades/br-v-rear-option.webp'
   };
   const modelImages=model && model!=='br-v'?{
-    full:`assets/honda/shades/${model}-full-option.webp`,
-    half:`assets/honda/shades/${model}-half-option.webp`,
-    front:`assets/honda/shades/${model}-front-option.webp`,
-    rear:`assets/honda/shades/${model}-rear-option.webp`
+    full:`assets/honda/shades/${model}-fitted-card.webp`,
+    half:`assets/honda/shades/${model}-fitted-card.webp`,
+    front:`assets/honda/shades/${model}-fitted-card.webp`,
+    rear:`assets/honda/shades/${model}-fitted-card.webp`
   }:null;
   const images=model==='br-v'?brvImages:(modelImages||genericImages);
   return images[id]||images.full;
