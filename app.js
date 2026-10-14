@@ -39,7 +39,7 @@ const VEHICLE_DATA = {
 };
 
 const HONDA_CATALOG = [
-  { id:'br-v', name:'BR-V', years:['2017-2024'], image:'br-v.png' },
+  { id:'br-v', name:'BR-V', years:['2017-2024'], image:'assets/honda/shades/br-v-fitted-mesh.webp' },
   { id:'city', name:'City', years:['2009-2013','2014-2020','2021-2024'], image:'assets/honda/city.jpg' },
   { id:'civic', name:'Civic', years:['2001-2005','2006-2011','2012-2015','2016-2021','2022-2024'], image:'civic.png' },
   { id:'hr-v', name:'HR-V', years:['2022-2024'], image:'assets/honda/hr-v.jpg' },
@@ -216,13 +216,20 @@ function hondaBrandPage(){
   return `<section class="honda-catalog-page"><div class="honda-catalog-inner"><nav class="honda-breadcrumb"><a href="#home">Home</a><span>/</span><span>Shop by Brand</span><span>/</span><b>Honda</b></nav><header class="honda-brand-heading"><img src="brand-logos/honda.png" alt="Honda logo"><h1>ALL <span>HONDA</span> MODELS</h1><p>Select your Honda model and year to find the right TINTX shades for your car.</p><div class="honda-promise-row"><span>✓ CUSTOM FIT</span><span>✓ UV PROTECTION</span><span>✓ EASY TO INSTALL</span><span>✓ PREMIUM MESH</span></div></header><div class="honda-catalog-grid">${cards}</div><details class="honda-photo-credits"><summary>Photo credits &amp; image licenses</summary><p>These six photos are independently licensed by their creators. The remaining Honda model illustrations are TINTX artwork.</p><ul>${credits}</ul></details></div></section>`;
 }
 
-function hondaShadeArt(id){
-  const images={
+function hondaShadeArt(id,model){
+  const genericImages={
     full:'assets/honda/shades/full.webp',
     half:'assets/honda/shades/half.webp',
     front:'assets/honda/shades/front.webp',
     rear:'assets/honda/shades/rear.webp'
   };
+  const brvImages={
+    full:'assets/honda/shades/br-v-full-option.webp',
+    half:'assets/honda/shades/br-v-half-option.webp',
+    front:'assets/honda/shades/br-v-front-option.webp',
+    rear:'assets/honda/shades/br-v-rear-option.webp'
+  };
+  const images=model==='br-v'?brvImages:genericImages;
   const label={full:'full-window coverage',half:'half-window coverage',front:'front-window shades',rear:'rear-window shades'}[id]||'window shades';
   return img(images[id]||images.full,`TINTX ${label} product example`);
 }
@@ -232,7 +239,7 @@ function hondaResultsPage(){
   const params=new URLSearchParams(query),car=HONDA_CATALOG.find(item=>item.id===params.get('model'))||HONDA_CATALOG[0];
   const year=params.get('year')||car.years[0],fitment=`Honda ${car.name} ${year}`;
   const shades=[{id:'full',name:'Full',detail:'Full Window Coverage',price:2499},{id:'half',name:'Half',detail:'Half Window Coverage',price:2499},{id:'front',name:'Front',detail:'Front Window Shades',price:4100},{id:'rear',name:'Rear',detail:'Rear Window Shades',price:3600}];
-  return `<section class="honda-results-page"><div class="honda-results-inner"><nav class="honda-breadcrumb"><a href="#home">Home</a><span>/</span><a href="#brand-honda">Honda Models</a><span>/</span><b>${car.name} · ${year.replace('-',' – ')}</b></nav><header class="honda-results-heading"><div class="honda-selected-car-image">${img(car.image,`Honda ${car.name}`)}</div><div><p class="honda-card-brand">SELECTED CAR</p><h1>Honda ${car.name}</h1><p class="honda-selected-year">${year.replace('-',' – ')}</p><p>Choose the shade coverage you want for this vehicle.</p></div></header><div class="honda-results-title"><p class="honda-card-brand">CUSTOM-FIT TINTX SHADES</p><h2>Select shade type to view</h2><p>Selected car: <b>${fitment}</b></p></div><div class="honda-shade-grid">${shades.map(item=>`<article class="honda-shade-card"><div class="honda-shade-art">${hondaShadeArt(item.id)}</div><div class="honda-shade-copy"><span>${item.detail}</span><h3>${item.name} Coverage</h3><strong>${money(item.price)}</strong><button type="button" data-result-coverage="${item.id}" data-fitment="${fitment}">Add to cart →</button></div></article>`).join('')}</div></div></section>`;
+  return `<section class="honda-results-page"><div class="honda-results-inner"><nav class="honda-breadcrumb"><a href="#home">Home</a><span>/</span><a href="#brand-honda">Honda Models</a><span>/</span><b>${car.name} · ${year.replace('-',' – ')}</b></nav><header class="honda-results-heading"><div class="honda-selected-car-image">${img(car.image,`Honda ${car.name} with TINTX mesh sunshades`)}</div><div><p class="honda-card-brand">SELECTED CAR</p><h1>Honda ${car.name}</h1><p class="honda-selected-year">${year.replace('-',' – ')}</p><p>Choose the shade coverage you want for this vehicle.</p></div></header><div class="honda-results-title"><p class="honda-card-brand">CUSTOM-FIT TINTX SHADES</p><h2>Select shade type to view</h2><p>Selected car: <b>${fitment}</b></p></div><div class="honda-shade-grid">${shades.map(item=>`<article class="honda-shade-card"><div class="honda-shade-art">${hondaShadeArt(item.id,car.id)}</div><div class="honda-shade-copy"><span>${item.detail}</span><h3>${item.name} Coverage</h3><strong>${money(item.price)}</strong><button type="button" data-result-coverage="${item.id}" data-fitment="${fitment}">Add to cart →</button></div></article>`).join('')}</div></div></section>`;
 }
 
 function render(){
