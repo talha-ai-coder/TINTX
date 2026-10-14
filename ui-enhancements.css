@@ -305,3 +305,25 @@ button,a,select,input{ -webkit-tap-highlight-color:transparent }
 @media (prefers-reduced-motion: reduce) {
   .exact-hero::after, .exact-hero-link { animation: none; }
 }
+
+
+/* Keep the external AI assistant pinned above WhatsApp, so focusing it cannot scroll the page. */
+#chatzy-shadow-host {
+  position: fixed !important;
+  top: auto !important;
+  left: auto !important;
+  right: 22px !important;
+  bottom: 100px !important;
+  z-index: 50 !important;
+  transform: scale(.72) !important;
+  transform-origin: bottom right !important;
+}
+
+@media (max-width:760px) {
+  #chatzy-shadow-host {
+    right: 14px !important;
+    bottom: 142px !important;
+    transform: scale(.62) !important;
+    transform-origin: bottom right !important;
+  }
+}
