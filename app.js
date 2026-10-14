@@ -221,19 +221,19 @@ function hondaShadeImage(id,model){
     full:'assets/honda/shades/full.webp',
     half:'assets/honda/shades/half.webp',
     front:'assets/honda/shades/front-autodrapes-style.webp',
-    rear:'assets/honda/shades/rear-autodrapes-style.webp'
+    rear:'assets/honda/shades/rear-shield-card.webp'
   };
   const brvImages={
     full:'assets/honda/shades/br-v-full-option.webp',
     half:'assets/honda/shades/br-v-half-option.webp',
     front:'assets/honda/shades/front-autodrapes-style.webp',
-    rear:'assets/honda/shades/rear-autodrapes-style.webp'
+    rear:'assets/honda/shades/rear-shield-card.webp'
   };
   const modelImages=model && model!=='br-v'?{
     full:`assets/honda/shades/${model}-fitted-card.webp`,
     half:`assets/honda/shades/${model}-half-card.webp`,
     front:'assets/honda/shades/front-autodrapes-style.webp',
-    rear:'assets/honda/shades/rear-autodrapes-style.webp'
+    rear:'assets/honda/shades/rear-shield-card.webp'
   }:null;
   const images=model==='br-v'?brvImages:(modelImages||genericImages);
   return images[id]||images.full;
