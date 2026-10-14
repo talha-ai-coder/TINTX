@@ -217,9 +217,14 @@ function hondaBrandPage(){
 }
 
 function hondaShadeArt(id){
-  const front=id==='full'||id==='half'||id==='front'?'#08b99e':'#d5e0e3';
-  const rear=id==='full'||id==='rear'?'#08b99e':'#d5e0e3';
-  return `<svg viewBox="0 0 180 72" aria-hidden="true"><path d="M13 48h13l13-20c4-6 9-9 16-9h73c8 0 13 3 18 9l13 20h8v11H13z" fill="#e6ecee" stroke="#60777d" stroke-width="3"/><path d="M42 29c2-4 6-6 11-6h31v21H32z" fill="${front}" stroke="#526b73" stroke-width="2"/><path d="M88 23h36c6 0 10 3 13 7l10 14H88z" fill="${rear}" stroke="#526b73" stroke-width="2"/><circle cx="48" cy="59" r="8" fill="#193039"/><circle cx="135" cy="59" r="8" fill="#193039"/></svg>`;
+  const images={
+    full:'assets/honda/shades/full.webp',
+    half:'assets/honda/shades/half.webp',
+    front:'assets/honda/shades/front.webp',
+    rear:'assets/honda/shades/rear.webp'
+  };
+  const label={full:'full-window coverage',half:'half-window coverage',front:'front-window shades',rear:'rear-window shades'}[id]||'window shades';
+  return img(images[id]||images.full,`TINTX ${label} product example`);
 }
 
 function hondaResultsPage(){
