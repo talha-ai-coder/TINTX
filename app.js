@@ -102,10 +102,10 @@ function getLogoUrl(brand) {
 function home(){
   const brands = Object.keys(VEHICLE_DATA).filter(b => b !== 'OTHER');
   const brandLogos = brands.map(brand => `
-    ${brand === 'HONDA' ? `<a class="brand-item" data-brand="${brand}" href="honda.html" title="Shop Honda models" aria-label="Shop Honda models">` : `<div class="brand-item" data-brand="${brand}" title="${brand}">`}
+    <a class="brand-item" data-brand="${brand}" href="${brand === 'HONDA' ? 'honda.html' : `#brand-${encodeURIComponent(brand.toLowerCase())}`}" title="Shop ${brand} models" aria-label="Shop ${brand} models">
       <img src="${getLogoUrl(brand)}" alt="${brand} logo">
       <span>${brand}</span>
-    ${brand === 'HONDA' ? '</a>' : '</div>'}
+    </a>
   `).join('');
 
   return `
@@ -216,6 +216,22 @@ function hondaBrandPage(){
   return `<section class="honda-catalog-page"><div class="honda-catalog-inner"><nav class="honda-breadcrumb"><a href="#home">Home</a><span>/</span><span>Shop by Brand</span><span>/</span><b>Honda</b></nav><header class="honda-brand-heading"><img src="brand-logos/honda.png" alt="Honda logo"><h1>ALL <span>HONDA</span> MODELS</h1><p>Select your Honda model and year to find the right TINTX shades for your car.</p><div class="honda-promise-row"><span>✓ CUSTOM FIT</span><span>✓ UV PROTECTION</span><span>✓ EASY TO INSTALL</span><span>✓ PREMIUM MESH</span></div></header><div class="honda-catalog-grid">${cards}</div><details class="honda-photo-credits"><summary>Photo credits &amp; image licenses</summary><p>These six photos are independently licensed by their creators. The remaining Honda model illustrations are TINTX artwork.</p><ul>${credits}</ul></details></div></section>`;
 }
 
+function genericShadeImage(id){
+  return ({full:'assets/honda/shades/full.webp',half:'assets/honda/shades/half.webp',front:'assets/honda/shades/front-autodrapes-style.webp',rear:'assets/honda/shades/rear-windshield-card.webp'}[id]||'assets/honda/shades/full.webp');
+}
+function genericBrandPage(brand){
+  const models=(VEHICLE_DATA[brand]||[]).map(full=>{const m=full.match(/^(.*?)(?:\s+(\d{4}(?:-\d{4})?))?$/);return {label:full,name:m?.[1]||full,year:m?.[2]||'2024'};});
+  const cards=models.map(car=>`<article class="honda-catalog-card"><div class="honda-catalog-image">${img('hero-car.jpg.png.webp.jpg',`${brand} ${car.name} preview`)}</div><div class="honda-catalog-copy"><span class="honda-card-brand">${brand}</span><h2>${car.name}</h2><p class="honda-available-label">AVAILABLE MODEL</p><div class="honda-year-list"><button type="button" class="honda-year-chip is-selected">${car.year.replace('-',' – ')}</button></div><button type="button" class="honda-view-button" data-generic-view="${encodeURIComponent(car.label)}" data-generic-brand="${brand}">VIEW OPTIONS →</button></div></article>`).join('');
+  return `<section class="honda-catalog-page"><div class="honda-catalog-inner"><nav class="honda-breadcrumb"><a href="#home">Home</a><span>/</span><span>Shop by Brand</span><span>/</span><b>${brand}</b></nav><header class="honda-brand-heading"><img src="${getLogoUrl(brand)}" alt="${brand} logo"><h1>ALL <span>${brand}</span> MODELS</h1><p>Select your ${brand} model and year to find the right TINTX shades for your car.</p><div class="honda-promise-row"><span>✓ CUSTOM FIT</span><span>✓ UV PROTECTION</span><span>✓ EASY TO INSTALL</span><span>✓ PREMIUM MESH</span></div></header><div class="honda-catalog-grid">${cards}</div><p class="hero-lede" style="margin-top:24px">Model-specific fitment is confirmed before dispatch. Model artwork will be refined as new vehicle references become available.</p></div></section>`;
+}
+function genericResultsPage(){
+  const q=location.hash.includes('?')?location.hash.slice(location.hash.indexOf('?')+1):'',p=new URLSearchParams(q),brand=p.get('brand')||'OTHER',model=p.get('model')||'',name=model.replace(/\s+\d{4}(?:-\d{4})?$/,'')||model,year=(model.match(/\d{4}(?:-\d{4})?/)||['2024'])[0];
+  const shades=[{id:'full',name:'4-Side (Full Window Coverage Sunshades)',title:'4-SIDE (FULL WINDOW COVERAGE SUNSHADES)',description:'Custom-cut shades follow each window shape and help keep the cabin cool, calm and glare-free.',price:2499},{id:'half',name:'4-Side (Half Window Coverage Sunshades)',title:'4-SIDE (HALF WINDOW COVERAGE SUNSHADES)',description:'A half-window set adds shade and privacy while keeping the front view clear.',price:2499},{id:'front',name:'Front Window Shield',title:'FRONT WINDOW SHIELD',description:'A custom-fit front-window shade helps reduce sun and glare on bright drives.',price:4100},{id:'rear',name:'Rear Window Shield',title:'REAR WINDOW SHIELD',description:'A fitted rear-window shade adds privacy and helps reduce glare from behind.',price:3600}];
+  const gallery=shades.map(x=>`<button type="button" class="honda-gallery-thumb${x.id==='full'?' is-selected':''}" data-honda-shade="${x.id}" data-shade-title="${x.title}" data-shade-detail="${x.description}" data-shade-price="${x.price}" data-shade-image="${genericShadeImage(x.id)}" aria-pressed="${x.id==='full'}"><span class="honda-thumb-image">${img(genericShadeImage(x.id),`TINTX ${x.name}`)}</span><span class="honda-thumb-title">${x.name}</span></button>`).join('');
+  const selector=shades.map(x=>`<button type="button" class="honda-selection-chip${x.id==='full'?' is-selected':''}" data-honda-shade="${x.id}" data-shade-title="${x.title}" data-shade-detail="${x.description}" data-shade-price="${x.price}" data-shade-image="${genericShadeImage(x.id)}" aria-pressed="${x.id==='full'}">${x.id==='full'?'Full Window':x.id==='half'?'Half Window':x.id==='front'?'Front Window Shield':'Rear Window Shield'}</button>`).join('');
+  return `<section class="honda-results-page"><div class="honda-results-inner"><nav class="honda-breadcrumb"><a href="#home">Home</a><span>/</span><a href="#brand-${encodeURIComponent(brand.toLowerCase())}">${brand} Models</a><span>/</span><b>${name} · ${year.replace('-',' – ')}</b></nav><div class="honda-product-layout"><div class="honda-gallery-column"><div class="honda-gallery-hero"><img id="honda-main-photo" src="${genericShadeImage('full')}" alt="${brand} ${name} TINTX shade preview"><div class="honda-photo-features"><strong>TINTX COVERAGE SUNSHADES</strong><ul><li>UV Protection</li><li>Heat Reduction</li><li>Perfect Fit</li><li>Easy Install</li><li>Long Lasting</li></ul></div><div class="honda-photo-benefits"><span><b>⌖</b> CUSTOM FIT</span><span><b>◉</b> ONE-WAY VISION</span><span><b>☼</b> REDUCES GLARE</span></div><a id="honda-photo-fullsize" class="honda-photo-fullsize" href="${genericShadeImage('full')}" target="_blank" rel="noopener noreferrer">↗ View full size</a></div><p class="honda-gallery-heading">SELECT SHADE TYPE TO VIEW</p><div class="honda-gallery-thumbs">${gallery}</div></div><aside class="honda-product-panel"><p class="honda-card-brand">${brand}</p><h1>${name}</h1><p class="honda-product-year">${year.replace('-',' – ')}</p><hr><p class="honda-selected-label">SELECTED SHADE</p><h2 id="honda-selected-shade-title">${shades[0].title}</h2><p id="honda-selected-shade-description" class="honda-product-description">${shades[0].description}</p><div class="honda-quality-block"><strong>PREMIUM QUALITY</strong><p>Precision-fit mesh, easy installation and a removable design made for everyday use.</p></div><div class="honda-selection-chips" aria-label="Choose shade option">${selector}</div><p class="honda-fitment-note">Selected car: <b>${brand} ${model}</b></p><div class="honda-product-price" id="honda-selected-price">${money(shades[0].price)}</div><p class="honda-availability"><span></span> AVAILABLE ON ORDER</p><p class="honda-order-note">Custom-made for your selected vehicle.</p><button type="button" class="honda-add-to-cart" id="honda-result-add" data-result-coverage="full" data-fitment="${brand} ${model}">ADD TO CART</button></aside></div></div></section>`;
+}
+
 function hondaShadeImage(id,model){
   const genericImages={
     full:'assets/honda/shades/full.webp',
@@ -269,7 +285,9 @@ function render(){
   if(location.pathname.endsWith('/honda.html')&&route==='home')route='brand-honda';
   if(route.startsWith('product'))route='product';
   if(route.startsWith('car-honda?'))route='car-honda';
-  const views={home:home,shop:shop,product, 'fit-guide':fitGuide,cart:cartPage,checkout,help,'brand-honda':hondaBrandPage,'car-honda':hondaResultsPage};
+  if(route.startsWith('car-generic?'))route='car-generic';
+  if(route.startsWith('brand-')&&route!=='brand-honda')route='brand-generic';
+  const views={home:home,shop:shop,product, 'fit-guide':fitGuide,cart:cartPage,checkout,help,'brand-honda':hondaBrandPage,'car-honda':hondaResultsPage,'brand-generic':()=>genericBrandPage((location.hash.replace('#brand-','')||'other').toUpperCase()),'car-generic':genericResultsPage};
   app.innerHTML=(views[route]||home)();
   app.focus({preventScroll:true});
   bind();
@@ -316,6 +334,10 @@ function bind(){
     const card=button.closest('.honda-catalog-card');
     card?.querySelectorAll('.honda-year-chip').forEach(chip=>chip.classList.toggle('is-selected',chip===button));
   });
+  document.querySelectorAll('[data-generic-view]').forEach(button=>button.onclick=()=>{
+    location.hash=`car-generic?brand=${encodeURIComponent(button.dataset.genericBrand)}&model=${button.dataset.genericView}`;
+  });
+
   document.querySelectorAll('.honda-view-button').forEach(button=>button.onclick=()=>{
     const card=button.closest('.honda-catalog-card');
     const selectedYear=card?.querySelector('.honda-year-chip.is-selected')?.dataset.hondaYear;
@@ -385,11 +407,7 @@ function bind(){
     document.querySelectorAll('.brand-item').forEach(item => {
       item.onclick = event => {
         const brand = item.dataset.brand;
-        if (String(brand).toUpperCase() === 'HONDA') {
-          // Let the anchor perform a full document navigation. This avoids
-          // hash-only routing failures on browsers clicking the moving marquee.
-          return;
-        }
+        if (item.tagName === 'A') return;
         makeSelect.value = brand;
         makeSelect.onchange();
         document.querySelectorAll('.brand-item').forEach(i => i.classList.remove('active'));
