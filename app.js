@@ -229,7 +229,13 @@ function hondaShadeImage(id,model){
     front:'assets/honda/shades/br-v-front-option.webp',
     rear:'assets/honda/shades/br-v-rear-option.webp'
   };
-  const images=model==='br-v'?brvImages:genericImages;
+  const modelImages=model && model!=='br-v'?{
+    full:`assets/honda/shades/${model}-full-option.webp`,
+    half:`assets/honda/shades/${model}-half-option.webp`,
+    front:`assets/honda/shades/${model}-front-option.webp`,
+    rear:`assets/honda/shades/${model}-rear-option.webp`
+  }:null;
+  const images=model==='br-v'?brvImages:(modelImages||genericImages);
   return images[id]||images.full;
 }
 
