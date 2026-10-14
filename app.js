@@ -231,7 +231,7 @@ function hondaShadeImage(id,model){
   };
   const modelImages=model && model!=='br-v'?{
     full:`assets/honda/shades/${model}-fitted-card.webp`,
-    half:`assets/honda/shades/${model}-half-card.webp`,
+    half:`assets/honda/shades/${model}-half-brv-style.webp`,
     front:'assets/honda/shades/front-autodrapes-style.webp',
     rear:'assets/honda/shades/rear-windshield-card.webp'
   }:null;
