@@ -23,7 +23,7 @@
     if(found) found.qty++;
     else cart.push({id,name:`TINTX ${option.name} Coverage Shades`,price:option.price,oldPrice:0,badge:'TINTX SHADE OPTION',models:[],image:'product-main.jpg',description:option.detail,fitment,qty:1});
     if(typeof save==='function')save();
-    window.location.hash='cart';
+    if(typeof window.openCheckout==='function')window.openCheckout();else window.location.href='checkout.html';
   }
   function renderHomePackages(){
     const app=document.getElementById('app');
