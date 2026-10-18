@@ -128,7 +128,7 @@ function home(){
     <div class="brand-strip" aria-label="Shop shades by car brand">
       <div class="brand-marquee">
         <div class="brand-track">${brandLogos}</div>
-        <div class="brand-track" aria-hidden="true">${brandLogos}</div>
+        <div class="brand-track" aria-hidden="true" inert>${brandLogos}</div>
       </div>
     </div>
 

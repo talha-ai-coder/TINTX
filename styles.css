@@ -705,12 +705,13 @@
   gap: 18px;
   padding-right: 18px;
   min-width: max-content;
-  animation: none;
+  animation: tintxBrandScroll 52s linear infinite;
 }
 
-.brand-track[aria-hidden="true"] { display: none; }
+.brand-track[aria-hidden="true"] { display: flex; pointer-events: none; }
 
-.brand-marquee:hover .brand-track {
+.brand-marquee:hover .brand-track,
+.brand-marquee:focus-within .brand-track {
   animation-play-state: paused;
 }
 
@@ -1460,7 +1461,7 @@ main:has(.exact-hero) {
   .brand-track {
     gap: 8px;
     padding-right: 8px;
-    animation-duration: 34s;
+    animation-duration: 48s;
   }
 
   .brand-item {
