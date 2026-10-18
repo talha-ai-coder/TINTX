@@ -57,10 +57,10 @@
 .honda-results-heading .eyebrow{margin:0 0 7px;color:#08b99e}
 .honda-results-heading h3{margin:0 0 7px;font-size:clamp(20px,3vw,28px)}
 .honda-results-heading p:last-child{margin:0;color:#a8b8bd;font-size:14px}
-.honda-model-card{padding:18px;background:#0a1a24;border:1px solid rgba(255,255,255,.1);border-radius:14px;color:#fff}
-.honda-model-meta{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:13px;color:#a8b8bd;font-size:11px;font-weight:800;letter-spacing:.08em}
-.honda-model-meta b{padding:5px 8px;border-radius:999px;background:rgba(8,185,158,.14);color:#60e3d1;letter-spacing:0}
-.honda-model-card h3{margin:0 0 16px;font-size:19px}
+.brand-model-card{padding:18px;background:#0a1a24;border:1px solid rgba(255,255,255,.1);border-radius:14px;color:#fff}
+.brand-model-meta{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:13px;color:#a8b8bd;font-size:11px;font-weight:800;letter-spacing:.08em}
+.brand-model-meta b{padding:5px 8px;border-radius:999px;background:rgba(8,185,158,.14);color:#60e3d1;letter-spacing:0}
+.brand-model-card h3{margin:0 0 16px;font-size:19px}
 .honda-view-options{width:100%;min-height:44px;padding:11px 13px;border:0;border-radius:8px;background:#08b99e;color:#071b20;font-weight:900;cursor:pointer}
 .honda-option-list{display:grid;gap:8px;margin-top:12px}
 .honda-option-list[hidden]{display:none}
@@ -68,7 +68,7 @@
 .honda-order-option:hover{border-color:#08b99e;background:#14343d}
 .honda-order-option strong{color:#60e3d1;white-space:nowrap}
 @media(max-width:900px){.browser-results.honda-fitment-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:600px){.browser-results.honda-fitment-list{grid-template-columns:1fr;gap:11px;margin-top:24px}.honda-model-card{padding:16px}.honda-model-card h3{font-size:17px}}
+@media(max-width:600px){.browser-results.honda-fitment-list{grid-template-columns:1fr;gap:11px;margin-top:24px}.brand-model-card{padding:16px}.brand-model-card h3{font-size:17px}}
 
 
 /* Dedicated Honda brand catalogue: model cards, year selectors, and View Options */
@@ -190,24 +190,24 @@
 @media(max-width:520px){.honda-photo-features{top:9px;left:9px;width:126px;padding:7px 8px}.honda-photo-features>strong{font-size:8px}.honda-photo-features ul{gap:1px}.honda-photo-features li{gap:4px;font-size:8px}.honda-photo-features li:before{width:10px;height:10px;font-size:7px}}
 
 
-/* Honda catalog: text-first model selection, then year and shade options. */
-.honda-model-list{display:grid;gap:11px;max-width:900px;margin:0 auto}
-.honda-model-row{overflow:hidden;border:1px solid #e2e7e8;border-radius:12px;background:#fff;box-shadow:0 3px 12px rgba(18,31,36,.06)}
-.honda-model-row>summary{display:grid;grid-template-columns:42px minmax(0,1fr) auto;align-items:center;gap:15px;min-height:76px;padding:13px 20px;list-style:none;cursor:pointer}
-.honda-model-row>summary::-webkit-details-marker{display:none}
-.honda-model-number{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#e8f7f4;color:#087964;font-size:12px;font-weight:900}
-.honda-model-summary-copy{display:flex;flex-direction:column;gap:4px;text-align:left}
-.honda-model-summary-copy strong{color:#20262a;font-size:19px}
-.honda-model-summary-copy small{color:#69757a;font-size:12px}
-.honda-model-summary-action{display:flex;align-items:center;gap:12px;color:#087964;font-size:12px;font-weight:850}
-.honda-model-summary-action b{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#edf8f6;font-size:18px}
-.honda-model-row[open]>summary{border-bottom:1px solid #e5e8e9}
-.honda-model-row[open] .honda-model-summary-action b{transform:rotate(45deg)}
-.honda-model-options{padding:17px 20px 20px}
-.honda-model-options>p{margin:0 0 12px;color:#59666b;font-size:13px;font-weight:650}
-.honda-model-year-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:9px}
-.honda-model-year-option{display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:48px;padding:10px 13px;border:1px solid #dce3e4;border-radius:8px;background:#fbfdfd;color:#20262a;text-decoration:none}
-.honda-model-year-option:hover,.honda-model-year-option:focus-visible{border-color:#08a98f;background:#f1fbf8;outline:none}
-.honda-model-year-label{font-size:13px;font-weight:850}
-.honda-model-year-action{color:#087964;font-size:11px;font-weight:850;white-space:nowrap}
-@media(max-width:600px){.honda-model-row>summary{grid-template-columns:34px minmax(0,1fr) auto;gap:10px;min-height:68px;padding:11px 12px}.honda-model-summary-copy strong{font-size:16px}.honda-model-summary-action{gap:6px;font-size:10px}.honda-model-options{padding:14px 12px 15px}.honda-model-year-grid{grid-template-columns:1fr}.honda-model-year-option{min-height:46px}}
+/* Shared text-first brand catalog: model selection, then year and shade options. */
+.brand-model-list{display:grid;gap:11px;max-width:900px;margin:0 auto}
+.brand-model-row{overflow:hidden;border:1px solid #e2e7e8;border-radius:12px;background:#fff;box-shadow:0 3px 12px rgba(18,31,36,.06)}
+.brand-model-row>summary{display:grid;grid-template-columns:42px minmax(0,1fr) auto;align-items:center;gap:15px;min-height:76px;padding:13px 20px;list-style:none;cursor:pointer}
+.brand-model-row>summary::-webkit-details-marker{display:none}
+.brand-model-number{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#e8f7f4;color:#087964;font-size:12px;font-weight:900}
+.brand-model-summary-copy{display:flex;flex-direction:column;gap:4px;text-align:left}
+.brand-model-summary-copy strong{color:#20262a;font-size:19px}
+.brand-model-summary-copy small{color:#69757a;font-size:12px}
+.brand-model-summary-action{display:flex;align-items:center;gap:12px;color:#087964;font-size:12px;font-weight:850}
+.brand-model-summary-action b{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#edf8f6;font-size:18px}
+.brand-model-row[open]>summary{border-bottom:1px solid #e5e8e9}
+.brand-model-row[open] .brand-model-summary-action b{transform:rotate(45deg)}
+.brand-model-options{padding:17px 20px 20px}
+.brand-model-options>p{margin:0 0 12px;color:#59666b;font-size:13px;font-weight:650}
+.brand-model-year-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:9px}
+.brand-model-year-option{display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:48px;padding:10px 13px;border:1px solid #dce3e4;border-radius:8px;background:#fbfdfd;color:#20262a;text-decoration:none}
+.brand-model-year-option:hover,.brand-model-year-option:focus-visible{border-color:#08a98f;background:#f1fbf8;outline:none}
+.brand-model-year-label{font-size:13px;font-weight:850}
+.brand-model-year-action{color:#087964;font-size:11px;font-weight:850;white-space:nowrap}
+@media(max-width:600px){.brand-model-row>summary{grid-template-columns:34px minmax(0,1fr) auto;gap:10px;min-height:68px;padding:11px 12px}.brand-model-summary-copy strong{font-size:16px}.brand-model-summary-action{gap:6px;font-size:10px}.brand-model-options{padding:14px 12px 15px}.brand-model-year-grid{grid-template-columns:1fr}.brand-model-year-option{min-height:46px}}
