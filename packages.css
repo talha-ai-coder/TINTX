@@ -133,7 +133,7 @@
 
 
 /* Reference-inspired Honda product gallery: crisp text stays in HTML, not baked into photos. */
-.honda-product-layout{display:grid;grid-template-columns:minmax(0,1.28fr) minmax(330px,.82fr);gap:30px;align-items:start}
+.honda-product-layout{display:block;max-width:760px;margin:0 auto}
 .honda-gallery-column{min-width:0}
 .honda-gallery-hero{position:relative;isolation:isolate;overflow:hidden;height:clamp(310px,34vw,430px);border:1px solid #e4e8e9;border-radius:16px;background:#fff;box-shadow:0 8px 24px rgba(16,31,36,.08)}
 .honda-gallery-hero>img{display:block;width:100%;height:100%;object-fit:contain;background:#fff}
@@ -177,8 +177,8 @@
 .honda-order-note{margin:2px 0 13px;color:#798286;font-size:11px}
 .honda-add-to-cart{width:100%;min-height:48px;border:0;border-radius:999px;background:#08a98f;color:#06201c;font-size:12px;font-weight:950;letter-spacing:.04em;cursor:pointer}
 .honda-add-to-cart:hover{filter:brightness(.94)}
-@media(max-width:960px){.honda-product-layout{grid-template-columns:minmax(0,1.12fr) minmax(300px,.88fr);gap:18px}.honda-gallery-thumbs{gap:7px}.honda-gallery-thumb{padding:6px}.honda-gallery-thumb.is-selected{padding:5px}.honda-thumb-image{height:76px}.honda-thumb-title{font-size:10px}.honda-product-panel{padding:21px}}
-@media(max-width:760px){.honda-product-layout{grid-template-columns:1fr}.honda-gallery-hero{height:clamp(280px,62vw,400px)}.honda-product-panel{padding:22px}}
+@media(max-width:960px){.honda-gallery-thumbs{gap:7px}.honda-gallery-thumb{padding:6px}.honda-gallery-thumb.is-selected{padding:5px}.honda-thumb-image{height:76px}.honda-thumb-title{font-size:10px}.honda-product-panel{padding:21px}}
+@media(max-width:760px){.honda-gallery-hero{height:clamp(280px,62vw,400px)}.honda-product-panel{padding:22px}}
 @media(max-width:520px){.honda-gallery-thumbs{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.honda-thumb-image{height:112px}.honda-thumb-title{min-height:32px;font-size:11px}.honda-photo-features{top:10px;left:10px;width:156px;padding:9px 10px}.honda-photo-features>strong{font-size:10px}.honda-photo-features li{font-size:9px}.honda-photo-features li:before{width:13px;height:13px;font-size:9px}.honda-photo-benefits{min-height:37px;padding:0 7px}.honda-photo-benefits span{gap:3px;padding:0 6px;font-size:7px}.honda-photo-benefits b{font-size:11px}.honda-photo-fullsize{right:8px;bottom:46px;padding:6px 9px;font-size:9px}.honda-product-panel{padding:19px}.honda-selection-chip{font-size:9px;padding:7px 10px}}
 
 /* Compact the feature badge so it does not hide the open door or mesh window. */
