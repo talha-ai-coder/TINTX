@@ -708,7 +708,7 @@
   animation: tintxBrandScroll 52s linear infinite;
 }
 
-.brand-track[aria-hidden="true"] { display: flex; pointer-events: none; }
+.brand-track[aria-hidden="true"] { display: flex; }
 
 .brand-marquee:hover .brand-track,
 .brand-marquee:focus-within .brand-track {

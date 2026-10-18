@@ -107,6 +107,7 @@ function home(){
       <span>${brand}</span>
     </a>
   `).join('');
+  const duplicateBrandLogos = brandLogos.replace(/<a class="brand-item"/g, '<a class="brand-item" tabindex="-1"');
 
   return `
     <section class="hero exact-hero" aria-label="TINTX hero banner">
@@ -128,7 +129,7 @@ function home(){
     <div class="brand-strip" aria-label="Shop shades by car brand">
       <div class="brand-marquee">
         <div class="brand-track">${brandLogos}</div>
-        <div class="brand-track" aria-hidden="true" inert>${brandLogos}</div>
+        <div class="brand-track" aria-hidden="true">${duplicateBrandLogos}</div>
       </div>
     </div>
 
