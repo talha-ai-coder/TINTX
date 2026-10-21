@@ -86,7 +86,7 @@
       if(resultOption){const option=options.find(o=>o.id===resultOption.dataset.resultCoverage);if(option)addToCart(option,resultOption.dataset.fitment);}
     },true);
   }
-  function init(){renderHomePackages();renderProductOptions();bindInteractions();syncFitment();}
+  function init(){renderProductOptions();bindInteractions();syncFitment();}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
   new MutationObserver(()=>{renderHomePackages();renderProductOptions();syncFitment();}).observe(document.documentElement,{childList:true,subtree:true});
 })();
