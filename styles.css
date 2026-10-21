@@ -1667,4 +1667,14 @@ body:has(.exact-hero) .product-section {
   background-color: #03111e;
 }
 
+.featured-shade-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.featured-shade-grid .product-image img { height: 300px; object-fit: cover; object-position: center; }
+.product-card-description { color: var(--muted); font-size: 13px; line-height: 1.45; min-height: 57px; margin: 8px 0 0; }
 .honda-selection-note { margin: 22px 0; padding: 14px 16px; border: 1px solid var(--line); background: var(--panel); color: var(--muted); font-size: 13px; }
+@media (max-width: 900px) {
+  .featured-shade-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .featured-shade-grid .product-image img { height: 210px; }
+  .product-card-description { min-height: 0; }
+}
