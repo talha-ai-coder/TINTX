@@ -1027,9 +1027,10 @@
 .exact-hero-video {
   display: block;
   width: 100%;
-  height: min(720px, calc(100vh - 102px));
-  min-height: 560px;
-  object-fit: contain;
+  height: clamp(500px, calc(100vh - 102px), 720px);
+  min-height: 500px;
+  object-fit: cover;
+  object-position: center 38%;
   background: #000;
 }
 
