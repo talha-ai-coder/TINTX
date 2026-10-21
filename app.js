@@ -1,4 +1,10 @@
 const PRODUCT={id:'tintx-removable-shades',name:'TINTX Removable Car Window Shades',price:2499,oldPrice:5999,badge:'TINTX ORIGINAL',models:['Honda City'],image:'1.jpg.jpg',description:'High-Density Polyester Mesh Fabric shades for privacy, heat protection and a comfortable clear inside view.'};
+const FEATURED_SHADES=[
+  {id:'front-window-shield',name:'Front Window Shield',price:4100,oldPrice:5200,badge:'FRONT SHADE',image:'front-shade.jpg',description:'Protects your front windows from sunlight while keeping your car cooler and more comfortable.'},
+  {id:'rear-window-shield',name:'Rear Window Shield',price:3600,oldPrice:4700,badge:'REAR SHADE',image:'rear-shade.jpg',description:'Reduces sunlight through rear windows while adding comfort and privacy for passengers.'},
+  {id:'full-window-coverage',name:'Full Window Coverage Sunshades',price:2499,oldPrice:5999,badge:'FULL SHADE',image:'full-shade.jpg',description:'Complete window coverage for maximum sun protection, comfort and privacy.'},
+  {id:'half-window-coverage',name:'Half Window Coverage Sunshades',price:2499,oldPrice:4999,badge:'HALF SHADE',image:'half-shade.jpg',description:'Covers the upper portion of side windows to reduce glare while maintaining visibility.'}
+];
 const HERO_IMAGE='hero-banner-tintx.jpg';
 
 const VEHICLE_DATA = {
@@ -84,7 +90,7 @@ document.addEventListener('click',openHondaCatalog,true);
 const save=()=>{localStorage.setItem('tintx-cart',JSON.stringify(cart));document.getElementById('cart-count').textContent=cart.reduce((s,i)=>s+i.qty,0)};
 function img(src,alt){return `<img src="${src}" alt="${alt}" onerror="this.style.opacity='.08'">`}
 function shell(eyebrow,title,intro,body){return `<div class="page-wrap"><p class="eyebrow">${eyebrow}</p><h1 class="page-title">${title}</h1><p class="page-intro">${intro}</p>${body}</div>`}
-function productCard(){return `<article class="product-card"><a class="product-image" href="#product">${img(PRODUCT.image,PRODUCT.name)}<span class="badge">${PRODUCT.badge}</span></a><div class="product-info"><a href="#product"><h3>${PRODUCT.name}</h3></a><div class="rating">★★★★★ <small>Verified fitment</small></div><div class="price"><del>${money(PRODUCT.oldPrice)}</del><strong>${money(PRODUCT.price)}</strong></div><button class="add-button" data-add>Add to cart</button></div></article>`}
+function productCard(item=PRODUCT){return `<article class="product-card"><a class="product-image" href="#product">${img(item.image,item.name)}<span class="badge">${item.badge}</span></a><div class="product-info"><a href="#product"><h3>${item.name}</h3></a><p class="product-card-description">${item.description}</p><div class="rating">★★★★★ <small>Verified fitment</small></div><div class="price"><del>${money(item.oldPrice)}</del><strong>${money(item.price)}</strong></div><button class="add-button" data-add="${item.id}">Add to cart</button></div></article>`}
 
 function getLogoUrl(brand) {
   const files = {
@@ -181,10 +187,10 @@ function home(){
 
     <section class="section product-section">
       <div class="section-heading">
-        <div><p class="eyebrow">THE TINTX SHADE</p><h2>Our current product</h2></div>
-        <a class="text-link" href="#shop">View product →</a>
+        <div><p class="eyebrow">THE TINTX SHADE</p><h2>Shop our products</h2></div>
+        <a class="text-link" href="#shop">View all products →</a>
       </div>
-      <div class="product-grid">${productCard()}</div>
+      <div class="product-grid featured-shade-grid">${FEATURED_SHADES.map(productCard).join('')}</div>
     </section>
 
     <section class="fitment-banner">
@@ -305,8 +311,9 @@ function render(){
 
 function bind(){
   document.querySelectorAll('[data-add]').forEach(b=>b.onclick=()=>{
-    const found=cart.find(i=>i.id===PRODUCT.id);
-    if(found)found.qty++;else cart.push({...PRODUCT,qty:1});
+    const item=FEATURED_SHADES.find(shade=>shade.id===b.dataset.add)||PRODUCT;
+    const found=cart.find(i=>i.id===item.id);
+    if(found)found.qty++;else cart.push({...item,qty:1});
     save();
     b.textContent='Added ✓';
     setTimeout(()=>b.textContent='Add to cart',1000)
