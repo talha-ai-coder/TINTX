@@ -1670,11 +1670,35 @@ body:has(.exact-hero) .product-section {
 .featured-shade-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .featured-shade-grid .product-image img { height: 300px; object-fit: cover; object-position: center; }
 .product-card-description { color: var(--muted); font-size: 13px; line-height: 1.45; min-height: 57px; margin: 8px 0 0; }
+.shade-comparison-section { padding-top: 45px; }
+.shade-comparison-heading { align-items: end; margin-bottom: 28px; }
+.shade-comparison-heading h2 { margin-bottom: 0; }
+.shade-comparison-heading h2 em { color: var(--muted); }
+.shade-comparison-table { border: 1px solid var(--line); background: var(--panel); overflow: hidden; }
+.shade-comparison-row { display: grid; grid-template-columns: 1.25fr 1fr 1fr; border-top: 1px solid var(--line); }
+.shade-comparison-row:first-child { border-top: 0; }
+.shade-comparison-row > * { padding: 16px 20px; }
+.shade-comparison-row > * + * { border-left: 1px solid var(--line); }
+.shade-comparison-head { background: #0d2b38; color: var(--text); }
+.shade-comparison-head strong:nth-child(2) { color: var(--cyan); }
+.shade-comparison-head strong:nth-child(3) { color: var(--lime); }
+.shade-comparison-row > span:first-child { color: var(--muted); font-weight: 700; }
+.shade-comparison-row > span:not(:first-child) { color: var(--text); }
+.comparison-check { color: var(--lime) !important; font-size: 20px; font-weight: 900; line-height: 1; }
+.shade-comparison-cta { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-top: 30px; padding: 28px 30px; border: 1px solid var(--cyan2); background: linear-gradient(100deg, #0c2c39, #0a1b25); }
+.shade-comparison-cta h3 { margin: 8px 0 0; font-size: clamp(28px, 4vw, 46px); line-height: 1; letter-spacing: -.05em; }
+.shade-comparison-cta h3 em { color: var(--cyan); font-style: normal; }
 .honda-selection-note { margin: 22px 0; padding: 14px 16px; border: 1px solid var(--line); background: var(--panel); color: var(--muted); font-size: 13px; }
 @media (max-width: 900px) {
   .featured-shade-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 760px) {
+  .shade-comparison-heading { align-items: start; }
+  .shade-comparison-row { grid-template-columns: 1fr 1fr 1fr; }
+  .shade-comparison-row > * { padding: 13px 10px; font-size: 12px; }
+  .shade-comparison-row > *:first-child { padding-left: 12px; }
+  .shade-comparison-cta { display: block; padding: 23px 20px; }
+  .shade-comparison-cta .button { margin-top: 20px; width: 100%; }
   .featured-shade-grid .product-image img { height: 210px; }
   .product-card-description { min-height: 0; }
 }

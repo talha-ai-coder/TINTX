@@ -185,6 +185,22 @@ function home(){
       <div class="privacy-proof-grid"><figure><img src="privacy-proof.jpeg" alt="TINTX shade installed on car window"><figcaption>Perfect balance of visibility and privacy</figcaption></figure><figure><img src="installed-shade.jpeg" alt="TINTX shade viewed from inside a car"><figcaption>Real-world fitment and clean finish</figcaption></figure></div>
     </section>
 
+    <section class="section shade-comparison-section" id="shade-comparison">
+      <div class="section-heading shade-comparison-heading">
+        <div><p class="eyebrow">CHOOSE YOUR COVERAGE</p><h2>Full Shades <em>vs</em> Half Shades</h2></div>
+        <p class="hero-lede">Choose the shade that best fits your driving style and coverage needs.</p>
+      </div>
+      <div class="shade-comparison-table" role="table" aria-label="Full Shades versus Half Shades comparison">
+        <div class="shade-comparison-row shade-comparison-head" role="row"><span role="columnheader">Features</span><strong role="columnheader">Full Shades</strong><strong role="columnheader">Half Shades</strong></div>
+        <div class="shade-comparison-row" role="row"><span>Coverage</span><span>Complete</span><span>Partial</span></div>
+        <div class="shade-comparison-row" role="row"><span>Privacy</span><span>High</span><span>Moderate</span></div>
+        <div class="shade-comparison-row" role="row"><span>UV Protection</span><span class="comparison-check">✓</span><span class="comparison-check">✓</span></div>
+        <div class="shade-comparison-row" role="row"><span>Heat Protection</span><span class="comparison-check">✓</span><span class="comparison-check">✓</span></div>
+        <div class="shade-comparison-row" role="row"><span>Best For</span><span>Maximum protection</span><span>Quick everyday use</span></div>
+      </div>
+      <div class="shade-comparison-cta"><div><p class="eyebrow">TINTX EVERYDAY COMFORT</p><h3>Drive cooler.<br><em>Drive better.</em></h3></div><a class="button button-primary" href="#product">Choose your shade →</a></div>
+    </section>
+
     <section class="section product-section">
       <div class="section-heading">
         <div><p class="eyebrow">THE TINTX SHADE</p><h2>Shop our products</h2></div>
