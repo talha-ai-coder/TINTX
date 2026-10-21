@@ -1024,41 +1024,38 @@
   background: #06131b;
 }
 
-.exact-hero-art {
+.exact-hero-video {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  height: min(720px, calc(100vh - 102px));
+  min-height: 560px;
+  object-fit: contain;
+  background: #000;
 }
 
-.exact-hero-links {
+.exact-hero-cta {
   position: absolute;
-  inset: 0;
+  left: 5%;
+  bottom: 28px;
   z-index: 4;
-  pointer-events: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
-
-.exact-hero-link {
-  position: absolute;
-  display: block;
-  pointer-events: auto;
-  border-radius: 4px;
-}
-
-.exact-hero-link:focus-visible {
-  outline: 2px solid var(--cyan);
-  outline-offset: 4px;
-}
-
-/* Coordinates follow the buttons baked into the approved 16:9 artwork. */
-.exact-hero-shop { left: 5.4%; top: 73.8%; width: 16.8%; height: 6.1%; }
-.exact-hero-fit { left: 23.2%; top: 73.8%; width: 10.5%; height: 6.1%; }
 
 @media (max-width: 760px) {
-  .exact-hero-art { min-height: 0; width: 100%; object-fit: cover; }
-  .exact-hero-shop { left: 5.4%; top: 73.8%; width: 16.8%; height: 6.5%; }
-  .exact-hero-fit { left: 23.2%; top: 73.8%; width: 10.5%; height: 6.5%; }
+  .exact-hero-video {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 9 / 16;
+    object-fit: contain;
+  }
+  .exact-hero-cta {
+    position: static;
+    padding: 14px 18px 18px;
+    background: #06131b;
+  }
+  .exact-hero-cta .button { flex: 1 1 150px; }
 }
 
 /* Exact reference hero must not inherit the old framed main/container layout */
