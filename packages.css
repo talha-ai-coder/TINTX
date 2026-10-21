@@ -1,18 +1,18 @@
 /* TINTX coverage option cards */
-.tintx-packages{background:#f7f9fa;padding:68px 20px 84px;scroll-margin-top:80px}
+.tintx-packages{background:#06131b;padding:68px 20px 84px;scroll-margin-top:80px}
 .tintx-packages-heading{max-width:1200px;margin:0 auto 24px;text-align:left}
 .tintx-packages-heading .eyebrow{margin:0 0 8px}
-.tintx-packages-heading h2{margin:0 0 10px;color:#06131b;font-size:clamp(30px,4vw,48px);letter-spacing:-.03em}
-.tintx-packages-heading>p:last-child{margin:0;color:#526b73;font-size:16px}
-.tintx-package-picture{max-width:1200px;margin:0 auto;overflow:hidden;background:#fff;border:1px solid #d8e2e5;border-radius:12px;box-shadow:0 12px 28px rgba(6,19,27,.08)}
+.tintx-packages-heading h2{margin:0 0 10px;color:#f3fbff;font-size:clamp(30px,4vw,48px);letter-spacing:-.03em}
+.tintx-packages-heading>p:last-child{margin:0;color:#9bb4bd;font-size:16px}
+.tintx-package-picture{max-width:1200px;margin:0 auto;overflow:hidden;background:#0b202b;border:1px solid #234553;border-radius:12px;box-shadow:0 12px 28px rgba(6,19,27,.08)}
 .tintx-package-picture img{display:block;width:100%;height:auto}
 .tintx-package-price-grid{max-width:1200px;margin:20px auto 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.tintx-package-price-card{position:relative;display:flex;flex-direction:column;min-height:210px;padding:22px;background:#fff;border:1px solid #d8e2e5;border-radius:12px;box-shadow:0 8px 20px rgba(6,19,27,.06)}
+.tintx-package-price-card{position:relative;display:flex;flex-direction:column;min-height:210px;padding:22px;background:#0b202b;border:1px solid #234553;border-radius:12px;box-shadow:0 8px 20px rgba(6,19,27,.06)}
 .tintx-package-price-card.is-popular{border:2px solid #08b99e;padding:21px}
 .tintx-popular-label{position:absolute;top:-12px;left:20px;padding:5px 10px;border-radius:999px;background:#08b99e;color:#071b20;font-size:10px;font-weight:900;letter-spacing:.08em}
-.tintx-package-price-name{color:#526b73;font-size:13px;font-weight:900;letter-spacing:.05em;text-transform:uppercase}
-.tintx-package-price-card strong{display:block;margin:13px 0 7px;color:#06131b;font-size:30px;letter-spacing:-.03em}
-.tintx-package-price-card small{display:block;min-height:38px;color:#526b73;font-size:13px;line-height:1.45}
+.tintx-package-price-name{color:#9bb4bd;font-size:13px;font-weight:900;letter-spacing:.05em;text-transform:uppercase}
+.tintx-package-price-card strong{display:block;margin:13px 0 7px;color:#f3fbff;font-size:30px;letter-spacing:-.03em}
+.tintx-package-price-card small{display:block;min-height:38px;color:#9bb4bd;font-size:13px;line-height:1.45}
 .tintx-package-price-card .tintx-package-button{width:100%;margin-top:auto;border:0;cursor:pointer}
 .tintx-package-price-card.is-popular .tintx-package-button{background:#08b99e;color:#071b20}
 @media(max-width:760px){.tintx-packages{padding:48px 14px 66px}.tintx-packages-heading h2{font-size:34px}.tintx-packages-heading>p:last-child{font-size:14px}.tintx-package-picture{border-radius:9px}.tintx-package-price-grid{grid-template-columns:1fr;gap:14px}.tintx-package-price-card,.tintx-package-price-card.is-popular{min-height:0;padding:20px}.tintx-package-price-card.is-popular{padding-top:24px}}
@@ -20,7 +20,7 @@
 
 /* Match each package picture with its own details */
 .tintx-package-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;align-items:stretch}
-.tintx-package-card{min-width:0;background:#fff;border:1px solid #d8e2e5;border-radius:12px;overflow:hidden;box-shadow:0 8px 22px rgba(6,19,27,.07)}
+.tintx-package-card{min-width:0;background:#0b202b;border:1px solid #234553;border-radius:12px;overflow:hidden;box-shadow:0 8px 22px rgba(6,19,27,.07)}
 .tintx-package-card.is-popular{border:2px solid #08b99e}
 .tintx-coverage-art{display:grid;place-items:center;min-height:130px;padding:16px;background:linear-gradient(145deg,#f4f8f8,#e9f1f2)}
 .coverage-visual{width:min(100%,210px);height:auto;overflow:visible}
@@ -32,9 +32,9 @@
 .tintx-coverage-front .coverage-front{fill:#08b99e}
 .tintx-coverage-rear .coverage-rear{fill:#08b99e}
 .tintx-package-content{position:relative;display:flex;flex-direction:column;min-height:205px;padding:20px 20px 18px;text-align:left}
-.tintx-package-price-name{display:block;padding-right:8px;color:#06131b;font-size:15px;font-weight:900;line-height:1.35;text-transform:uppercase}
-.tintx-package-content strong{display:block;margin:12px 0 7px;color:#06131b;font-size:30px;letter-spacing:-.03em}
-.tintx-package-content small{display:block;min-height:39px;color:#526b73;font-size:13px;line-height:1.45}
+.tintx-package-price-name{display:block;padding-right:8px;color:#f3fbff;font-size:15px;font-weight:900;line-height:1.35;text-transform:uppercase}
+.tintx-package-content strong{display:block;margin:12px 0 7px;color:#f3fbff;font-size:30px;letter-spacing:-.03em}
+.tintx-package-content small{display:block;min-height:39px;color:#9bb4bd;font-size:13px;line-height:1.45}
 .tintx-package-content .tintx-package-button{width:100%;margin-top:auto;border:0;cursor:pointer}
 .tintx-package-card.is-popular .tintx-package-button{background:#08b99e;color:#071b20}
 @media(max-width:900px){.tintx-package-grid{grid-template-columns:1fr 1fr;gap:18px}.tintx-package-grid .tintx-package-card:last-child{grid-column:1/-1;max-width:calc(50% - 9px);margin:0 auto;width:100%}}
