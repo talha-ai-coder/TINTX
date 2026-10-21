@@ -88,5 +88,5 @@
   }
   function init(){renderProductOptions();bindInteractions();syncFitment();}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
-  new MutationObserver(()=>{renderHomePackages();renderProductOptions();syncFitment();}).observe(document.documentElement,{childList:true,subtree:true});
+  new MutationObserver(()=>{renderProductOptions();syncFitment();}).observe(document.documentElement,{childList:true,subtree:true});
 })();
