@@ -187,10 +187,10 @@ function home(){
 
     <section class="section product-section">
       <div class="section-heading">
-        <div><p class="eyebrow">THE TINTX SHADE</p><h2>Shop our products</h2></div>
-        <a class="text-link" href="#shop">View all products →</a>
+        <div><p class="eyebrow">THE TINTX SHADE</p><h2>Our current product</h2></div>
+        <a class="text-link" href="#shop">View product →</a>
       </div>
-      <div class="product-grid featured-shade-grid">${FEATURED_SHADES.map(productCard).join('')}</div>
+      <div class="product-grid">${productCard()}</div>
     </section>
 
     <section class="fitment-banner">
