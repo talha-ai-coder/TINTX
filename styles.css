@@ -1046,10 +1046,11 @@
 
 @media (max-width: 760px) {
   .exact-hero-video {
-    height: auto;
+    height: min(720px, calc(100svh - 102px));
     min-height: 0;
     aspect-ratio: 9 / 16;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center 38%;
   }
   .exact-hero-cta {
     position: static;
