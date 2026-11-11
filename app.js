@@ -323,6 +323,12 @@ function render(){
   app.focus({preventScroll:true});
   bind();
   save();
+  const heroVideo=document.querySelector('.exact-hero-video');
+  if(heroVideo){
+    heroVideo.defaultPlaybackRate=1.15;
+    heroVideo.playbackRate=1.15;
+    heroVideo.addEventListener('loadedmetadata',()=>{heroVideo.playbackRate=1.15},{once:true});
+  }
 }
 
 function bind(){
