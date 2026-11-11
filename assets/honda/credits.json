@@ -2,7 +2,7 @@
   {
     "id": "city",
     "model": "Honda City",
-    "file": "assets/honda/city.jpg",
+    "file": "assets/honda/city.webp",
     "title": "File:Honda City 1.5 i-VTEC V (VIII, Facelift) – f 22032025.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File%3AHonda_City_1.5_i-VTEC_V_%28VIII%2C_Facelift%29_%E2%80%93_f_22032025.jpg",
     "license": "CC BY-SA 3.0 de",
@@ -16,7 +16,7 @@
   {
     "id": "hr-v",
     "model": "Honda HR-V",
-    "file": "assets/honda/hr-v.jpg",
+    "file": "assets/honda/hr-v.webp",
     "title": "File:2025 Honda HR-V Hybrid DSC 7908.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File%3A2025_Honda_HR-V_Hybrid_DSC_7908.jpg",
     "license": "CC BY-SA 4.0",
@@ -30,7 +30,7 @@
   {
     "id": "accord",
     "model": "Honda Accord",
-    "file": "assets/honda/accord.jpg",
+    "file": "assets/honda/accord.webp",
     "title": "File:2018 Honda Accord 2.13.18.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File%3A2018_Honda_Accord_2.13.18.jpg",
     "license": "CC BY-SA 4.0",
@@ -44,7 +44,7 @@
   {
     "id": "vezel",
     "model": "Honda Vezel",
-    "file": "assets/honda/vezel.jpg",
+    "file": "assets/honda/vezel.webp",
     "title": "File:2013-2018 Honda Vezel Hybrid X.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File%3A2013-2018_Honda_Vezel_Hybrid_X.jpg",
     "license": "CC0",
@@ -58,7 +58,7 @@
   {
     "id": "fit",
     "model": "Honda Fit",
-    "file": "assets/honda/fit.jpg",
+    "file": "assets/honda/fit.webp",
     "title": "File:Honda Jazz III front 20100529.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Honda_Jazz_III_front_20100529.jpg",
     "license": "Attribution",

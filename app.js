@@ -1,11 +1,11 @@
-const PRODUCT={id:'tintx-removable-shades',name:'TINTX Removable Car Window Shades',price:2499,oldPrice:5999,badge:'TINTX ORIGINAL',models:['Honda City'],image:'1.jpg.jpg',description:'High-Density Polyester Mesh Fabric shades for privacy, heat protection and a comfortable clear inside view.'};
+const PRODUCT={id:'tintx-removable-shades',name:'TINTX Removable Car Window Shades',price:2499,oldPrice:5999,badge:'TINTX ORIGINAL',models:['Honda City'],image:'1.jpg.webp',description:'High-Density Polyester Mesh Fabric shades for privacy, heat protection and a comfortable clear inside view.'};
 const FEATURED_SHADES=[
   {id:'front-window-shield',name:'Front Window Shield',price:4100,oldPrice:5200,badge:'FRONT SHADE',image:'front-shade.jpg',description:'Protects your front windows from sunlight while keeping your car cooler and more comfortable.'},
   {id:'rear-window-shield',name:'Rear Window Shield',price:3600,oldPrice:4700,badge:'REAR SHADE',image:'rear-shade.jpg',description:'Reduces sunlight through rear windows while adding comfort and privacy for passengers.'},
   {id:'full-window-coverage',name:'Full Window Coverage Sunshades',price:2499,oldPrice:5999,badge:'FULL SHADE',image:'full-shade.jpg',description:'Complete window coverage for maximum sun protection, comfort and privacy.'},
   {id:'half-window-coverage',name:'Half Window Coverage Sunshades',price:2499,oldPrice:4999,badge:'HALF SHADE',image:'half-shade.jpg',description:'Covers the upper portion of side windows to reduce glare while maintaining visibility.'}
 ];
-const HERO_IMAGE='hero-banner-tintx.jpg';
+const HERO_IMAGE='hero-banner-tintx.webp';
 
 const VEHICLE_DATA = {
   "SUZUKI": ["Alto 2019-2024", "Cultus 2000-2016", "Cultus 2017-2024", "Swift 2010-2024", "WagonR 2014-2024", "Mehran 1989-2019", "Bolan 1990-2024", "Ravi 1990-2024", "Every 2018-2024", "APV 2008-2024", "Liana 2006-2014", "Jimny 2021-2024", "Grand Vitara 2008-2024"],
@@ -45,13 +45,13 @@ const VEHICLE_DATA = {
 };
 
 const HONDA_CATALOG = [
-  { id:'br-v', name:'BR-V', years:['2017-2024'], image:'br-v.png' },
-  { id:'city', name:'City', years:['2009-2013','2014-2020','2021-2024'], image:'assets/honda/city.jpg' },
-  { id:'civic', name:'Civic', years:['2001-2005','2006-2011','2012-2015','2016-2021','2022-2024'], image:'civic.png' },
-  { id:'hr-v', name:'HR-V', years:['2022-2024'], image:'assets/honda/hr-v.jpg' },
-  { id:'accord', name:'Accord', years:['2018-2024'], image:'assets/honda/accord.jpg' },
-  { id:'vezel', name:'Vezel', years:['2014-2024'], image:'assets/honda/vezel.jpg' },
-  { id:'fit', name:'Fit', years:['2010-2024'], image:'assets/honda/fit.jpg' },
+  { id:'br-v', name:'BR-V', years:['2017-2024'], image:'br-v.webp' },
+  { id:'city', name:'City', years:['2009-2013','2014-2020','2021-2024'], image:'assets/honda/city.webp' },
+  { id:'civic', name:'Civic', years:['2001-2005','2006-2011','2012-2015','2016-2021','2022-2024'], image:'civic.webp' },
+  { id:'hr-v', name:'HR-V', years:['2022-2024'], image:'assets/honda/hr-v.webp' },
+  { id:'accord', name:'Accord', years:['2018-2024'], image:'assets/honda/accord.webp' },
+  { id:'vezel', name:'Vezel', years:['2014-2024'], image:'assets/honda/vezel.webp' },
+  { id:'fit', name:'Fit', years:['2010-2024'], image:'assets/honda/fit.webp' },
   { id:'cr-v', name:'CR-V', years:['2018-2024'], image:'assets/honda/cr-v.jpg' }
 ];
 
@@ -88,17 +88,17 @@ const openHondaCatalog=event=>{
 document.addEventListener('pointerdown',openHondaCatalog,true);
 document.addEventListener('click',openHondaCatalog,true);
 const save=()=>{localStorage.setItem('tintx-cart',JSON.stringify(cart));document.getElementById('cart-count').textContent=cart.reduce((s,i)=>s+i.qty,0)};
-function img(src,alt){return `<img src="${src}" alt="${alt}" onerror="this.style.opacity='.08'">`}
+function img(src,alt){return `<img src="${src}" alt="${alt}" loading="lazy" decoding="async" onerror="this.style.opacity='.08'">`}
 function shell(eyebrow,title,intro,body){return `<div class="page-wrap"><p class="eyebrow">${eyebrow}</p><h1 class="page-title">${title}</h1><p class="page-intro">${intro}</p>${body}</div>`}
 function productCard(item=PRODUCT){return `<article class="product-card"><a class="product-image" href="#product">${img(item.image,item.name)}<span class="badge">${item.badge}</span></a><div class="product-info"><a href="#product"><h3>${item.name}</h3></a><p class="product-card-description">${item.description}</p><div class="rating">★★★★★ <small>Verified fitment</small></div><div class="price"><del>${money(item.oldPrice)}</del><strong>${money(item.price)}</strong></div><button class="add-button" data-add="${item.id}">Add to cart</button></div></article>`}
 
 function getLogoUrl(brand) {
   const files = {
     'SUZUKI':'suzuki.png','TOYOTA':'toyota.png','HONDA':'honda.png','KIA':'kia.png','HYUNDAI':'hyundai.png',
-    'MG':'mg.png','CHANGAN':'changan.png','LEXUS':'lexus.png','AUDI':'audi.png','PROTON':'proton.png',
+    'MG':'mg.webp','CHANGAN':'changan.png','LEXUS':'lexus.png','AUDI':'audi.png','PROTON':'proton.webp',
     'UNITED':'united.png','MERCEDES':'mercedes.png','PRINCE':'prince.png','DFSK':'dfsk.png','ISUZU':'isuzu.png',
-    'FAW':'faw.png','HAVAL':'haval.png','PEUGEOT':'peugeot.png','CHERY':'chery.png','MITSUBISHI':'mitsubishi.png',
-    'DAIHATSU':'daihatsu.png','NISSAN':'nissan.png','BYD':'byd.svg','JAC':'jac.png','BMW':'bmw.png',
+    'FAW':'faw.webp','HAVAL':'haval.png','PEUGEOT':'peugeot.png','CHERY':'chery.png','MITSUBISHI':'mitsubishi.png',
+    'DAIHATSU':'daihatsu.png','NISSAN':'nissan.webp','BYD':'byd.svg','JAC':'jac.webp','BMW':'bmw.webp',
     'LAND ROVER':'land-rover.jpg','JEEP':'jeep.svg','BAIC':'baic.png','JETOUR':'jetour.png','JAECOO':'jaecoo.jpg',
     'OMODA':'omoda.jpg','GAC':'gac.png','DEEPAL':'deepal.png'
   };
@@ -109,7 +109,7 @@ function home(){
   const brands = Object.keys(VEHICLE_DATA).filter(b => b !== 'OTHER');
   const brandLogos = brands.map(brand => `
     <a class="brand-item" data-brand="${brand}" href="${brand === 'HONDA' ? 'honda.html' : `#brand-${encodeURIComponent(brand.toLowerCase())}`}" title="Shop ${brand} models" aria-label="Shop ${brand} models">
-      <img src="${getLogoUrl(brand)}" alt="${brand} logo">
+      <img src="${getLogoUrl(brand)}" alt="${brand} logo" loading="lazy" decoding="async">
       <span>${brand}</span>
     </a>
   `).join('');
@@ -117,7 +117,7 @@ function home(){
 
   return `
     <section class="hero exact-hero" aria-label="TINTX hero video">
-      <video class="exact-hero-video" autoplay muted loop playsinline preload="metadata" poster="hero-exact-tintx.jpg" aria-label="TINTX removable car shades video">
+      <video class="exact-hero-video" autoplay muted loop playsinline preload="metadata" poster="hero-exact-tintx.webp" aria-label="TINTX removable car shades video">
         <source src="tintx-hero.mp4" type="video/mp4">
       </video>
       <div class="exact-hero-cta" aria-label="Hero actions">
@@ -134,7 +134,7 @@ function home(){
     </div>
 
     <section class="section installed-proof-section" id="installed-proof">
-      <div class="installed-proof-media"><img src="installed-shade.jpeg" alt="TINTX removable shade installed on a car window"></div>
+      <div class="installed-proof-media"><img src="installed-shade.webp" alt="TINTX removable shade installed on a car window" loading="lazy" decoding="async"></div>
       <div class="installed-proof-copy"><p class="eyebrow">REAL FITMENT</p><h2>Privacy outside.<br><em>Clear view inside.</em></h2><p class="hero-lede">See how the TINTX mesh shade looks on a real car door. Custom-fit coverage, comfortable driving and a clean finish without permanent tint.</p><a class="button button-primary" href="#vehicle-browser">Find my car →</a></div>
     </section>
 
@@ -171,7 +171,7 @@ function home(){
     </div>
 
     <section class="section fabric-section why-tintx-section" id="why">
-      <div class="why-tintx-media"><img src="why-tintx.jpeg" alt="Why TINTX mesh shade benefits"></div>
+      <div class="why-tintx-media"><img src="why-tintx.webp" alt="Why TINTX mesh shade benefits" loading="lazy" decoding="async"></div>
       <div>
         <p class="eyebrow">THE TINTX MATERIAL</p>
         <h2>Designed for privacy,<br><em>built for everyday driving.</em></h2>
@@ -184,7 +184,7 @@ function home(){
 
     <section class="section privacy-proof-section">
       <div class="section-heading"><div><p class="eyebrow">PRODUCT PROOF</p><h2>Visibility and privacy</h2></div><p class="hero-lede">Real photos of the TINTX shade installed in a car.</p></div>
-      <div class="privacy-proof-grid"><figure><img src="privacy-proof.jpeg" alt="TINTX shade installed on car window"><figcaption>Perfect balance of visibility and privacy</figcaption></figure><figure><img src="installed-shade.jpeg" alt="TINTX shade viewed from inside a car"><figcaption>Real-world fitment and clean finish</figcaption></figure></div>
+      <div class="privacy-proof-grid"><figure><img src="privacy-proof.webp" alt="TINTX shade installed on car window" loading="lazy" decoding="async"><figcaption>Perfect balance of visibility and privacy</figcaption></figure><figure><img src="installed-shade.webp" alt="TINTX shade viewed from inside a car" loading="lazy" decoding="async"><figcaption>Real-world fitment and clean finish</figcaption></figure></div>
     </section>
 
     <section class="section shade-comparison-section" id="shade-comparison">
@@ -223,7 +223,7 @@ function home(){
 }
 
 function shop(){return shell('TINTX SHOP','Find your perfect shade.','Shop the current TINTX removable shade product, with fitment confirmation before dispatch.',`<div class="shop-toolbar"><div class="shop-search">⌕<input id="search" placeholder="Search the TINTX shade..."></div><select id="sort"><option>Sort the shade</option><option>Price: low to high</option><option>Price: high to low</option></select></div><div class="shop-layout"><aside class="filters"><div class="filter-title"><b>⚙ Filter by</b><span>1 product</span></div><label>Car model</label><select id="model-filter"><option>All models</option>${CAR_MODELS.slice(0,15).map(m=>`<option>${m}</option>`).join('')}<option>Other model — WhatsApp check</option></select><label>Maximum price</label><select><option>Up to PKR 10,000</option><option>Up to PKR 3,000</option><option>Up to PKR 1,500</option></select><div class="filter-note">◈ Every shade is checked for fitment before dispatch.</div></aside><div class="catalogue"><div class="catalogue-head"><span>1 product</span><span>Premium mesh · COD available</span></div><div class="product-grid">${productCard()}</div></div></div>`)}
-function product(){return shell('PRODUCT DETAILS',PRODUCT.name,'Custom-fit removable mesh shade, made for comfortable drives.',`<div class="detail-grid"><div><div class="detail-main"><img id="main-product-image" src="product-main-new.png.png" alt="TINTX Removable Car Window Shades"></div><div class="thumb-row"><img class="gallery-thumb" src="installed-shade.jpeg" alt="Shade installed on car window" onclick="document.getElementById('main-product-image').src=this.src"><img class="gallery-thumb" src="privacy-proof.jpeg" alt="TINTX privacy and visibility" onclick="document.getElementById('main-product-image').src=this.src"><img class="gallery-thumb" src="mesh-closeup.jpeg" alt="Mesh fabric detail" onclick="document.getElementById('main-product-image').src=this.src"><img class="gallery-thumb" src="why-tintx.jpeg" alt="Why TINTX benefits" onclick="document.getElementById('main-product-image').src=this.src"></div></div><div><span class="badge">${PRODUCT.badge}</span><h2>${PRODUCT.name}</h2><div class="rating">★★★★★ <small>Verified fitment support</small></div><p class="detail-description">${PRODUCT.description}</p><div class="detail-price"><del>${money(PRODUCT.oldPrice)}</del><strong>${money(PRODUCT.price)}</strong><span>COD available</span></div><label class="form-label">Select your car for fitment</label><select id="detail-model"><option value="">Make, model & year</option>${CAR_MODELS.map(model=>`<option value="${model}">${model}</option>`).join('')}</select><div class="qty-row"><button data-qty="-1">−</button><b id="qty">1</b><button data-qty="1">+</button></div><button class="button button-primary" id="detail-add">Add to cart →</button><a class="text-link" style="display:block;margin-top:20px" href="${WA}" target="_blank">Need help? Ask on WhatsApp</a><div class="benefit"><span class="benefit-icon">✓</span><div><b>Free delivery across Pakistan</b><p>Fitment confirmed before dispatch.</p></div></div></div></div><section class="material-section"><p class="eyebrow">THE MATERIAL</p><h2>See the mesh.<br><em>Feel the difference.</em></h2><p class="hero-lede">High-Density Polyester Mesh is lightweight, washable and breathable. Privacy outside, clear view inside.</p><div class="material-grid"><div><div class="fabric-texture"></div><p><b>High-density weave</b><br>Privacy outside, clear view inside.</p></div><div><div class="fabric-texture"></div><p><b>Lightweight + washable</b><br>Easy to remove and clean.</p></div></div></section>`)}
+function product(){return shell('PRODUCT DETAILS',PRODUCT.name,'Custom-fit removable mesh shade, made for comfortable drives.',`<div class="detail-grid"><div><div class="detail-main"><img id="main-product-image" src="product-main-new.png.webp" alt="TINTX Removable Car Window Shades"></div><div class="thumb-row"><img loading="lazy" decoding="async" class="gallery-thumb" src="installed-shade.webp" alt="Shade installed on car window" onclick="document.getElementById('main-product-image').src=this.src"><img loading="lazy" decoding="async" class="gallery-thumb" src="privacy-proof.webp" alt="TINTX privacy and visibility" onclick="document.getElementById('main-product-image').src=this.src"><img loading="lazy" decoding="async" class="gallery-thumb" src="mesh-closeup.webp" alt="Mesh fabric detail" onclick="document.getElementById('main-product-image').src=this.src"><img loading="lazy" decoding="async" class="gallery-thumb" src="why-tintx.webp" alt="Why TINTX benefits" onclick="document.getElementById('main-product-image').src=this.src"></div></div><div><span class="badge">${PRODUCT.badge}</span><h2>${PRODUCT.name}</h2><div class="rating">★★★★★ <small>Verified fitment support</small></div><p class="detail-description">${PRODUCT.description}</p><div class="detail-price"><del>${money(PRODUCT.oldPrice)}</del><strong>${money(PRODUCT.price)}</strong><span>COD available</span></div><label class="form-label">Select your car for fitment</label><select id="detail-model"><option value="">Make, model & year</option>${CAR_MODELS.map(model=>`<option value="${model}">${model}</option>`).join('')}</select><div class="qty-row"><button data-qty="-1">−</button><b id="qty">1</b><button data-qty="1">+</button></div><button class="button button-primary" id="detail-add">Add to cart →</button><a class="text-link" style="display:block;margin-top:20px" href="${WA}" target="_blank">Need help? Ask on WhatsApp</a><div class="benefit"><span class="benefit-icon">✓</span><div><b>Free delivery across Pakistan</b><p>Fitment confirmed before dispatch.</p></div></div></div></div><section class="material-section"><p class="eyebrow">THE MATERIAL</p><h2>See the mesh.<br><em>Feel the difference.</em></h2><p class="hero-lede">High-Density Polyester Mesh is lightweight, washable and breathable. Privacy outside, clear view inside.</p><div class="material-grid"><div><div class="fabric-texture"></div><p><b>High-density weave</b><br>Privacy outside, clear view inside.</p></div><div><div class="fabric-texture"></div><p><b>Lightweight + washable</b><br>Easy to remove and clean.</p></div></div></section>`)}
 function fitGuide(){return shell('FIT GUIDE','Choose your car. We’ll confirm the fit.','No guessing. Select your car details and we’ll confirm whether the current TINTX shade fits.',`<div class="fit-card"><h2>Find the right TINTX shade</h2><p class="hero-lede">Currently available for Honda City. For another car, send us a WhatsApp message for a manual check.</p><div class="fit-fields"><select id="fit-make"><option>Select make</option><option>Honda</option><option>Toyota</option><option>Suzuki</option><option>Kia</option><option>Hyundai</option><option>MG</option><option>Changan</option><option>Haval</option><option>Nissan</option><option>Daihatsu</option><option>Other make — WhatsApp check</option></select><select id="fit-model"><option>Select model</option>${CAR_MODELS.map(model=>`<option value="${model}">${model}</option>`).join('')}</select><select id="fit-year"><option>Select year</option><option>2021+</option><option>2020</option><option>2019</option><option>2018</option><option>2017</option><option>2016</option><option>2015</option><option>Other year</option></select></div><div id="fit-result" class="fit-result">Select your model to see fitment.</div><a class="button button-ghost" href="${WA}" target="_blank">Ask us to check my car →</a></div><div class="fit-points"><div class="benefit"><span class="benefit-icon">◈</span><div><b>Precision fit</b><p>Honda City is the current supported fit.</p></div></div><div class="benefit"><span class="benefit-icon">✦</span><div><b>Fast confirmation</b><p>We confirm details before dispatch.</p></div></div><div class="benefit"><span class="benefit-icon">✓</span><div><b>Easy ordering</b><p>COD and nationwide delivery.</p></div></div></div>`)}
 function cartPage(){let total=cart.reduce((s,i)=>s+i.price*i.qty,0);return shell('YOUR BAG','Ready for a more comfortable drive?',cart.length?'Review your TINTX shade before checkout.':'Your cart is empty.',cart.length?`<div class="cart-grid"><div>${cart.map(i=>`<div class="cart-item">${img(i.image,i.name)}<div><h3>${i.name}</h3><small>${money(i.price)} · Qty ${i.qty}</small><br><button class="remove" data-remove>Remove</button></div></div>`).join('')}</div><aside class="order-summary"><h3>Order summary</h3><div class="summary-line"><span>Subtotal</span><b>${money(total)}</b></div><div class="summary-line"><span>Delivery</span><b>Free</b></div><div class="summary-total"><span>Total</span><strong>${money(total)}</strong></div><a class="button button-primary full" href="#checkout">Proceed to COD checkout</a></aside></div>`:`<div class="form-card"><h2>Your cart is empty</h2><p class="hero-lede">Find out whether the current TINTX shade fits your car.</p><a class="button button-primary" href="#shop">Shop the shade →</a></div>`)}
 function checkout(){let total=cart.reduce((s,i)=>s+i.price*i.qty,0);return shell('CASH ON DELIVERY','Complete your order.','Tell us where to deliver. We’ll confirm the fit before dispatch.',`<div class="checkout-grid"><form class="form-card" id="checkout-form"><h3>Customer details</h3><div class="form-grid"><input class="form-field" required placeholder="Full name"><input class="form-field" required type="tel" placeholder="Phone number"></div><input class="form-field" required placeholder="Complete delivery address"><div class="form-grid"><input class="form-field" required placeholder="City"><input class="form-field" placeholder="Order notes (optional)"></div><h3>Car details</h3><div class="form-grid"><input class="form-field" required placeholder="Car make"><input class="form-field" required placeholder="Car model"></div><input class="form-field" placeholder="Year / variant"><div class="cod-box">✓ <div><b>Cash on Delivery</b><br><small>Pay when your shade arrives. No online payment required.</small></div></div><button class="button button-primary full">Place COD order →</button></form><aside class="order-summary"><h3>Your order</h3><div class="summary-line"><span>TINTX shade</span><b>${money(total||PRODUCT.price)}</b></div><div class="summary-total"><span>Total</span><strong>${money(total||PRODUCT.price)}</strong></div><p>🚚 Free nationwide delivery</p></aside></div>`)}
@@ -432,7 +432,7 @@ function bind(){
       resultsDiv.innerHTML = `
         <div class="car-card">
           <div class="car-card-img">
-            <img src="${model.toLowerCase().includes('civic') ? 'civic.png' : (model.toLowerCase().includes('brv') ? 'br-v.png' : '1.jpg.jpg')}" alt="${carName}">
+            <img loading="lazy" decoding="async" src="${model.toLowerCase().includes('civic') ? 'civic.webp' : (model.toLowerCase().includes('brv') ? 'br-v.webp' : '1.jpg.webp')}" alt="${carName}">
           </div>
           <div class="car-card-content">
             <div class="car-card-title">${carName}</div>
