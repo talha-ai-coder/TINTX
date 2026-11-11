@@ -145,11 +145,13 @@ function home(){
         <p class="hero-lede">Select your car brand and model to see the custom-fit TINTX shade for your vehicle.</p>
         
         <div class="browser-selector">
-          <select class="browser-select" id="browser-make">
+          <label class="sr-only" for="browser-make">Select car brand</label>
+          <select class="browser-select" id="browser-make" aria-label="Select car brand">
             <option value="">Select Brand</option>
             ${Object.keys(VEHICLE_DATA).map(make => `<option value="${make}">${make}</option>`).join('')}
           </select>
-          <select class="browser-select" id="browser-model" disabled>
+          <label class="sr-only" for="browser-model">Select car model</label>
+          <select class="browser-select" id="browser-model" aria-label="Select car model" disabled>
             <option value="">Select Model</option>
           </select>
           <button class="button button-primary" id="browser-search">Search Fitment</button>
